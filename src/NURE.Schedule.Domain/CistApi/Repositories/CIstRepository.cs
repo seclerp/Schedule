@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 using NURE.Schedule.Common;
 using NURE.Schedule.Domain.CistApi.Events;
+using NURE.Schedule.Domain.CistApi.Repositories.Interfaces;
 using NURE.Schedule.Domain.CistApi.Structure;
-using NURE.Schedule.Domain.Interfaces;
 
-namespace NURE.Schedule.Domain.CistApi
+namespace NURE.Schedule.Domain.CistApi.Repositories
 {
   public class CistRepository : ICistRepository
   {

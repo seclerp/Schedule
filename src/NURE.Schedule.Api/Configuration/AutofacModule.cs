@@ -1,7 +1,8 @@
-﻿using Autofac;
-using Microsoft.Extensions.Logging;
-using NURE.Schedule.Domain.CistApi;
-using NURE.Schedule.Domain.Interfaces;
+﻿using System.Data;
+using System.Data.SqlClient;
+using Autofac;
+using NURE.Schedule.Domain.CistApi.Repositories;
+using NURE.Schedule.Domain.CistApi.Repositories.Interfaces;
 
 namespace NURE.Schedule.Api.Configuration
 {
@@ -17,6 +18,9 @@ namespace NURE.Schedule.Api.Configuration
 
       builder.RegisterType<CistRepository>()
         .As<ICistRepository>();
+      
+      builder.RegisterType<SqlConnection>()
+        .As<IDbConnection>();
     }
   }
 }

@@ -9,9 +9,6 @@
     <OutputPath>..\..\bin\Release\netstandard2.0\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Entities" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Dapper" Version="1.50.5" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>

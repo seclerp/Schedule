@@ -1,4 +1,6 @@
-﻿using Autofac;
+﻿using System.Data;
+using System.Data.SqlClient;
+using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
@@ -34,6 +36,11 @@ namespace NURE.Schedule.Api
     public void ConfigureContainer(ContainerBuilder builder)
     {
       builder.RegisterModule(new AutofacModule());
+      
+      // For Dapper
+      builder.RegisterType<SqlConnection>()
+        .As<IDbConnection>()
+        .WithParameter("connectionString", Configuration.GetConnectionString("Default"));
     }
     
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
