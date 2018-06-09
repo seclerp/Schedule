@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using NURE.Schedule.Api.Models.Response;
 using NURE.Schedule.Api.StaticData;
 

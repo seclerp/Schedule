@@ -11,4 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NURE.Schedule.Domain\NURE.Schedule.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.0" />
+  </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,8 +30,13 @@ namespace NURE.Schedule.Common
       return JsonConvert.DeserializeObject<T>(@string);
     }
 
-    private string MakeQueryString(IEnumerable<(string Key, string Value)> queryParansKeyValues)
+    private string MakeQueryString(ICollection<(string Key, string Value)> queryParansKeyValues)
     {
+      if (queryParansKeyValues is null || queryParansKeyValues.Count == 0)
+      {
+        return "";
+      }
+      
       var sb = new StringBuilder("?");
 
       foreach (var kv in queryParansKeyValues)

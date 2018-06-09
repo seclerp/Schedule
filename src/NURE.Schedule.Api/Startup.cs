@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Text;
 using Autofac;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
@@ -24,6 +25,9 @@ namespace NURE.Schedule.Api
     {
       services.AddMvc();
       services.AddAutoMapper();
+      
+      // Configure Windows-1251 encoding for Cist
+      Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
     }
 
     // ConfigureContainer is where you can register things directly

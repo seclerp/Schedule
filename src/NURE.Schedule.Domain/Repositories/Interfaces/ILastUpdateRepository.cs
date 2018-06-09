@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using NURE.Schedule.Domain.Entities;
 
-namespace NURE.Schedule.Domain.Repositories
+namespace NURE.Schedule.Domain.Repositories.Interfaces
 {
   public interface ILastUpdateRepository
   {

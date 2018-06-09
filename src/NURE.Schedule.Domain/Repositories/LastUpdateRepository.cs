@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
 using NURE.Schedule.Domain.Entities;
+using NURE.Schedule.Domain.Repositories.Interfaces;
 
 namespace NURE.Schedule.Domain.Repositories
 {
@@ -30,7 +31,7 @@ namespace NURE.Schedule.Domain.Repositories
       var sql = $"SELECT * FROM {Table} WHERE Id = @Id";
       
       return (await _connection.QueryAsync<LastUpdateEntity>(sql, new { Id = id }))
-        .Single();
+        .FirstOrDefault();
     }
 
     public async Task AddAsync(LastUpdateEntity entity)

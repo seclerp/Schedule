@@ -5,6 +5,8 @@ using NURE.Schedule.Domain.CistApi.Repositories;
 using NURE.Schedule.Domain.CistApi.Repositories.Interfaces;
 using NURE.Schedule.Domain.Repositories;
 using NURE.Schedule.Domain.Repositories.Interfaces;
+using NURE.Schedule.Services;
+using NURE.Schedule.Services.Interfaces;
 
 namespace NURE.Schedule.Api.Configuration
 {
@@ -13,6 +15,7 @@ namespace NURE.Schedule.Api.Configuration
     protected override void Load(ContainerBuilder builder)
     {
       RegisterRepositories(builder);
+      RegisterServices(builder);
     }
 
     private void RegisterRepositories(ContainerBuilder builder)
@@ -20,17 +23,26 @@ namespace NURE.Schedule.Api.Configuration
       builder.RegisterType<CistRepository>()
         .As<ICistRepository>();
       
-      builder.RegisterType<TeachersRepository>()
-        .As<ITeachersRepository>();
-      
-      builder.RegisterType<GroupsRepository>()
-        .As<IGroupsRepository>();
+      builder.RegisterType<SearchItemRepository>()
+        .As<ISearchItemRepository>();
       
       builder.RegisterType<LastUpdateRepository>()
         .As<ILastUpdateRepository>();
       
       builder.RegisterType<EventsRepository>()
         .As<IEventsRepository>();
+    }
+    
+    private void RegisterServices(ContainerBuilder builder)
+    {
+      builder.RegisterType<SearchService>()
+        .As<ISearchService>();
+      
+      builder.RegisterType<CistService>()
+        .As<ICistService>();
+      
+      builder.RegisterType<RelevanceService>()
+        .As<IRelevanceService>();
     }
   }
 }
