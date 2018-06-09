@@ -5,6 +5,7 @@ namespace NURE.Schedule.Domain.Entities
 {
   public class EventEntity
   {
+    public long Id { get; set; }
     public long SubjectId { get; set; }
     public DateTime StartTime { get; set; }
     public DateTime EndTime { get; set; }

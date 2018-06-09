@@ -1,12 +1,11 @@
 ﻿using System.Data;
-using System.Data.SqlClient;
 using Autofac;
-using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MySql.Data.MySqlClient;
 using NURE.Schedule.Api.Configuration;
 
 namespace NURE.Schedule.Api
@@ -37,8 +36,12 @@ namespace NURE.Schedule.Api
     {
       builder.RegisterModule(new AutofacModule());
       
-      // For Dapper
-      builder.RegisterType<SqlConnection>()
+      RegisterDbConnection(builder);
+    }
+
+    private void RegisterDbConnection(ContainerBuilder builder)
+    {
+      builder.RegisterType<MySqlConnection>()
         .As<IDbConnection>()
         .WithParameter("connectionString", Configuration.GetConnectionString("Default"));
     }
