@@ -20,6 +20,7 @@ namespace NURE.Schedule.Api
 
     public static IWebHost BuildWebHost(string[] args) =>
       WebHost.CreateDefaultBuilder(args)
+        .ConfigureServices(services => services.AddAutofac())
         .UseStartup<Startup>()
         .Build();
   }

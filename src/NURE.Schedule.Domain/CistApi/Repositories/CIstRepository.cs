@@ -1,12 +1,12 @@
 ﻿using System.Threading.Tasks;
 using NURE.Schedule.Common;
 using NURE.Schedule.Domain.CistApi.Events;
+using NURE.Schedule.Domain.CistApi.Repositories.Interfaces;
 using NURE.Schedule.Domain.CistApi.Structure;
-using NURE.Schedule.Domain.Interfaces;
 
-namespace NURE.Schedule.Domain.CistApi
+namespace NURE.Schedule.Domain.CistApi.Repositories
 {
-  public class CistR2pository : ICistRepository
+  public class CistRepository : ICistRepository
   {
     private const string CistApiRoot             = "http://cist.nure.ua/ias/app/tt/";
     private const string GetTeachersInfoMethod   = "P_API_PODR_JSON";
@@ -16,7 +16,7 @@ namespace NURE.Schedule.Domain.CistApi
     
     private WebClient _client;
 
-    public CistR2pository()
+    public CistRepository()
     {
       _client = new WebClient();
     }

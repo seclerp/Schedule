@@ -1,10 +1,11 @@
-﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
+﻿using System.Data;
+using Autofac;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MySql.Data.MySqlClient;
 using NURE.Schedule.Api.Configuration;
 
 namespace NURE.Schedule.Api
@@ -23,7 +24,6 @@ namespace NURE.Schedule.Api
     {
       services.AddMvc();
       services.AddAutoMapper();
-      services.AddAutofac();
     }
 
     // ConfigureContainer is where you can register things directly
@@ -35,6 +35,15 @@ namespace NURE.Schedule.Api
     public void ConfigureContainer(ContainerBuilder builder)
     {
       builder.RegisterModule(new AutofacModule());
+      
+      RegisterDbConnection(builder);
+    }
+
+    private void RegisterDbConnection(ContainerBuilder builder)
+    {
+      builder.RegisterType<MySqlConnection>()
+        .As<IDbConnection>()
+        .WithParameter("connectionString", Configuration.GetConnectionString("Default"));
     }
     
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
