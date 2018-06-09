@@ -23,7 +23,6 @@ namespace NURE.Schedule.Api
     {
       services.AddMvc();
       services.AddAutoMapper();
-      services.AddAutofac();
     }
 
     // ConfigureContainer is where you can register things directly

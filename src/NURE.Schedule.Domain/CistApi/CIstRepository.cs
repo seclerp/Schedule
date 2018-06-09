@@ -6,7 +6,7 @@ using NURE.Schedule.Domain.Interfaces;
 
 namespace NURE.Schedule.Domain.CistApi
 {
-  public class CistR2pository : ICistRepository
+  public class CistRepository : ICistRepository
   {
     private const string CistApiRoot             = "http://cist.nure.ua/ias/app/tt/";
     private const string GetTeachersInfoMethod   = "P_API_PODR_JSON";
@@ -16,7 +16,7 @@ namespace NURE.Schedule.Domain.CistApi
     
     private WebClient _client;
 
-    public CistR2pository()
+    public CistRepository()
     {
       _client = new WebClient();
     }
