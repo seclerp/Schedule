@@ -5,6 +5,7 @@ namespace NURE.Schedule.Api.Models.Response
 {
   public class StaticDataResponseModel
   {
-    public Dictionary<EventType, string> EventTypesColors { get; set; }
+    public Dictionary<EventType, string> EventTypeColors { get; set; }
+    public Dictionary<EventType, string> EventTypeNames { get; set; }
   }
 }

@@ -9,7 +9,11 @@ namespace NURE.Schedule.Api.Controllers
   {
     public StaticDataResponseModel Get()
     {
-      return new StaticDataResponseModel { EventTypesColors = EventTypeColors.Colors };
+      return new StaticDataResponseModel
+      {
+        EventTypeColors = EventTypeStaticData.Colors,
+        EventTypeNames = EventTypeStaticData.Names
+      };
     }
   }
 }
