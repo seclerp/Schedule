@@ -15,14 +15,14 @@ namespace NURE.Schedule.Common
     {
       _client = new HttpClient();
     }
-    
+
     public async Task<string> GetStringAsync(string url, params (string Key, string Value)[] queryParansKeyValues)
     {
       var query = MakeQueryString(queryParansKeyValues);
 
       return await _client.GetStringAsync($"{url}{query}");
     }
-    
+
     public async Task<T> GetAsync<T>(string url, params (string Key, string Value)[] queryParansKeyValues)
     {
       var @string = await GetStringAsync(url, queryParansKeyValues);
@@ -36,7 +36,7 @@ namespace NURE.Schedule.Common
       {
         return "";
       }
-      
+
       var sb = new StringBuilder("?");
 
       foreach (var kv in queryParansKeyValues)

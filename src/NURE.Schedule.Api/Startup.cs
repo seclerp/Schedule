@@ -25,7 +25,7 @@ namespace NURE.Schedule.Api
     {
       services.AddMvc();
       services.AddAutoMapper();
-      
+
       // Configure Windows-1251 encoding for Cist
       Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
     }
@@ -39,7 +39,7 @@ namespace NURE.Schedule.Api
     public void ConfigureContainer(ContainerBuilder builder)
     {
       builder.RegisterModule(new AutofacModule());
-      
+
       RegisterDbConnection(builder);
     }
 
@@ -49,7 +49,7 @@ namespace NURE.Schedule.Api
         .As<IDbConnection>()
         .WithParameter("connectionString", Configuration.GetConnectionString("Default"));
     }
-    
+
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {

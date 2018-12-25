@@ -25,7 +25,7 @@ namespace NURE.Schedule.Services
 
       return !IsNeedUpdate(lastTeachersUpdateEntity.DateTime);
     }
-    
+
     private bool IsNeedUpdate(DateTime timeOfLastUpdate)
     {
       // Cist API update schedule every day at 5:00 AM
@@ -38,10 +38,10 @@ namespace NURE.Schedule.Services
         // Yesterday
         lastCistUpdateUnix -= 60 * 60 * 24;
       }
-      
+
       var diff = lastUpdateTimeUnix - lastCistUpdateUnix;
 
-      // If last update time less than lastCistUpdateUnix, and now time is bigger than 5:00 
+      // If last update time less than lastCistUpdateUnix, and now time is bigger than 5:00
       return diff < 0;
     }
 

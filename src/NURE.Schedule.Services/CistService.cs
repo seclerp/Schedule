@@ -18,7 +18,7 @@ namespace NURE.Schedule.Services
     public async Task<IEnumerable<Teacher>> GetTeachersAsync()
     {
       var result = new List<Teacher>();
-      
+
       var newTeachersInfo = await _repository.GetTeachersUniversityInfoAsync();
 
       foreach (var faculty in newTeachersInfo.University.Faculties)
@@ -37,11 +37,11 @@ namespace NURE.Schedule.Services
 
       return result;
     }
-    
+
     public async Task<IEnumerable<Group>> GetGroupsAsync()
     {
       var result = new List<Group>();
-      
+
       var newTeachersInfo = await _repository.GetGroupsUniversityInfoAsync();
 
       foreach (var faculty in newTeachersInfo.University.Faculties)
@@ -58,7 +58,7 @@ namespace NURE.Schedule.Services
               }
             }
           }
-          
+
           if (!(direction.Specialities is null))
           {
             foreach (var speciality in direction.Specialities)
@@ -74,7 +74,7 @@ namespace NURE.Schedule.Services
           }
         }
       }
-      
+
       return result;
     }
   }

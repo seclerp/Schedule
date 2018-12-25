@@ -14,12 +14,12 @@ namespace NURE.Schedule.Api.Configuration
         .ForMember(x => x.Value, y => y.MapFrom(s => s.FullValue))
         .ForMember(x => x.ShortValue, y => y.MapFrom(s => s.Value))
         .ForMember(x => x.TimeTableId, y => y.MapFrom(s => s.Id));
-      
+
       CreateMap<Teacher, SearchItemEntity>()
         .ForMember(x => x.Value, y => y.MapFrom(s => s.ShortName))
         .ForMember(x => x.FullValue, y => y.MapFrom(s => s.FullName))
         .ForMember(x => x.ItemType, y => y.MapFrom(_ => SearchItemType.Teacher));
-      
+
       CreateMap<Group, SearchItemEntity>()
         .ForMember(x => x.Value, y => y.MapFrom(s => s.Name))
         .ForMember(x => x.FullValue, y => y.MapFrom(s => s.Name))

@@ -36,7 +36,7 @@ namespace NURE.Schedule.Api.StaticData
 
       {EventType.CourseWork, "8FD3FC"}
     };
-    
+
     public static Dictionary<EventType, string> Names = new Dictionary<EventType, string>()
     {
       {EventType.Lecture, "Лекция"},

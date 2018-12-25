@@ -16,7 +16,7 @@ namespace NURE.Schedule.Api.Controllers
     {
       _service = service;
     }
-    
+
     public async Task<IEnumerable<SearchResultModel>> GetAsync(
       [FromQuery] SearchScheduleRequestModel model
     )

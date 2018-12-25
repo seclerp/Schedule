@@ -9,7 +9,7 @@ namespace NURE.Schedule.Domain.CistApi.Structure
 
     [JsonProperty("full_name")]
     public string FullName { get; set; }
-    
+
     [JsonProperty("faculties")]
     public Faculty[] Faculties { get; set; }
   }

@@ -11,7 +11,7 @@ namespace NURE.Schedule.Domain.Repositories
   public class EventsRepository : IEventsRepository
   {
     private const string Table = "events";
-    
+
     private IDbConnection _connection;
 
     public EventsRepository(IDbConnection connection)
@@ -22,7 +22,7 @@ namespace NURE.Schedule.Domain.Repositories
     public async Task<IEnumerable<EventEntity>> GetAllAsync(long timeTableId)
     {
       var sql = $"SELECT * FROM {Table} WHERE Id = @Id";
-      
+
       return await _connection.QueryAsync<EventEntity>(sql, new { Id = timeTableId });
     }
 
@@ -41,18 +41,18 @@ namespace NURE.Schedule.Domain.Repositories
 
       await _connection.ExecuteAsync(sql, entity);
     }
-    
+
     public async Task RemoveAllAsync(long timeTableId)
     {
       var sql = $"DELETE FROM {Table} WHERE Id = @Id";
-      
+
       await _connection.ExecuteAsync(sql, new { Id = timeTableId });
     }
-    
+
     public async Task RemoveAllAsync()
     {
       var sql = $"DELETE FROM {Table}";
-      
+
       await _connection.ExecuteAsync(sql);
     }
   }

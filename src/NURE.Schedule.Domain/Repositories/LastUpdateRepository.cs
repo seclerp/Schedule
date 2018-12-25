@@ -11,7 +11,7 @@ namespace NURE.Schedule.Domain.Repositories
   public class LastUpdateRepository : ILastUpdateRepository
   {
     private const string Table = "last_updates";
-    
+
     private IDbConnection _connection;
 
     public LastUpdateRepository(IDbConnection connection)
@@ -22,14 +22,14 @@ namespace NURE.Schedule.Domain.Repositories
     public async Task<IEnumerable<LastUpdateEntity>> GetAllAsync()
     {
       var sql = $"SELECT * FROM {Table}";
-      
+
       return await _connection.QueryAsync<LastUpdateEntity>(sql);
     }
-    
+
     public async Task<LastUpdateEntity> GetAsync(long id)
     {
       var sql = $"SELECT * FROM {Table} WHERE Id = @Id";
-      
+
       return (await _connection.QueryAsync<LastUpdateEntity>(sql, new { Id = id }))
         .FirstOrDefault();
     }
@@ -40,7 +40,7 @@ namespace NURE.Schedule.Domain.Repositories
 
       await _connection.ExecuteAsync(sql, entity);
     }
-    
+
     public async Task UpdateAsync(LastUpdateEntity entity)
     {
       var sql = $"UPDATE {Table} SET DateTime = @DateTime WHERE Id = @Id";
@@ -51,14 +51,14 @@ namespace NURE.Schedule.Domain.Repositories
     public async Task RemoveAsync(long id)
     {
       var sql = $"DELETE FROM {Table} WHERE Id = @Id";
-      
+
       await _connection.ExecuteAsync(sql, new { Id = id });
     }
-    
+
     public async Task RemoveAllAsync()
     {
       var sql = $"DELETE FROM {Table} WHERE TRUE";
-      
+
       await _connection.ExecuteAsync(sql);
     }
   }
