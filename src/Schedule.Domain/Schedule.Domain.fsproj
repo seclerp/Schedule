@@ -15,4 +15,8 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Schedule.Shared\Schedule.Shared.fsproj" />
+    </ItemGroup>
+
 </Project>

@@ -1,6 +1,5 @@
-namespace src
+module Startup
 
-open System.Text
 open Domain.ScheduleContext
 open Microsoft.AspNetCore.Builder
 open Microsoft.AspNetCore.Hosting
@@ -8,6 +7,7 @@ open Microsoft.AspNetCore.Mvc
 open Microsoft.Extensions.Configuration
 open Microsoft.Extensions.DependencyInjection
 open Microsoft.EntityFrameworkCore
+open Swashbuckle.AspNetCore
 open Swashbuckle.AspNetCore.Swagger
 
 type Startup private () =
@@ -20,10 +20,9 @@ type Startup private () =
         // Add framework services.
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1) |> ignore
         services.AddSwaggerGen(fun c ->
-                    c.SwaggerDoc("v1", new Info())
-                ) |> ignore
+            c.SwaggerDoc("v1", new Info())
+        ) |> ignore
         services.AddEntityFrameworkMySql() |> ignore
-        services.AddSingleton<IConfiguration>(this.Configuration) |> ignore
         services.AddDbContext<ScheduleContext>(
             fun o -> o.UseMySql(this.Configuration.GetValue<string>("ConnectionStrings:Schedule"),
                                 fun o -> o.MigrationsAssembly("Schedule.Migrations") |> ignore
@@ -37,9 +36,7 @@ type Startup private () =
         else
             app.UseHsts() |> ignore
             app.UseHttpsRedirection() |> ignore
-        
-        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance)
-            
+
         app.UseSwagger() |> ignore
         app.UseSwaggerUI(fun c -> c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1")) |> ignore
         app.UseMvc() |> ignore

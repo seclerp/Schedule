@@ -3,8 +3,6 @@ module Domain.Models
 open System
 open System.Collections.Generic
 
-type long = int64
-
 type EventType =
     | Lecture       = 0  // лекция (базовый тип, цвет желтый, FEFEEA) – lecture;
     | Lecture2      = 1  // лекция установочная, первая (этот подтип есть у заочников);
@@ -35,6 +33,11 @@ type EventType =
     
     | CourseWork    = 60 // КП/КР (базовый тип) – course_work.
 
+type IdentityType =
+    | Teacher = 0
+    | Group = 1
+    | Auditory = 2
+
 type [<CLIMutable>] Event = {
     Id        : long
     Date      : DateTime
@@ -48,6 +51,7 @@ and [<CLIMutable>] Identity = {
     Id        : long
     ShortName : string
     FullName  : string
+    Type      : IdentityType
 }
 and [<CLIMutable>] Auditory = {
     Id        : long

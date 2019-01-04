@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Schedule.DataAccess.Migrations
+namespace Schedule.Migrations.Migrations
 {
     public partial class Initial : Migration
     {
@@ -73,6 +73,7 @@ namespace Schedule.DataAccess.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ShortName = table.Column<string>(nullable: true),
                     FullName = table.Column<string>(nullable: true),
+                    Type = table.Column<int>(nullable: false),
                     EventId = table.Column<long>(nullable: true),
                     EventId1 = table.Column<long>(nullable: true)
                 },

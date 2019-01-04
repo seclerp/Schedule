@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Schedule.DataAccess.Migrations
+namespace Schedule.Migrations.Migrations
 {
     [DbContext(typeof(ScheduleContext.ScheduleContext))]
-    [Migration("20190102185150_Initial")]
+    [Migration("20190104213739_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,6 +69,8 @@ namespace Schedule.DataAccess.Migrations
                     b.Property<string>("FullName");
 
                     b.Property<string>("ShortName");
+
+                    b.Property<int>("Type");
 
                     b.HasKey("Id");
 

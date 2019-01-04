@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Schedule.DataAccess.Migrations
+namespace Schedule.Migrations.Migrations
 {
     [DbContext(typeof(ScheduleContext.ScheduleContext))]
     partial class ScheduleContextModelSnapshot : ModelSnapshot
@@ -67,6 +67,8 @@ namespace Schedule.DataAccess.Migrations
                     b.Property<string>("FullName");
 
                     b.Property<string>("ShortName");
+
+                    b.Property<int>("Type");
 
                     b.HasKey("Id");
 

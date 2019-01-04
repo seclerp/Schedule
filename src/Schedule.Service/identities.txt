@@ -1,0 +1,2202 @@
+{ Id: 2; Type: Teacher; Name: Барибіна Л. М. }
+{ Id: 4; Type: Teacher; Name: Широкопетлєва М. С. }
+{ Id: 6; Type: Teacher; Name: Конькова Т. М. }
+{ Id: 7; Type: Teacher; Name: Демченко В. А. }
+{ Id: 9; Type: Teacher; Name: Мельнікова Р. В. }
+{ Id: 10; Type: Teacher; Name: Ширяєв А. В. }
+{ Id: 13; Type: Teacher; Name: Шатовська Т. Б. }
+{ Id: 17; Type: Teacher; Name: Євланов М. В. }
+{ Id: 26; Type: Teacher; Name: Явтушенко В. М. }
+{ Id: 34; Type: Teacher; Name: Усик В. В. }
+{ Id: 36; Type: Teacher; Name: Ощепков М. Ю. }
+{ Id: 37; Type: Teacher; Name: Пащенко О. Г. }
+{ Id: 38; Type: Teacher; Name: Тітаренко Л. О. }
+{ Id: 44; Type: Teacher; Name: Гребенюк В. О. }
+{ Id: 47; Type: Teacher; Name: Цимбал О. М. }
+{ Id: 48; Type: Teacher; Name: Мельникова О. А. }
+{ Id: 50; Type: Teacher; Name: Комарова Т. Г. }
+{ Id: 52; Type: Teacher; Name: Брагін Я. Ю. }
+{ Id: 54; Type: Teacher; Name: Величко О. М. }
+{ Id: 56; Type: Teacher; Name: Хромих Р. В. }
+{ Id: 58; Type: Teacher; Name: Дашенкова Н. М. }
+{ Id: 63; Type: Teacher; Name: Кулак Е. М. }
+{ Id: 65; Type: Teacher; Name: Запорожець О. В. }
+{ Id: 67; Type: Teacher; Name: Сизонова С. М. }
+{ Id: 69; Type: Teacher; Name: Дацок О. М. }
+{ Id: 71; Type: Teacher; Name: Буковська І. Ю. }
+{ Id: 73; Type: Teacher; Name: Лук`янова В. А. }
+{ Id: 76; Type: Teacher; Name: Семашко С. А. }
+{ Id: 81; Type: Teacher; Name: Янковський О. А. }
+{ Id: 83; Type: Teacher; Name: Прібильнова І. Б. }
+{ Id: 84; Type: Teacher; Name: Каук В. І. }
+{ Id: 86; Type: Teacher; Name: Білоус Н. В. }
+{ Id: 87; Type: Teacher; Name: Деркач Г. О. }
+{ Id: 88; Type: Teacher; Name: Кулішова Н. Є. }
+{ Id: 89; Type: Teacher; Name: Мірошниченко Л. І. }
+{ Id: 90; Type: Teacher; Name: Головкіна Л. В. }
+{ Id: 91; Type: Teacher; Name: Воргуль О. В. }
+{ Id: 93; Type: Teacher; Name: Гребеннік І. В. }
+{ Id: 100; Type: Teacher; Name: Коноваленко О. К. }
+{ Id: 101; Type: Teacher; Name: Шалаєва В. В. }
+{ Id: 106; Type: Teacher; Name: Єрохін А. Л. }
+{ Id: 108; Type: Teacher; Name: Кутузов М. Ю. }
+{ Id: 110; Type: Teacher; Name: Павленко Є. П. }
+{ Id: 112; Type: Teacher; Name: Тучин О. В. }
+{ Id: 114; Type: Teacher; Name: Пономаренко Л. В. }
+{ Id: 115; Type: Teacher; Name: Губін В. О. }
+{ Id: 118; Type: Teacher; Name: Сергієнко Н. О. }
+{ Id: 128; Type: Teacher; Name: Панфьорова І. Ю. }
+{ Id: 131; Type: Teacher; Name: Захватова Т. Є. }
+{ Id: 133; Type: Teacher; Name: Чалий С. Ф. }
+{ Id: 152; Type: Teacher; Name: Міхнова А. В. }
+{ Id: 158; Type: Teacher; Name: Пересада О. В. }
+{ Id: 160; Type: Teacher; Name: Литвинова Є. І. }
+{ Id: 162; Type: Teacher; Name: Матат О. О. }
+{ Id: 163; Type: Teacher; Name: Пахалкова-Соіч Т. В. }
+{ Id: 168; Type: Teacher; Name: Ремаєва О. О. }
+{ Id: 169; Type: Teacher; Name: Павлов П. Ф. }
+{ Id: 172; Type: Teacher; Name: Шубін І. Ю. }
+{ Id: 174; Type: Teacher; Name: Мусієнко В. О. }
+{ Id: 175; Type: Teacher; Name: Чепелєва М. А. }
+{ Id: 176; Type: Teacher; Name: Назаренко В. А. }
+{ Id: 178; Type: Teacher; Name: Филипенко О. І. }
+{ Id: 181; Type: Teacher; Name: Іванов В. Г. }
+{ Id: 186; Type: Teacher; Name: Золотарьов В. А. }
+{ Id: 189; Type: Teacher; Name: Мамонтов О. В. }
+{ Id: 198; Type: Teacher; Name: Кривенко С. А. }
+{ Id: 204; Type: Teacher; Name: Ребезюк Л. М. }
+{ Id: 207; Type: Teacher; Name: Тіхонова Л. А. }
+{ Id: 208; Type: Teacher; Name: Терзіян В. Я. }
+{ Id: 209; Type: Teacher; Name: Челомбітько В. Ф. }
+{ Id: 210; Type: Teacher; Name: Грицунов О. В. }
+{ Id: 219; Type: Teacher; Name: Довгопол Н. В. }
+{ Id: 222; Type: Teacher; Name: Карташов В. М. }
+{ Id: 223; Type: Teacher; Name: Єсілевський В. С. }
+{ Id: 226; Type: Teacher; Name: Алфьоров М. Є. }
+{ Id: 229; Type: Teacher; Name: Васильцова Н. В. }
+{ Id: 233; Type: Teacher; Name: Коробкіна Т. В. }
+{ Id: 235; Type: Teacher; Name: Писаренко В. М. }
+{ Id: 238; Type: Teacher; Name: Гусарова І. Г. }
+{ Id: 243; Type: Teacher; Name: Прасол І. В. }
+{ Id: 245; Type: Teacher; Name: Безкоровайний В. В. }
+{ Id: 257; Type: Teacher; Name: Саранча С. М. }
+{ Id: 260; Type: Teacher; Name: Ларченко Л. В. }
+{ Id: 263; Type: Teacher; Name: Аксак Н. Г. }
+{ Id: 271; Type: Teacher; Name: Волк М. О. }
+{ Id: 272; Type: Teacher; Name: Митцева О. С. }
+{ Id: 273; Type: Teacher; Name: Старікова Г. Г. }
+{ Id: 274; Type: Teacher; Name: Руденко Д. О. }
+{ Id: 278; Type: Teacher; Name: Гришко С. В. }
+{ Id: 288; Type: Teacher; Name: Новожилова М. В. }
+{ Id: 289; Type: Teacher; Name: Калита Н. І. }
+{ Id: 291; Type: Teacher; Name: Олійников Р. В. }
+{ Id: 295; Type: Teacher; Name: Нікітенко О. М. }
+{ Id: 296; Type: Teacher; Name: Лепейко Т. І. }
+{ Id: 297; Type: Teacher; Name: Лихограй В. Г. }
+{ Id: 301; Type: Teacher; Name: Шейко І. А. }
+{ Id: 302; Type: Teacher; Name: Кіріченко Л. О. }
+{ Id: 305; Type: Teacher; Name: Імангулова З. А. }
+{ Id: 310; Type: Teacher; Name: Вечур О. В. }
+{ Id: 311; Type: Teacher; Name: Токарєв В. В. }
+{ Id: 313; Type: Teacher; Name: Колесников Д. О. }
+{ Id: 319; Type: Teacher; Name: Калиниченко О. В. }
+{ Id: 321; Type: Teacher; Name: Рустінов В. О. }
+{ Id: 323; Type: Teacher; Name: Іванісенко І. М. }
+{ Id: 326; Type: Teacher; Name: Ревенчук І. А. }
+{ Id: 331; Type: Teacher; Name: Козіна О. А. }
+{ Id: 333; Type: Teacher; Name: Новоселов С. П. }
+{ Id: 337; Type: Teacher; Name: Омельченко С. В. }
+{ Id: 342; Type: Teacher; Name: Григор`Єв О. В. }
+{ Id: 343; Type: Teacher; Name: Саєнко В. І. }
+{ Id: 344; Type: Teacher; Name: Тер-Ованесьян В. Г. }
+{ Id: 348; Type: Teacher; Name: Посошенко В. О. }
+{ Id: 355; Type: Teacher; Name: Омельченко А. В. }
+{ Id: 359; Type: Teacher; Name: Гороховатський В. О. }
+{ Id: 369; Type: Teacher; Name: Єгоров А. Б. }
+{ Id: 371; Type: Teacher; Name: Баркова І. М. }
+{ Id: 372; Type: Teacher; Name: Дудар З. В. }
+{ Id: 373; Type: Teacher; Name: Ігуменцева Н. В. }
+{ Id: 374; Type: Teacher; Name: Захаров І. П. }
+{ Id: 386; Type: Teacher; Name: Клімова Н. П. }
+{ Id: 387; Type: Teacher; Name: Вишняк М. Ю. }
+{ Id: 389; Type: Teacher; Name: Семенець В. В. }
+{ Id: 391; Type: Teacher; Name: Сакало С. М. }
+{ Id: 393; Type: Teacher; Name: Дорошенко В. О. }
+{ Id: 394; Type: Teacher; Name: Афанасьєв В. О. }
+{ Id: 395; Type: Teacher; Name: Сінельнікова Т. Ф. }
+{ Id: 396; Type: Teacher; Name: Філатов В. О. }
+{ Id: 402; Type: Teacher; Name: Міхнов Д. К. }
+{ Id: 404; Type: Teacher; Name: Смицька Т. В. }
+{ Id: 405; Type: Teacher; Name: П`Ятикоп І. Б. }
+{ Id: 407; Type: Teacher; Name: Зубков О. В. }
+{ Id: 408; Type: Teacher; Name: Олейніков В. М. }
+{ Id: 412; Type: Teacher; Name: Безугла Г. Є. }
+{ Id: 413; Type: Teacher; Name: Євсєєва О. Ю. }
+{ Id: 419; Type: Teacher; Name: Міхаль О. П. }
+{ Id: 420; Type: Teacher; Name: Ситніков Д. Е. }
+{ Id: 423; Type: Teacher; Name: Лисицька І. В. }
+{ Id: 426; Type: Teacher; Name: Бондар Д. В. }
+{ Id: 429; Type: Teacher; Name: Подгайко О. І. }
+{ Id: 437; Type: Teacher; Name: Висоцька О. В. }
+{ Id: 444; Type: Teacher; Name: Крівєнцова О. В. }
+{ Id: 445; Type: Teacher; Name: Савіна І. І. }
+{ Id: 448; Type: Teacher; Name: Москалець М. В. }
+{ Id: 459; Type: Teacher; Name: Щербина О. О. }
+{ Id: 466; Type: Teacher; Name: Колтун Ю. М. }
+{ Id: 467; Type: Teacher; Name: Костромицький А. І. }
+{ Id: 468; Type: Teacher; Name: Безрук В. М. }
+{ Id: 472; Type: Teacher; Name: Сидоренко Г. М. }
+{ Id: 473; Type: Teacher; Name: Мельников О. Ф. }
+{ Id: 480; Type: Teacher; Name: Немченко В. П. }
+{ Id: 482; Type: Teacher; Name: Соловйова К. О. }
+{ Id: 483; Type: Teacher; Name: Кукоба А. В. }
+{ Id: 488; Type: Teacher; Name: Мельнікова Л. І. }
+{ Id: 493; Type: Teacher; Name: Бородін О. В. }
+{ Id: 494; Type: Teacher; Name: Бодянський Є. В. }
+{ Id: 497; Type: Teacher; Name: Корабльов М. М. }
+{ Id: 502; Type: Teacher; Name: Мачехін Ю. П. }
+{ Id: 503; Type: Teacher; Name: Лучанінов А. І. }
+{ Id: 504; Type: Teacher; Name: Руженцев І. В. }
+{ Id: 511; Type: Teacher; Name: Удовенко С. Г. }
+{ Id: 519; Type: Teacher; Name: Сабурова С. О. }
+{ Id: 526; Type: Teacher; Name: Руденко О. Г. }
+{ Id: 529; Type: Teacher; Name: Євстратов М. Д. }
+{ Id: 535; Type: Teacher; Name: Чурілов О. І. }
+{ Id: 541; Type: Teacher; Name: Дзюбенко В. Ф. }
+{ Id: 543; Type: Teacher; Name: Федоренко Є. П. }
+{ Id: 546; Type: Teacher; Name: Ткаченко В. П. }
+{ Id: 548; Type: Teacher; Name: Коритцев І. В. }
+{ Id: 549; Type: Teacher; Name: Анпілогов Є. М. }
+{ Id: 552; Type: Teacher; Name: Бєлявцев В. Б. }
+{ Id: 556; Type: Teacher; Name: Горбачов В. О. }
+{ Id: 567; Type: Teacher; Name: Закорін В. О. }
+{ Id: 568; Type: Teacher; Name: Буданова І. О. }
+{ Id: 570; Type: Teacher; Name: Калінін В. В. }
+{ Id: 571; Type: Teacher; Name: Свідерська Л. І. }
+{ Id: 572; Type: Teacher; Name: Олександров Ю. М. }
+{ Id: 573; Type: Teacher; Name: Сергієнко Т. М. }
+{ Id: 575; Type: Teacher; Name: Меняйло О. Д. }
+{ Id: 584; Type: Teacher; Name: Стороженко В. О. }
+{ Id: 587; Type: Teacher; Name: Марчук В. С. }
+{ Id: 588; Type: Teacher; Name: Рибалка А. І. }
+{ Id: 589; Type: Teacher; Name: Соколова Л. В. }
+{ Id: 608; Type: Teacher; Name: Умяров К. Т. }
+{ Id: 614; Type: Teacher; Name: Ковальчук В. К. }
+{ Id: 617; Type: Teacher; Name: Колесник Б. О. }
+{ Id: 625; Type: Teacher; Name: Імангулов А. І. }
+{ Id: 686; Type: Teacher; Name: Замула О. А. }
+{ Id: 690; Type: Teacher; Name: Шкіль О. С. }
+{ Id: 694; Type: Teacher; Name: Шергін В. Л. }
+{ Id: 700; Type: Teacher; Name: Бакаленко О. А. }
+{ Id: 704; Type: Teacher; Name: Бєлова Н. В. }
+{ Id: 705; Type: Teacher; Name: Стороженко О. В. }
+{ Id: 706; Type: Teacher; Name: Тохтамиш Н. І. }
+{ Id: 717; Type: Teacher; Name: Валенда Н. А. }
+{ Id: 727; Type: Teacher; Name: Яшков І. О. }
+{ Id: 728; Type: Teacher; Name: Омельченко В. В. }
+{ Id: 729; Type: Teacher; Name: Жидкова О. О. }
+{ Id: 740; Type: Teacher; Name: Гурін В. М. }
+{ Id: 742; Type: Teacher; Name: Полозова Т. В. }
+{ Id: 743; Type: Teacher; Name: Ечкенко Л. Б. }
+{ Id: 745; Type: Teacher; Name: Лисакевич В. В. }
+{ Id: 747; Type: Teacher; Name: Церковна О. В. }
+{ Id: 749; Type: Teacher; Name: Оршацька Н. В. }
+{ Id: 753; Type: Teacher; Name: Білетченко Ю. П. }
+{ Id: 755; Type: Teacher; Name: Горбенко І. Д. }
+{ Id: 761; Type: Teacher; Name: Гусятін В. М. }
+{ Id: 796; Type: Teacher; Name: Лесик Л. О. }
+{ Id: 808; Type: Teacher; Name: Березуцька Н. Л. }
+{ Id: 809; Type: Teacher; Name: Малінін О. П. }
+{ Id: 811; Type: Teacher; Name: Панченко О. Ю. }
+{ Id: 812; Type: Teacher; Name: Ключник І. І. }
+{ Id: 813; Type: Teacher; Name: Єгорова І. М. }
+{ Id: 816; Type: Teacher; Name: Васянович А. В. }
+{ Id: 818; Type: Teacher; Name: Хаханов В. І. }
+{ Id: 827; Type: Teacher; Name: Сукнов М. П. }
+{ Id: 835; Type: Teacher; Name: Четвериков Г. Г. }
+{ Id: 840; Type: Teacher; Name: Салій М. В. }
+{ Id: 842; Type: Teacher; Name: Скляр О. І. }
+{ Id: 843; Type: Teacher; Name: Козиренко С. І. }
+{ Id: 846; Type: Teacher; Name: Мешков С. М. }
+{ Id: 847; Type: Teacher; Name: Губа М. І. }
+{ Id: 848; Type: Teacher; Name: Кадацька О. Й. }
+{ Id: 850; Type: Teacher; Name: Рябова Н. В. }
+{ Id: 852; Type: Teacher; Name: Манаков В. П. }
+{ Id: 853; Type: Teacher; Name: Чайніков С. І. }
+{ Id: 857; Type: Teacher; Name: Чурюмов Г. І. }
+{ Id: 859; Type: Teacher; Name: Гетманова О. Є. }
+{ Id: 861; Type: Teacher; Name: Середа О. Г. }
+{ Id: 868; Type: Teacher; Name: Стоян Ю. Г. }
+{ Id: 899; Type: Teacher; Name: Бороховський Є. М. }
+{ Id: 928; Type: Teacher; Name: Лободюк В. І. }
+{ Id: 930; Type: Teacher; Name: Дзюбенко М. І. }
+{ Id: 941; Type: Teacher; Name: Кривуля Г. Ф. }
+{ Id: 950; Type: Teacher; Name: Литвин О. Г. }
+{ Id: 952; Type: Teacher; Name: Колосова С. В. }
+{ Id: 955; Type: Teacher; Name: Костін Ю. Д. }
+{ Id: 957; Type: Teacher; Name: Путятін Є. П. }
+{ Id: 959; Type: Teacher; Name: Рибалко О. М. }
+{ Id: 965; Type: Teacher; Name: Левикін В. М. }
+{ Id: 975; Type: Teacher; Name: Невлюдов І. Ш. }
+{ Id: 976; Type: Teacher; Name: Гальцов Ю. П. }
+{ Id: 983; Type: Teacher; Name: Гордієнко Ю. О. }
+{ Id: 990; Type: Teacher; Name: Козарь А. І. }
+{ Id: 998; Type: Teacher; Name: Должиков В. В. }
+{ Id: 1004; Type: Teacher; Name: Бих А. І. }
+{ Id: 1032; Type: Teacher; Name: Павленко Ю. Ф. }
+{ Id: 1042; Type: Teacher; Name: Штанько В. І. }
+{ Id: 1044; Type: Teacher; Name: Сова Г. В. }
+{ Id: 1046; Type: Teacher; Name: Токарський П. Л. }
+{ Id: 1048; Type: Teacher; Name: Кривошеєва Г. М. }
+{ Id: 1051; Type: Teacher; Name: Зеленін А. М. }
+{ Id: 1055; Type: Teacher; Name: Качко О. Г. }
+{ Id: 1059; Type: Teacher; Name: Тевяшев А. Д. }
+{ Id: 1071; Type: Teacher; Name: Нерух О. Г. }
+{ Id: 1073; Type: Teacher; Name: Самофалов Л. Д. }
+{ Id: 1075; Type: Teacher; Name: Кузьомін О. Я. }
+{ Id: 1079; Type: Teacher; Name: Замірець М. В. }
+{ Id: 1085; Type: Teacher; Name: Зарудний О. А. }
+{ Id: 1096; Type: Teacher; Name: Завизіступ Ю. Ю. }
+{ Id: 1099; Type: Teacher; Name: Танянський С. Ф. }
+{ Id: 1110; Type: Teacher; Name: Черняков Е. І. }
+{ Id: 1125; Type: Teacher; Name: Палагін В. А. }
+{ Id: 1128; Type: Teacher; Name: Сідоров Г. І. }
+{ Id: 1133; Type: Teacher; Name: Руткас А. Г. }
+{ Id: 1137; Type: Teacher; Name: Ємельянов В. В. }
+{ Id: 1142; Type: Teacher; Name: Гвоздинський А. М. }
+{ Id: 1153; Type: Teacher; Name: Тимошенко Л. П. }
+{ Id: 1156; Type: Teacher; Name: Сінотін А. М. }
+{ Id: 1158; Type: Teacher; Name: Стиценко Т. Є. }
+{ Id: 1183; Type: Teacher; Name: Лєсна Н. С. }
+{ Id: 1184; Type: Teacher; Name: Білозерова Л. Г. }
+{ Id: 1189; Type: Teacher; Name: Бондарєв В. М. }
+{ Id: 1190; Type: Teacher; Name: Гладкоскок І. Д. }
+{ Id: 1192; Type: Teacher; Name: Олейніков А. М. }
+{ Id: 1193; Type: Teacher; Name: Ліхачов С. О. }
+{ Id: 1199; Type: Teacher; Name: Борисенко В. П. }
+{ Id: 1201; Type: Teacher; Name: Торба А. А. }
+{ Id: 1204; Type: Teacher; Name: Умяров Р. Я. }
+{ Id: 1207; Type: Teacher; Name: Богдан О. М. }
+{ Id: 1209; Type: Teacher; Name: Горшанкова Т. О. }
+{ Id: 1210; Type: Teacher; Name: Єльчанінов Д. Б. }
+{ Id: 1212; Type: Teacher; Name: Дементьєва Т. І. }
+{ Id: 1214; Type: Teacher; Name: Морозова Л. Ю. }
+{ Id: 1218; Type: Teacher; Name: Романова Т. Є. }
+{ Id: 1220; Type: Teacher; Name: Вітько О. В. }
+{ Id: 1230; Type: Teacher; Name: Горячковська Г. М. }
+{ Id: 1235; Type: Teacher; Name: Халімов Г. З. }
+{ Id: 1240; Type: Teacher; Name: Орел Р. П. }
+{ Id: 1242; Type: Teacher; Name: Заболотний В. І. }
+{ Id: 1245; Type: Teacher; Name: Чумаченко С. В. }
+{ Id: 1247; Type: Teacher; Name: Товстопльот О. С. }
+{ Id: 1252; Type: Teacher; Name: Свид І. В. }
+{ Id: 1257; Type: Teacher; Name: Токарєва О. В. }
+{ Id: 1258; Type: Teacher; Name: Круковський Г. І. }
+{ Id: 1259; Type: Teacher; Name: Дідюк Н. О. }
+{ Id: 1527; Type: Teacher; Name: Росінський Д. М. }
+{ Id: 1650; Type: Teacher; Name: Чеботарьова І. Б. }
+{ Id: 1653; Type: Teacher; Name: Милютченко І. О. }
+{ Id: 1656; Type: Teacher; Name: Плотнікова М. А. }
+{ Id: 1657; Type: Teacher; Name: Карнаушенко В. П. }
+{ Id: 1658; Type: Teacher; Name: Пуди А. Ю. }
+{ Id: 1664; Type: Teacher; Name: Ворочек О. Г. }
+{ Id: 1665; Type: Teacher; Name: Савченко І. В. }
+{ Id: 1667; Type: Teacher; Name: Астраханцев А. А. }
+{ Id: 1668; Type: Teacher; Name: Покровський А. М. }
+{ Id: 1672; Type: Teacher; Name: Величко Д. А. }
+{ Id: 1675; Type: Teacher; Name: Діденко Є. В. }
+{ Id: 1676; Type: Teacher; Name: Руженцев В. І. }
+{ Id: 1683; Type: Teacher; Name: Шевченко О. Ю. }
+{ Id: 1684; Type: Teacher; Name: Гарбар М. А. }
+{ Id: 1685; Type: Teacher; Name: Курденко О. В. }
+{ Id: 1688; Type: Teacher; Name: Литвиненко А. М. }
+{ Id: 1692; Type: Teacher; Name: Майстренко Г. В. }
+{ Id: 1697; Type: Teacher; Name: Аврунін О. Г. }
+{ Id: 1700; Type: Teacher; Name: Блінкін І. Ю. }
+{ Id: 1703; Type: Teacher; Name: Кирій В. В. }
+{ Id: 1704; Type: Teacher; Name: Євсєєв В. В. }
+{ Id: 1709; Type: Teacher; Name: Малик Б. О. }
+{ Id: 1711; Type: Teacher; Name: Хаханова І. В. }
+{ Id: 1715; Type: Teacher; Name: Наумейко І. В. }
+{ Id: 1725; Type: Teacher; Name: Агеєв Д. В. }
+{ Id: 1726; Type: Teacher; Name: Федоров О. В. }
+{ Id: 1729; Type: Teacher; Name: Машталір В. П. }
+{ Id: 1732; Type: Teacher; Name: Черепанова Ю. Ю. }
+{ Id: 1733; Type: Teacher; Name: Літвінов С. М. }
+{ Id: 1740; Type: Teacher; Name: Валійова Т. Б. }
+{ Id: 1741; Type: Teacher; Name: Мартиненко Н. М. }
+{ Id: 1742; Type: Teacher; Name: Нікітіна Л. О. }
+{ Id: 1745; Type: Teacher; Name: Прокопенко Ю. В. }
+{ Id: 1758; Type: Teacher; Name: Колендовська М. М. }
+{ Id: 1774; Type: Teacher; Name: Стрельницький О. Є. }
+{ Id: 1776; Type: Teacher; Name: Олейнікова О. І. }
+{ Id: 1795; Type: Teacher; Name: Бибка О. І. }
+{ Id: 1819; Type: Teacher; Name: Гріненко Т. О. }
+{ Id: 1907; Type: Teacher; Name: Авер`Янова Л. О. }
+{ Id: 2018; Type: Teacher; Name: Галуза О. А. }
+{ Id: 2019; Type: Teacher; Name: Шевченко О. Л. }
+{ Id: 2056; Type: Teacher; Name: Аллахверанов Р. Ю. }
+{ Id: 2058; Type: Teacher; Name: Цехмістро Р. І. }
+{ Id: 2059; Type: Teacher; Name: Афанасьєва О. В. }
+{ Id: 2142; Type: Teacher; Name: Горелов Д. Ю. }
+{ Id: 2188; Type: Teacher; Name: Хондак І. І. }
+{ Id: 2197; Type: Teacher; Name: Пронюк Г. В. }
+{ Id: 2219; Type: Teacher; Name: Коваленко О. М. }
+{ Id: 2224; Type: Teacher; Name: Жемчужкіна Т. В. }
+{ Id: 2237; Type: Teacher; Name: Галат О. Б. }
+{ Id: 2249; Type: Teacher; Name: Лозовий О. Д. }
+{ Id: 2253; Type: Teacher; Name: Осіпов В. М. }
+{ Id: 2266; Type: Teacher; Name: Штефан Н. В. }
+{ Id: 2273; Type: Teacher; Name: Колесник Л. В. }
+{ Id: 2285; Type: Teacher; Name: Кравець О. В. }
+{ Id: 2287; Type: Teacher; Name: Міщеряков Ю. В. }
+{ Id: 2304; Type: Teacher; Name: Любченко В. А. }
+{ Id: 2305; Type: Teacher; Name: Яковлева О. В. }
+{ Id: 2328; Type: Teacher; Name: Манчинська Н. Б. }
+{ Id: 2329; Type: Teacher; Name: Сидоров М. В. }
+{ Id: 2331; Type: Teacher; Name: Сінельнікова О. І. }
+{ Id: 2332; Type: Teacher; Name: Смеляков С. В. }
+{ Id: 2345; Type: Teacher; Name: Стародубцев М. Г. }
+{ Id: 2348; Type: Teacher; Name: Грецьких Д. В. }
+{ Id: 2349; Type: Teacher; Name: Гавва Д. С. }
+{ Id: 2353; Type: Teacher; Name: Шейко С. О. }
+{ Id: 2354; Type: Teacher; Name: Омаров М. А. }
+{ Id: 2372; Type: Teacher; Name: Овсюченко Ю. В. }
+{ Id: 2515; Type: Teacher; Name: Рожнова Т. Г. }
+{ Id: 2613; Type: Teacher; Name: Петрова Р. В. }
+{ Id: 2908; Type: Teacher; Name: Голян В. В. }
+{ Id: 3126; Type: Teacher; Name: Гибкiна Н. В. }
+{ Id: 3296; Type: Teacher; Name: Лещинський В. О. }
+{ Id: 3448; Type: Teacher; Name: Вергун Т. І. }
+{ Id: 3453; Type: Teacher; Name: Тарапов С. І. }
+{ Id: 3480; Type: Teacher; Name: Колесникова Т. А. }
+{ Id: 3485; Type: Teacher; Name: Партика С. О. }
+{ Id: 3605; Type: Teacher; Name: Кальницька А. Ю. }
+{ Id: 3606; Type: Teacher; Name: Балагура Д. С. }
+{ Id: 3607; Type: Teacher; Name: Голобородько Ю. М. }
+{ Id: 3609; Type: Teacher; Name: Караваєв В. М. }
+{ Id: 3615; Type: Teacher; Name: Іванова В. Б. }
+{ Id: 3629; Type: Teacher; Name: Одаренко Є. М. }
+{ Id: 3630; Type: Teacher; Name: Нефьодова А. Л. }
+{ Id: 3631; Type: Teacher; Name: Ликов Ю. В. }
+{ Id: 3636; Type: Teacher; Name: Коваленко Т. М. }
+{ Id: 3642; Type: Teacher; Name: Бокарєва Ю. С. }
+{ Id: 3663; Type: Teacher; Name: Трощило О. С. }
+{ Id: 3671; Type: Teacher; Name: Токар Л. О. }
+{ Id: 3672; Type: Teacher; Name: Бадєєва Л. І. }
+{ Id: 3674; Type: Teacher; Name: Машталір С. В. }
+{ Id: 3684; Type: Teacher; Name: Верясова Г. М. }
+{ Id: 3685; Type: Teacher; Name: Фастова Н. І. }
+{ Id: 3695; Type: Teacher; Name: Бондаренко І. М. }
+{ Id: 3760; Type: Teacher; Name: Кіктєв Г. С. }
+{ Id: 4051; Type: Teacher; Name: Медяник О. М. }
+{ Id: 4053; Type: Teacher; Name: Пастушенко М. С. }
+{ Id: 4056; Type: Teacher; Name: Степанова О. В. }
+{ Id: 4060; Type: Teacher; Name: Кузнєцов Ю. О. }
+{ Id: 4067; Type: Teacher; Name: Мощенко І. О. }
+{ Id: 4068; Type: Teacher; Name: Холод Л. М. }
+{ Id: 4069; Type: Teacher; Name: Хорошайло Ю. Є. }
+{ Id: 4070; Type: Teacher; Name: Лемешко О. В. }
+{ Id: 4120; Type: Teacher; Name: Сизоненко О. Б. }
+{ Id: 4137; Type: Teacher; Name: Даниліна Г. В. }
+{ Id: 4174; Type: Teacher; Name: Журавка А. В. }
+{ Id: 1031132; Type: Teacher; Name: Штангей С. В. }
+{ Id: 1031137; Type: Teacher; Name: Терещенко І. В. }
+{ Id: 1031151; Type: Teacher; Name: Дуравкін Є. В. }
+{ Id: 1031167; Type: Teacher; Name: Андрушко Д. В. }
+{ Id: 1031230; Type: Teacher; Name: Сергієнко М. П. }
+{ Id: 1031234; Type: Teacher; Name: Циганенко В. Л. }
+{ Id: 1031264; Type: Teacher; Name: Сердюк Н. М. }
+{ Id: 1031387; Type: Teacher; Name: Носова Т. В. }
+{ Id: 1031402; Type: Teacher; Name: Сніжко Д. В. }
+{ Id: 1031403; Type: Teacher; Name: Левикін І. В. }
+{ Id: 1031804; Type: Teacher; Name: Волошина Н. О. }
+{ Id: 1036089; Type: Teacher; Name: Коваленко А. А. }
+{ Id: 1036103; Type: Teacher; Name: Філімончук Т. В. }
+{ Id: 1052931; Type: Teacher; Name: Ткачова Т. С. }
+{ Id: 1052933; Type: Teacher; Name: Лещинська І. О. }
+{ Id: 1052986; Type: Teacher; Name: Чала Л. Е. }
+{ Id: 1054678; Type: Teacher; Name: Вовк О. В. }
+{ Id: 1054680; Type: Teacher; Name: Сєвєрінов О. В. }
+{ Id: 1055749; Type: Teacher; Name: Федорченко В. М. }
+{ Id: 1260878; Type: Teacher; Name: Стрельницький О. О. }
+{ Id: 1269563; Type: Teacher; Name: Дейнеко Ж. В. }
+{ Id: 1269577; Type: Teacher; Name: Лановий О. Ф. }
+{ Id: 1271231; Type: Teacher; Name: Ієвлєва С. М. }
+{ Id: 1277526; Type: Teacher; Name: Шостко І. С. }
+{ Id: 1290582; Type: Teacher; Name: Ружицька Н. М. }
+{ Id: 1317627; Type: Teacher; Name: Васильєв Ю. С. }
+{ Id: 1400065; Type: Teacher; Name: Антіпов І. Є. }
+{ Id: 1400066; Type: Teacher; Name: Цопа О. І. }
+{ Id: 1428332; Type: Teacher; Name: Солодкий В. С. }
+{ Id: 1435379; Type: Teacher; Name: Яценко Л. О. }
+{ Id: 1435867; Type: Teacher; Name: Лошаков В. А. }
+{ Id: 1441257; Type: Teacher; Name: Демська Н. П. }
+{ Id: 1442596; Type: Teacher; Name: Максимова С. С. }
+{ Id: 1493569; Type: Teacher; Name: Головянко М. В. }
+{ Id: 1560590; Type: Teacher; Name: Коляденко Ю. Ю. }
+{ Id: 1560591; Type: Teacher; Name: Снігуров А. В. }
+{ Id: 1560594; Type: Teacher; Name: Єпішкін С. О. }
+{ Id: 1676770; Type: Teacher; Name: Хряпкін О. В. }
+{ Id: 1677789; Type: Teacher; Name: Шостак Б. О. }
+{ Id: 1679397; Type: Teacher; Name: Король А. Л. }
+{ Id: 1679574; Type: Teacher; Name: Філіппенко І. В. }
+{ Id: 1679732; Type: Teacher; Name: Харченко Н. А. }
+{ Id: 1684561; Type: Teacher; Name: Мазурова О. О. }
+{ Id: 1685437; Type: Teacher; Name: Ликова Г. О. }
+{ Id: 1685568; Type: Teacher; Name: Стаднікова Г. В. }
+{ Id: 1688451; Type: Teacher; Name: Барковська О. Ю. }
+{ Id: 1754070; Type: Teacher; Name: Ляпота В. М. }
+{ Id: 1769508; Type: Teacher; Name: Середа Г. Ю. }
+{ Id: 1791089; Type: Teacher; Name: Минко П. Є. }
+{ Id: 1792230; Type: Teacher; Name: Вакансія1_ . . }
+{ Id: 1800171; Type: Teacher; Name: Григор`Єва О. В. }
+{ Id: 1810189; Type: Teacher; Name: Бутенко Н. С. }
+{ Id: 1811236; Type: Teacher; Name: Зайченко О. Б. }
+{ Id: 1811583; Type: Teacher; Name: Мартинчук О. О. }
+{ Id: 1815191; Type: Teacher; Name: Іванова О. О. }
+{ Id: 1845010; Type: Teacher; Name: Добринін І. С. }
+{ Id: 1851722; Type: Teacher; Name: Чеботарьова Д. В. }
+{ Id: 1904887; Type: Teacher; Name: Огар В. І. }
+{ Id: 1975314; Type: Teacher; Name: Гусятін М. В. }
+{ Id: 1989548; Type: Teacher; Name: Жолудов Ю. Т. }
+{ Id: 1989550; Type: Teacher; Name: Музика К. М. }
+{ Id: 1992689; Type: Teacher; Name: Кобилін О. А. }
+{ Id: 2003513; Type: Teacher; Name: Булага В. А. }
+{ Id: 2004267; Type: Teacher; Name: Дегтярьов О. В. }
+{ Id: 2035077; Type: Teacher; Name: Кудрявцева М. С. }
+{ Id: 2077397; Type: Teacher; Name: Козлов Ю. В. }
+{ Id: 2083395; Type: Teacher; Name: Пшеничних С. В. }
+{ Id: 2091141; Type: Teacher; Name: Бізюк А. В. }
+{ Id: 2094295; Type: Teacher; Name: Мурзабулатова О. В. }
+{ Id: 2101319; Type: Teacher; Name: Хаханова Г. В. }
+{ Id: 2103199; Type: Teacher; Name: Безсонов О. О. }
+{ Id: 2103201; Type: Teacher; Name: Дяченко В. О. }
+{ Id: 2103218; Type: Teacher; Name: Радівілова Т. А. }
+{ Id: 2104150; Type: Teacher; Name: Семенов С. Г. }
+{ Id: 2145721; Type: Teacher; Name: Новіков Ю. С. }
+{ Id: 2188887; Type: Teacher; Name: Костиря О. О. }
+{ Id: 2201691; Type: Teacher; Name: Чугуй Є. А. }
+{ Id: 2203223; Type: Teacher; Name: Невлюдова В. В. }
+{ Id: 2244981; Type: Teacher; Name: Волотка В. С. }
+{ Id: 2298575; Type: Teacher; Name: Сичова О. В. }
+{ Id: 2362033; Type: Teacher; Name: Якубовська С. В. }
+{ Id: 2370585; Type: Teacher; Name: Кобзев І. В. }
+{ Id: 2388777; Type: Teacher; Name: Чернишов М. М. }
+{ Id: 2465869; Type: Teacher; Name: Бараннік В. В. }
+{ Id: 2576482; Type: Teacher; Name: Сацюк В. В. }
+{ Id: 2577571; Type: Teacher; Name: Сотник С. В. }
+{ Id: 2581838; Type: Teacher; Name: Шарапова О. В. }
+{ Id: 2667816; Type: Teacher; Name: Сакало Є. С. }
+{ Id: 2672810; Type: Teacher; Name: Галайченко О. М. }
+{ Id: 2673818; Type: Teacher; Name: Омаров  Ш. А. }
+{ Id: 2676022; Type: Teacher; Name: Кузьміна Л. В. }
+{ Id: 2678101; Type: Teacher; Name: Дудка О. О. }
+{ Id: 2678122; Type: Teacher; Name: Сайківська Л. Ф. }
+{ Id: 2683736; Type: Teacher; Name: Супрун О. О. }
+{ Id: 2815585; Type: Teacher; Name: Малик С. Б. }
+{ Id: 2870648; Type: Teacher; Name: Марчук А. В. }
+{ Id: 2877717; Type: Teacher; Name: Єременко О. С. }
+{ Id: 2912084; Type: Teacher; Name: Разумов-Фризюк Є. А. }
+{ Id: 2912785; Type: Teacher; Name: Боцман І. В. }
+{ Id: 2912882; Type: Teacher; Name: Ситнік О. В. }
+{ Id: 2995296; Type: Teacher; Name: Обод І. І. }
+{ Id: 3075855; Type: Teacher; Name: Лебьодкіна А. Ю. }
+{ Id: 3076550; Type: Teacher; Name: Ляшенко Г. Є. }
+{ Id: 3093981; Type: Teacher; Name: Добровольська О. В. }
+{ Id: 3095537; Type: Teacher; Name: Кучеренко Д. Ю. }
+{ Id: 3098426; Type: Teacher; Name: Філіппенко О. І. }
+{ Id: 3099358; Type: Teacher; Name: Галкін П. В. }
+{ Id: 3099669; Type: Teacher; Name: Сковороднікова В. В. }
+{ Id: 3105401; Type: Teacher; Name: Саєнко 0. 0. }
+{ Id: 3118211; Type: Teacher; Name: Гуца О. М. }
+{ Id: 3126143; Type: Teacher; Name: Лінник О. В. }
+{ Id: 3156045; Type: Teacher; Name: Євсюкова О. Г. }
+{ Id: 3196777; Type: Teacher; Name: Волощук О. Б. }
+{ Id: 3198686; Type: Teacher; Name: Нечипоренко А. С. }
+{ Id: 3198873; Type: Teacher; Name: Кузьміних Є. Д. }
+{ Id: 3199553; Type: Teacher; Name: Бабиченко О. Ю. }
+{ Id: 3199753; Type: Teacher; Name: Вишнякова Ю. В. }
+{ Id: 3204550; Type: Teacher; Name: Голян Н. В. }
+{ Id: 3205567; Type: Teacher; Name: Дорошенко С. М. }
+{ Id: 3207911; Type: Teacher; Name: Артюх А. В. }
+{ Id: 3209195; Type: Teacher; Name: Можаєв О. О. }
+{ Id: 3209337; Type: Teacher; Name: Лебедєв О. Г. }
+{ Id: 3248615; Type: Teacher; Name: Уманець О. М. }
+{ Id: 3258075; Type: Teacher; Name: Чуканов С. Б. }
+{ Id: 3362177; Type: Teacher; Name: Кухтін С. М. }
+{ Id: 3496881; Type: Teacher; Name: Бендеберя Г. М. }
+{ Id: 3496889; Type: Teacher; Name: Хорошевський О. І. }
+{ Id: 3498771; Type: Teacher; Name: Бєльчева Г. В. }
+{ Id: 3500943; Type: Teacher; Name: Бронніков А. І. }
+{ Id: 3562640; Type: Teacher; Name: Данилов А. Д. }
+{ Id: 3590661; Type: Teacher; Name: Русакова Н. Є. }
+{ Id: 3591252; Type: Teacher; Name: Бондарь Є. Ю. }
+{ Id: 3596274; Type: Teacher; Name: Порван А. П. }
+{ Id: 3600873; Type: Teacher; Name: Кукуш В. Д. }
+{ Id: 3617407; Type: Teacher; Name: Іваненко Д. В. }
+{ Id: 3628460; Type: Teacher; Name: Фролов А. В. }
+{ Id: 3692452; Type: Teacher; Name: Євдокименко М. О. }
+{ Id: 3781698; Type: Teacher; Name: Сукесов Е. А. }
+{ Id: 3798985; Type: Group; Name: БМІза-10_11-1 }
+{ Id: 3823461; Type: Teacher; Name: Малькова І. А. }
+{ Id: 3926602; Type: Group; Name: РТз-12-1 }
+{ Id: 3926608; Type: Group; Name: КНз-12-1 }
+{ Id: 3926612; Type: Group; Name: ПІз-12-1 }
+{ Id: 3926618; Type: Group; Name: ВПСз-12-1 }
+{ Id: 3926622; Type: Group; Name: АКІТз-12-1 }
+{ Id: 3926630; Type: Group; Name: ЕПСз-12-1 }
+{ Id: 3926634; Type: Group; Name: ЕКз-12-1 }
+{ Id: 3926638; Type: Group; Name: КІз-12-1 }
+{ Id: 3926640; Type: Group; Name: ТКз-12-1 }
+{ Id: 3931328; Type: Teacher; Name: Сергієва А. В. }
+{ Id: 3932260; Type: Teacher; Name: Чуприна А. С. }
+{ Id: 3934598; Type: Teacher; Name: Вакансия . . }
+{ Id: 3934622; Type: Teacher; Name: Ткачова О. Б. }
+{ Id: 3936451; Type: Teacher; Name: Табакова І. С. }
+{ Id: 3957603; Type: Teacher; Name: Анорує О. О. }
+{ Id: 4013190; Type: Teacher; Name: Колісник О. В. }
+{ Id: 4024138; Type: Teacher; Name: Перова І. Г. }
+{ Id: 4036590; Type: Group; Name: теsт }
+{ Id: 4046151; Type: Teacher; Name: Мягкий А. В. }
+{ Id: 4046174; Type: Teacher; Name: Куліков Ю. О. }
+{ Id: 4053862; Type: Teacher; Name: Губаренко Є. В. }
+{ Id: 4056871; Type: Teacher; Name: Фомічов О. О. }
+{ Id: 4057722; Type: Teacher; Name: Яковлев А. О. }
+{ Id: 4060493; Type: Group; Name: АСП-16-3 }
+{ Id: 4060495; Type: Group; Name: АСП-16-2 }
+{ Id: 4060973; Type: Group; Name: АСП-16-1 }
+{ Id: 4071375; Type: Teacher; Name: Вечірська І. Д. }
+{ Id: 4072424; Type: Teacher; Name: Афанасьєва І. В. }
+{ Id: 4074888; Type: Teacher; Name: Консультант . . }
+{ Id: 4077928; Type: Teacher; Name: Турута  О. П. }
+{ Id: 4084713; Type: Teacher; Name: Іваненко О. О. }
+{ Id: 4167740; Type: Teacher; Name: Роменский В. І. }
+{ Id: 4248463; Type: Group; Name: ЕКз-12-6 }
+{ Id: 4258034; Type: Teacher; Name: Старенький В. П. }
+{ Id: 4274482; Type: Teacher; Name: Павлова Н. В. }
+{ Id: 4289513; Type: Teacher; Name: Мурадова В. Х. }
+{ Id: 4307124; Type: Group; Name: КІ-13-2 }
+{ Id: 4307126; Type: Group; Name: ВПС-13-2 }
+{ Id: 4307128; Type: Group; Name: СТЗІ-13-1 }
+{ Id: 4307130; Type: Group; Name: МІВТ-13-1 }
+{ Id: 4307134; Type: Group; Name: КН-13-4 }
+{ Id: 4307136; Type: Group; Name: КАФ-13-1 }
+{ Id: 4307138; Type: Group; Name: КАФ-13-4 }
+{ Id: 4307140; Type: Group; Name: ПІ-13-2 }
+{ Id: 4307142; Type: Group; Name: БМІ-13-1 }
+{ Id: 4307144; Type: Group; Name: ІНФ-13-2 }
+{ Id: 4307146; Type: Group; Name: КАФ-13-2 }
+{ Id: 4307148; Type: Group; Name: КІ-13-3 }
+{ Id: 4307152; Type: Group; Name: МН-13-1 }
+{ Id: 4307154; Type: Group; Name: ТК-13-2 }
+{ Id: 4307158; Type: Group; Name: ТК-13-3 }
+{ Id: 4307160; Type: Group; Name: БІКС-13-2 }
+{ Id: 4307162; Type: Group; Name: РЕА-13-1 }
+{ Id: 4307164; Type: Group; Name: КАФ-13-8 }
+{ Id: 4307166; Type: Group; Name: КІ-13-4 }
+{ Id: 4307168; Type: Group; Name: ОТ-13-1 }
+{ Id: 4307170; Type: Group; Name: ТК-13-1 }
+{ Id: 4307172; Type: Group; Name: КАФ-13-3 }
+{ Id: 4307174; Type: Group; Name: КАФ-13-7 }
+{ Id: 4307180; Type: Group; Name: ТК-13-4 }
+{ Id: 4307182; Type: Group; Name: ВПС-13-1 }
+{ Id: 4307184; Type: Group; Name: ЕК-13-1 }
+{ Id: 4307188; Type: Group; Name: КН-13-1 }
+{ Id: 4307190; Type: Group; Name: КН-13-3 }
+{ Id: 4307192; Type: Group; Name: КАФ-13-5 }
+{ Id: 4307194; Type: Group; Name: КАФ-13-6 }
+{ Id: 4307196; Type: Group; Name: ПМ-13-1 }
+{ Id: 4307198; Type: Group; Name: ПІ-13-1 }
+{ Id: 4307200; Type: Group; Name: ПІ-13-3 }
+{ Id: 4307202; Type: Group; Name: БІКС-13-1 }
+{ Id: 4307204; Type: Group; Name: ІНФ-13-1 }
+{ Id: 4307206; Type: Group; Name: КІ-13-1 }
+{ Id: 4307208; Type: Group; Name: СА-13-1 }
+{ Id: 4307210; Type: Group; Name: ЕПС-13-1 }
+{ Id: 4307214; Type: Group; Name: РТ-13-1 }
+{ Id: 4307216; Type: Group; Name: СІ-13-1 }
+{ Id: 4307218; Type: Group; Name: АКІТ-13-1 }
+{ Id: 4307220; Type: Group; Name: УІБ-13-1 }
+{ Id: 4307222; Type: Group; Name: МСС-13-1 }
+{ Id: 4308036; Type: Group; Name: КІу-13-7 }
+{ Id: 4314616; Type: Group; Name: МАГ-МВТ_МЗВ_УІБ-13 }
+{ Id: 4314632; Type: Group; Name: МАГ-САУ-13 }
+{ Id: 4314644; Type: Group; Name: МАГ-СТЗІ-13 }
+{ Id: 4314646; Type: Group; Name: МАГ-АРТ-13 }
+{ Id: 4314654; Type: Group; Name: МАГ-ІТБММ-12-1-13 }
+{ Id: 4314656; Type: Group; Name: МАГ-ПОТОКЕТ-13 }
+{ Id: 4314658; Type: Group; Name: МАГ-МВТ-13 }
+{ Id: 4314662; Type: Group; Name: МАГ-ПОТОК_ПММ-13 }
+{ Id: 4314678; Type: Group; Name: МАГ-ІУСТ-13 }
+{ Id: 4314686; Type: Group; Name: МАГ-УП-13 }
+{ Id: 4314706; Type: Group; Name: МАГ-БДІР_БІКС-13 }
+{ Id: 4314714; Type: Group; Name: МАГ-УІБ-13 }
+{ Id: 4314720; Type: Group; Name: МАГ-БМІ-13 }
+{ Id: 4314728; Type: Group; Name: МАГ-КСУА-13 }
+{ Id: 4314736; Type: Group; Name: МАГ-БМІМ-12-1-13 }
+{ Id: 4314746; Type: Group; Name: МАГ-ТСМ-12-13 }
+{ Id: 4314808; Type: Group; Name: МАГ-ІМЗ-12-13 }
+{ Id: 4314824; Type: Group; Name: МАГ-ПМ-13 }
+{ Id: 4316837; Type: Group; Name: АКІТз-13-1 }
+{ Id: 4316843; Type: Group; Name: ЕКз-13-1 }
+{ Id: 4316851; Type: Group; Name: КНз-13-1 }
+{ Id: 4316857; Type: Group; Name: ВПСз-13-1 }
+{ Id: 4316859; Type: Group; Name: ЕПСз-13-1 }
+{ Id: 4316861; Type: Group; Name: ПІз-13-1 }
+{ Id: 4316867; Type: Group; Name: ТКз-13-1 }
+{ Id: 4316871; Type: Group; Name: СТЗІз-13-1 }
+{ Id: 4316879; Type: Group; Name: КІз-13-1 }
+{ Id: 4339960; Type: Group; Name: ІНФу-13-1 }
+{ Id: 4341377; Type: Teacher; Name: Стогній Н. П. }
+{ Id: 4341394; Type: Group; Name: ТКі-13-1 }
+{ Id: 4341396; Type: Group; Name: EC-13-1_1 }
+{ Id: 4341399; Type: Group; Name: CE-13-1_1 }
+{ Id: 4341401; Type: Group; Name: BMI-13-1 }
+{ Id: 4353571; Type: Teacher; Name: Іващенко Г. С. }
+{ Id: 4355086; Type: Teacher; Name: Радченко В. О. }
+{ Id: 4356800; Type: Teacher; Name: Поповська К. О. }
+{ Id: 4357892; Type: Teacher; Name: Золотухін О. В. }
+{ Id: 4357993; Type: Teacher; Name: Печерська А. І. }
+{ Id: 4435898; Type: Group; Name: АКІТ-13-2 }
+{ Id: 4436732; Type: Group; Name: СІ-13-2 }
+{ Id: 4442653; Type: Group; Name: КН-13-5 }
+{ Id: 4442656; Type: Group; Name: КН-13-6 }
+{ Id: 4442658; Type: Group; Name: ПІ-13-4 }
+{ Id: 4460126; Type: Group; Name: КІ-13-5 }
+{ Id: 4475367; Type: Teacher; Name: Вавенко Т. В. }
+{ Id: 4487257; Type: Group; Name: CE-13-1_2 }
+{ Id: 4488102; Type: Teacher; Name: Страшненко Г. М. }
+{ Id: 4526374; Type: Group; Name: СТЗІ-13-2 }
+{ Id: 4526462; Type: Group; Name: РТ-13-2 }
+{ Id: 4529958; Type: Teacher; Name: Міщенко О. В. }
+{ Id: 4530536; Type: Group; Name: ТКу-13-1 }
+{ Id: 4530543; Type: Group; Name: МІВТу-13-1 }
+{ Id: 4536394; Type: Group; Name: КН-13-2 }
+{ Id: 4537142; Type: Group; Name: БМІз-12-1 }
+{ Id: 4537855; Type: Group; Name: ПІ-13-5 }
+{ Id: 4537859; Type: Group; Name: ПІ-13-6 }
+{ Id: 4539179; Type: Group; Name: КІ-13-6 }
+{ Id: 4543130; Type: Group; Name: ЕКи-13-1 }
+{ Id: 4544044; Type: Teacher; Name: Понамарьов С. В. }
+{ Id: 4544859; Type: Teacher; Name: Піщухіна О. О. }
+{ Id: 4544860; Type: Teacher; Name: Вороний М. П. }
+{ Id: 4546807; Type: Teacher; Name: Кравченко С. Г. }
+{ Id: 4547693; Type: Teacher; Name: Гриньова О. Є. }
+{ Id: 4548329; Type: Group; Name: КІи-13-1_1 }
+{ Id: 4548331; Type: Group; Name: ТКи-13-4 }
+{ Id: 4549081; Type: Teacher; Name: Кіношенко Д. К. }
+{ Id: 4549887; Type: Teacher; Name: Онищенко А. А. }
+{ Id: 4550667; Type: Teacher; Name: Довнар О. Й. }
+{ Id: 4552501; Type: Teacher; Name: Коваленко Е. А. }
+{ Id: 4554854; Type: Group; Name: АКІТи-13-1 }
+{ Id: 4557047; Type: Teacher; Name: Штих І. А. }
+{ Id: 4575240; Type: Group; Name: МССи-13-1 }
+{ Id: 4575242; Type: Group; Name: БМІи-13-1 }
+{ Id: 4582325; Type: Group; Name: КНи-13-1 }
+{ Id: 4582544; Type: Group; Name: ЕКи-13-2 }
+{ Id: 4582546; Type: Group; Name: ЕКи-13-3 }
+{ Id: 4588261; Type: Teacher; Name: Чуб О. І. }
+{ Id: 4596831; Type: Group; Name: МАГ-СПР-13 }
+{ Id: 4596833; Type: Group; Name: МАГ-АУТП-13 }
+{ Id: 4596835; Type: Group; Name: МАГ-МЗВЯП-13 }
+{ Id: 4596837; Type: Group; Name: МАГ-КСМ-13 }
+{ Id: 4596839; Type: Group; Name: МАГ-БДІР-13 }
+{ Id: 4596841; Type: Group; Name: МАГ-ІТБМ-13 }
+{ Id: 4596843; Type: Group; Name: МАГ-ЯСС-13 }
+{ Id: 4596845; Type: Group; Name: МАГ-СКС-13 }
+{ Id: 4596847; Type: Group; Name: МАГ-КС-13 }
+{ Id: 4596849; Type: Group; Name: МАГ-АКТ-1-13 }
+{ Id: 4596851; Type: Group; Name: МАГ-СП-13 }
+{ Id: 4596853; Type: Group; Name: МАГ-ЕПП-13 }
+{ Id: 4596855; Type: Group; Name: МАГ-РЕАЗ-13 }
+{ Id: 4596857; Type: Group; Name: МАГ-РТ-13 }
+{ Id: 4596859; Type: Group; Name: МАГ-СШІ-13 }
+{ Id: 4596861; Type: Group; Name: МАГ-РПСК-13 }
+{ Id: 4596863; Type: Group; Name: МАГ-ІПЗ-13 }
+{ Id: 4596865; Type: Group; Name: МАГ-ТЕМВ-13 }
+{ Id: 4596867; Type: Group; Name: МАГ-ЕК-13 }
+{ Id: 4596869; Type: Group; Name: МАГ-ЕТ-13 }
+{ Id: 4596873; Type: Group; Name: МАГ-ПЗС-13 }
+{ Id: 4596875; Type: Group; Name: МАГ-АМЗІ-13 }
+{ Id: 4596877; Type: Group; Name: МАГ-КТРС-13 }
+{ Id: 4596879; Type: Group; Name: МАГ-МНП-13 }
+{ Id: 4596881; Type: Group; Name: МАГ-КІТПВ-13 }
+{ Id: 4596883; Type: Group; Name: МАГ-ІТ-13 }
+{ Id: 4596885; Type: Group; Name: МАГ-АКТ-2-13 }
+{ Id: 4596891; Type: Group; Name: МАГ-БІКС-13 }
+{ Id: 4596893; Type: Group; Name: МАГ-ІТП-13 }
+{ Id: 4596895; Type: Group; Name: МАГ-ІНФ-13 }
+{ Id: 4654846; Type: Teacher; Name: Медведев Є. О. }
+{ Id: 4681557; Type: Teacher; Name: Губницька Ю. С. }
+{ Id: 4693116; Type: Teacher; Name: Чакрян В. Х. }
+{ Id: 4722655; Type: Teacher; Name: Олешко І. В. }
+{ Id: 4729254; Type: Group; Name: КІи-13-1_2 }
+{ Id: 4729268; Type: Group; Name: ТКи-13-1_2 }
+{ Id: 4733803; Type: Teacher; Name: Власова В. О. }
+{ Id: 4743155; Type: Teacher; Name: Сушко О. А. }
+{ Id: 4744454; Type: Group; Name: EC-13-1_2 }
+{ Id: 4746503; Type: Teacher; Name: Селіванова К. Г. }
+{ Id: 4759356; Type: Teacher; Name: Рубан І. В. }
+{ Id: 4769727; Type: Teacher; Name: Мова О. Ю. }
+{ Id: 4786100; Type: Group; Name: БМІза-12_13-1 }
+{ Id: 4801900; Type: Group; Name: БМІ-14-1 }
+{ Id: 4801902; Type: Group; Name: АКІТ-14-2 }
+{ Id: 4801904; Type: Group; Name: РТу-14-3 }
+{ Id: 4801906; Type: Group; Name: РЕАу-14-1 }
+{ Id: 4801908; Type: Group; Name: ТК-14-1 }
+{ Id: 4801910; Type: Group; Name: ТК-14-2 }
+{ Id: 4801912; Type: Group; Name: КІ-14-1 }
+{ Id: 4801916; Type: Group; Name: КАФ-14-1 }
+{ Id: 4801918; Type: Group; Name: КАФ-14-5 }
+{ Id: 4801920; Type: Group; Name: ПІ-14-3 }
+{ Id: 4801922; Type: Group; Name: ПІ-14-4 }
+{ Id: 4801924; Type: Group; Name: ПІ-14-5 }
+{ Id: 4801926; Type: Group; Name: ТКи-13-1 }
+{ Id: 4801928; Type: Group; Name: ТК-14-3 }
+{ Id: 4801930; Type: Group; Name: ТК-14-4 }
+{ Id: 4801932; Type: Group; Name: КІ-14-2 }
+{ Id: 4801934; Type: Group; Name: ІНФ-14-1 }
+{ Id: 4801936; Type: Group; Name: СІ-14-2 }
+{ Id: 4801938; Type: Group; Name: ВПС-14-1 }
+{ Id: 4801940; Type: Group; Name: ОТ-14-1 }
+{ Id: 4801942; Type: Group; Name: КАФ-14-3 }
+{ Id: 4801944; Type: Group; Name: КАФ-14-7 }
+{ Id: 4801946; Type: Group; Name: КАФ-14-8 }
+{ Id: 4801948; Type: Group; Name: МН-14-1 }
+{ Id: 4801950; Type: Group; Name: КН-14-3 }
+{ Id: 4801952; Type: Group; Name: БІКС-14-2 }
+{ Id: 4801954; Type: Group; Name: БМІу-14-1 }
+{ Id: 4801956; Type: Group; Name: ПМ-14-1 }
+{ Id: 4801958; Type: Group; Name: СА-14-1 }
+{ Id: 4801962; Type: Group; Name: ВПС-14-2 }
+{ Id: 4801964; Type: Group; Name: РЕА-14-1 }
+{ Id: 4801966; Type: Group; Name: СТЗІ-14-1 }
+{ Id: 4801968; Type: Group; Name: МСС-14-1 }
+{ Id: 4801970; Type: Group; Name: ЕК-14-1 }
+{ Id: 4801972; Type: Group; Name: ПІ-14-2 }
+{ Id: 4801974; Type: Group; Name: АКІТ-14-1 }
+{ Id: 4801976; Type: Group; Name: ІНФ-14-2 }
+{ Id: 4801978; Type: Group; Name: СІу-14-2 }
+{ Id: 4801980; Type: Group; Name: КН-14-1 }
+{ Id: 4801982; Type: Group; Name: КАФ-14-4 }
+{ Id: 4801984; Type: Group; Name: КАФ-14-6 }
+{ Id: 4801986; Type: Group; Name: ПІ-14-1 }
+{ Id: 4801988; Type: Group; Name: СТЗІу-14-2 }
+{ Id: 4801990; Type: Group; Name: УІБ-14-1 }
+{ Id: 4801992; Type: Group; Name: КІи-13-1 }
+{ Id: 4801994; Type: Group; Name: СІ-14-1 }
+{ Id: 4801996; Type: Group; Name: КН-14-6 }
+{ Id: 4801998; Type: Group; Name: КН-14-5 }
+{ Id: 4802000; Type: Group; Name: КІ-14-4 }
+{ Id: 4802002; Type: Group; Name: РТ-14-1 }
+{ Id: 4802004; Type: Group; Name: РТу-14-2 }
+{ Id: 4802006; Type: Group; Name: РЕАу-14-2 }
+{ Id: 4802008; Type: Group; Name: СІу-14-1 }
+{ Id: 4802010; Type: Group; Name: БМІу-14-2 }
+{ Id: 4802012; Type: Group; Name: ТКу-14-1 }
+{ Id: 4802014; Type: Group; Name: КАФ-14-2 }
+{ Id: 4802016; Type: Group; Name: ЕПС-14-1 }
+{ Id: 4802018; Type: Group; Name: КН-14-2 }
+{ Id: 4802020; Type: Group; Name: БІКС-14-1 }
+{ Id: 4802022; Type: Group; Name: КІ-14-3 }
+{ Id: 4802028; Type: Group; Name: АТу-14-2 }
+{ Id: 4802030; Type: Group; Name: АТ-14-1 }
+{ Id: 4802046; Type: Group; Name: БМІу-13-1+БМІу-13-2 }
+{ Id: 4802050; Type: Group; Name: МСС-13-1+МІВТ-13-1 }
+{ Id: 4802052; Type: Group; Name: БМІу-14-1+БМІу-14-2 }
+{ Id: 4809254; Type: Group; Name: МАГ-САУ-14 }
+{ Id: 4809258; Type: Group; Name: МАГ-БДІР-14 }
+{ Id: 4809260; Type: Group; Name: МАГ-БМІМ-13-1-14 }
+{ Id: 4809268; Type: Group; Name: МАГ-АРТ-14 }
+{ Id: 4809280; Type: Group; Name: МАГ-АКТ-1-14 }
+{ Id: 4809316; Type: Group; Name: МАГ-УП-14 }
+{ Id: 4809320; Type: Group; Name: МАГ-УПМ-13-14 }
+{ Id: 4809330; Type: Group; Name: МАГ-КТСВП-13-14 }
+{ Id: 4809348; Type: Group; Name: МАГ-БМІ-14 }
+{ Id: 4809354; Type: Group; Name: МАГ-МВТ_МЗВ_АМЗІ-14 }
+{ Id: 4809356; Type: Group; Name: МАГ-ТСМ-13-14 }
+{ Id: 4809370; Type: Group; Name: МАГ-ІТБММ-13-1-14 }
+{ Id: 4809382; Type: Group; Name: МАГ-ЕТ-2-14 }
+{ Id: 4809408; Type: Group; Name: МАГ-ІМЗ-13-14 }
+{ Id: 4809418; Type: Group; Name: МАГ-АМЗІ-14 }
+{ Id: 4809420; Type: Group; Name: МАГ-АКТ-2-14 }
+{ Id: 4809438; Type: Group; Name: МАГ-ЕТ-1-14 }
+{ Id: 4809448; Type: Group; Name: МАГ-ПМ-14 }
+{ Id: 4809452; Type: Group; Name: МАГ-ЛОЕТ-13-14 }
+{ Id: 4811589; Type: Group; Name: ТКз-14-1 }
+{ Id: 4811591; Type: Group; Name: ЕКз-14-1 }
+{ Id: 4811593; Type: Group; Name: КІз-14-1 }
+{ Id: 4811595; Type: Group; Name: ЕПСз-14-1 }
+{ Id: 4811597; Type: Group; Name: РТз-14-1 }
+{ Id: 4811599; Type: Group; Name: ВПСз-14-1 }
+{ Id: 4811601; Type: Group; Name: АКІТз-14-1 }
+{ Id: 4811603; Type: Group; Name: ПІз-14-1 }
+{ Id: 4811605; Type: Group; Name: КНз-14-1 }
+{ Id: 4844658; Type: Teacher; Name: Ганшин Д. Г. }
+{ Id: 4844708; Type: Teacher; Name: Скорик Ю. В. }
+{ Id: 4866352; Type: Teacher; Name: Колованова Є. П. }
+{ Id: 4868147; Type: Teacher; Name: Хоменко О. В. }
+{ Id: 4868405; Type: Teacher; Name: Ткачов В. М. }
+{ Id: 4901427; Type: Group; Name: ТКі-14-1 }
+{ Id: 4901431; Type: Group; Name: CE-14-1_1 }
+{ Id: 4901433; Type: Group; Name: EC-14-1 }
+{ Id: 4901435; Type: Group; Name: BME-14-1_1 }
+{ Id: 4903056; Type: Teacher; Name: Жила О. В. }
+{ Id: 4903957; Type: Teacher; Name: Парамонов А. К. }
+{ Id: 4904179; Type: Teacher; Name: Чорна О. С. }
+{ Id: 4927958; Type: Teacher; Name: Сорокін А. Р. }
+{ Id: 4952446; Type: Teacher; Name: Саманцов О. О. }
+{ Id: 5007826; Type: Group; Name: КІ-14-5 }
+{ Id: 5007828; Type: Group; Name: КІу-14-6 }
+{ Id: 5008791; Type: Group; Name: СТЗІу-14-3 }
+{ Id: 5008853; Type: Group; Name: ІНФу-14-1 }
+{ Id: 5008857; Type: Group; Name: ПІ-14-6 }
+{ Id: 5008859; Type: Group; Name: КН-14-4 }
+{ Id: 5010704; Type: Group; Name: АКІТу-14-1 }
+{ Id: 5011010; Type: Group; Name: МІВТу-14-1 }
+{ Id: 5011813; Type: Group; Name: ОТу-14-1 }
+{ Id: 5011815; Type: Group; Name: ЕПСу-14-1 }
+{ Id: 5013663; Type: Teacher; Name: Осика О. Ф. }
+{ Id: 5014954; Type: Group; Name: ТКз-12-2 }
+{ Id: 5014956; Type: Group; Name: КІз-12-2 }
+{ Id: 5015680; Type: Group; Name: БМІзу-14-1 }
+{ Id: 5015847; Type: Group; Name: ЕКп-14-1 }
+{ Id: 5024468; Type: Teacher; Name: Тимкович  М. Ю. }
+{ Id: 5025229; Type: Teacher; Name: Гребінник О. Ю. }
+{ Id: 5026295; Type: Group; Name: КІи-14-1 }
+{ Id: 5026297; Type: Group; Name: ТКи-14-4 }
+{ Id: 5026299; Type: Group; Name: БІКСи-14-1 }
+{ Id: 5028061; Type: Teacher; Name: Вакула А. С. }
+{ Id: 5028070; Type: Teacher; Name: Курський Ю. С. }
+{ Id: 5028589; Type: Teacher; Name: Работягов А. В. }
+{ Id: 5033047; Type: Group; Name: ЕКи-14-1 }
+{ Id: 5035280; Type: Teacher; Name: Ягудіна О. В. }
+{ Id: 5036867; Type: Group; Name: ЕКпз-14-1 }
+{ Id: 5038604; Type: Group; Name: ТСМпз-14-1 }
+{ Id: 5038671; Type: Teacher; Name: Груздо І. В. }
+{ Id: 5044208; Type: Group; Name: ІПЗп-14-1 }
+{ Id: 5044210; Type: Group; Name: ІПЗп-14-2 }
+{ Id: 5047007; Type: Teacher; Name: Юр’Єв І. О. }
+{ Id: 5053085; Type: Group; Name: АКІТи-14-1 }
+{ Id: 5053087; Type: Group; Name: БМІи-14-1 }
+{ Id: 5053089; Type: Group; Name: ЕПСи-14-1 }
+{ Id: 5059205; Type: Group; Name: КНи-14-5 }
+{ Id: 5060961; Type: Group; Name: МІВТУ-14+МСС14-1 }
+{ Id: 5060963; Type: Group; Name: МСС-МІВТ-13+МІВТУ-14 }
+{ Id: 5060965; Type: Group; Name: ЕПС-13-1+ЕПСу14-1 }
+{ Id: 5060967; Type: Group; Name: СТЗІУ-14-3+АТУ14-2 }
+{ Id: 5060971; Type: Group; Name: ТК-14-1+МСС14-1 }
+{ Id: 5060975; Type: Group; Name: МІВТ-13-1+МІВТУ14-1 }
+{ Id: 5060977; Type: Group; Name: УІБ-14-1+МСС14-1 }
+{ Id: 5060981; Type: Group; Name: АТ-14-1+АТУ14-2 }
+{ Id: 5060983; Type: Group; Name: ОТ-13-1+ОТу-14-1 }
+{ Id: 5060985; Type: Group; Name: ТК-13-12 }
+{ Id: 5060993; Type: Group; Name: ТК-13-11 }
+{ Id: 5060995; Type: Group; Name: ТК-13-13 }
+{ Id: 5069901; Type: Group; Name: МАГ-КСМ-14 }
+{ Id: 5069903; Type: Group; Name: МАГ-ІТБМ-14 }
+{ Id: 5069907; Type: Group; Name: МАГ-СПР-14 }
+{ Id: 5069909; Type: Group; Name: МАГ-АУТП-14 }
+{ Id: 5069911; Type: Group; Name: МАГ-ІТМРТМРТ-14 }
+{ Id: 5069913; Type: Group; Name: МАГ-МЗВЯП-14 }
+{ Id: 5069915; Type: Group; Name: МАГ-ЯСС-14 }
+{ Id: 5069917; Type: Group; Name: МАГ-СКС-14 }
+{ Id: 5069919; Type: Group; Name: МАГ-КС-14 }
+{ Id: 5069921; Type: Group; Name: МАГ-ТЕМВ-14-14 }
+{ Id: 5069923; Type: Group; Name: МАГ-МВТ-14 }
+{ Id: 5069925; Type: Group; Name: МАГ-РТ-14 }
+{ Id: 5069927; Type: Group; Name: МАГ-ІУСТ-14 }
+{ Id: 5069929; Type: Group; Name: МАГ-СП-14 }
+{ Id: 5069931; Type: Group; Name: МАГ-ЕПП-14 }
+{ Id: 5069933; Type: Group; Name: МАГ-РЕАЗ-14 }
+{ Id: 5069935; Type: Group; Name: МАГ-РПСК-14 }
+{ Id: 5069937; Type: Group; Name: МАГ-СШІ-14 }
+{ Id: 5069939; Type: Group; Name: МАГ-КСУА-14 }
+{ Id: 5069943; Type: Group; Name: МАГ-ІПЗ-14 }
+{ Id: 5069945; Type: Group; Name: МАГ-ПЗС-14 }
+{ Id: 5069947; Type: Group; Name: МАГ-КТСВП-14-14 }
+{ Id: 5069949; Type: Group; Name: МАГ-КТРС-14 }
+{ Id: 5069951; Type: Group; Name: МАГ-МНП-14 }
+{ Id: 5069953; Type: Group; Name: МАГ-КІТПВ-14 }
+{ Id: 5069955; Type: Group; Name: МАГ-ІТП-14 }
+{ Id: 5069957; Type: Group; Name: МАГ-ІНФ-14 }
+{ Id: 5069961; Type: Group; Name: МАГ-БІКС-14 }
+{ Id: 5070739; Type: Group; Name: КІз-12-3 }
+{ Id: 5070741; Type: Group; Name: БМІз-14-1 }
+{ Id: 5070745; Type: Group; Name: БМІзу-14-2 }
+{ Id: 5070755; Type: Group; Name: ЕПСЗ-14-1+БМІЗ-14-1 }
+{ Id: 5070757; Type: Group; Name: ТКЗ-14-1+АКІТЗ-14-1 }
+{ Id: 5124984; Type: Teacher; Name: Пелешенко  Д. С. }
+{ Id: 5128069; Type: Group; Name: ПІи-14-1 }
+{ Id: 5167816; Type: Teacher; Name: Руженцев М. В. }
+{ Id: 5179153; Type: Group; Name: CE-14-1_2 }
+{ Id: 5221465; Type: Teacher; Name: Турута О. В. }
+{ Id: 5221900; Type: Teacher; Name: Ребезюк О. Л. }
+{ Id: 5221906; Type: Teacher; Name: Урняєва І. А. }
+{ Id: 5226041; Type: Teacher; Name: Нестеренко Г. Г. }
+{ Id: 5232801; Type: Group; Name: МССи-14-1 }
+{ Id: 5232913; Type: Group; Name: ВПСи-13-1 }
+{ Id: 5237444; Type: Teacher; Name: Шафроненко А. Ю. }
+{ Id: 5237623; Type: Teacher; Name: Прісич О. Ю. }
+{ Id: 5237715; Type: Group; Name: ІПЗмд-14-1 }
+{ Id: 5241571; Type: Group; Name: ПЗСпз-14-1 }
+{ Id: 5241573; Type: Group; Name: ІПЗпз-14-1 }
+{ Id: 5241575; Type: Group; Name: ІПЗпз-14-2 }
+{ Id: 5242775; Type: Teacher; Name: Іваненко С. А. }
+{ Id: 5244263; Type: Teacher; Name: Чала О. В. }
+{ Id: 5258930; Type: Group; Name: ІПЗпз-15-1 }
+{ Id: 5259274; Type: Group; Name: УІБ-15-1 }
+{ Id: 5259276; Type: Group; Name: ПІ-15-3 }
+{ Id: 5259278; Type: Group; Name: ПМ-15-1 }
+{ Id: 5259280; Type: Group; Name: КІ-15-2 }
+{ Id: 5259282; Type: Group; Name: СТЗІу-15-2 }
+{ Id: 5259286; Type: Group; Name: КАФ-15-4 }
+{ Id: 5259288; Type: Group; Name: КН-15-4 }
+{ Id: 5259290; Type: Group; Name: РТ-13-3 }
+{ Id: 5259292; Type: Group; Name: МСС-15-1 }
+{ Id: 5259294; Type: Group; Name: ТК-15-1 }
+{ Id: 5259296; Type: Group; Name: ІНФ-15-2 }
+{ Id: 5259300; Type: Group; Name: ПІ-15-6 }
+{ Id: 5259302; Type: Group; Name: КІ-15-1 }
+{ Id: 5259306; Type: Group; Name: ТК-14-12 }
+{ Id: 5259308; Type: Group; Name: ТКи -13-4 }
+{ Id: 5259310; Type: Group; Name: ОТу-15-1 }
+{ Id: 5259312; Type: Group; Name: КАФ-15-2 }
+{ Id: 5259314; Type: Group; Name: РЕАу-15-1 }
+{ Id: 5259316; Type: Group; Name: КН-15-6 }
+{ Id: 5259318; Type: Group; Name: ТК-15-3 }
+{ Id: 5259320; Type: Group; Name: ТКу-15-1 }
+{ Id: 5259324; Type: Group; Name: ПІ-15-1 }
+{ Id: 5259326; Type: Group; Name: ПІ-15-2 }
+{ Id: 5259330; Type: Group; Name: РТу-15-2 }
+{ Id: 5259332; Type: Group; Name: КАФ-15-5 }
+{ Id: 5259334; Type: Group; Name: КАФ-15-7 }
+{ Id: 5259336; Type: Group; Name: БМІу-15-1 }
+{ Id: 5259340; Type: Group; Name: КІ-15-3 }
+{ Id: 5259342; Type: Group; Name: КАФ-15-8 }
+{ Id: 5259344; Type: Group; Name: КН-15-3 }
+{ Id: 5259346; Type: Group; Name: КН-15-5 }
+{ Id: 5259348; Type: Group; Name: СА-15-1 }
+{ Id: 5259350; Type: Group; Name: РТ-13-4 }
+{ Id: 5259356; Type: Group; Name: ПІ-15-5 }
+{ Id: 5259358; Type: Group; Name: ЕПС-15-1 }
+{ Id: 5259360; Type: Group; Name: КІ-15-4 }
+{ Id: 5259362; Type: Group; Name: КІ-15-5 }
+{ Id: 5259370; Type: Group; Name: БІКС-15-2 }
+{ Id: 5259372; Type: Group; Name: АТ-15-1 }
+{ Id: 5259374; Type: Group; Name: МСС-13-1+МІВТ-13-1+МІВТУ-14-1 }
+{ Id: 5259376; Type: Group; Name: МН-15-1 }
+{ Id: 5259380; Type: Group; Name: РТу-15-3 }
+{ Id: 5259384; Type: Group; Name: КАФ-15-3 }
+{ Id: 5259386; Type: Group; Name: КАФ-15-6 }
+{ Id: 5259388; Type: Group; Name: РЕАу-15-2 }
+{ Id: 5259392; Type: Group; Name: СІ-15-1 }
+{ Id: 5259394; Type: Group; Name: СІ-15-2 }
+{ Id: 5259398; Type: Group; Name: ЕК-15-1 }
+{ Id: 5259400; Type: Group; Name: ВПС-15-1 }
+{ Id: 5259402; Type: Group; Name: ТК-15-2 }
+{ Id: 5259404; Type: Group; Name: СІу-15-1 }
+{ Id: 5259412; Type: Group; Name: ЕПС-13-1+ЕПСу-14-1 }
+{ Id: 5259414; Type: Group; Name: ЕПСу-15-1 }
+{ Id: 5259416; Type: Group; Name: АКІТ-15-1 }
+{ Id: 5259418; Type: Group; Name: КН-15-2 }
+{ Id: 5259420; Type: Group; Name: БМІ-15-1 }
+{ Id: 5259422; Type: Group; Name: МІВТ-15-1 }
+{ Id: 5259424; Type: Group; Name: РЕА-15-1 }
+{ Id: 5259426; Type: Group; Name: ТК-15-4 }
+{ Id: 5259428; Type: Group; Name: ІНФ-15-1 }
+{ Id: 5259430; Type: Group; Name: ПІ-15-4 }
+{ Id: 5259434; Type: Group; Name: АКІТу-15-1 }
+{ Id: 5259436; Type: Group; Name: БІКС-15-1 }
+{ Id: 5259438; Type: Group; Name: КАФ-15-1 }
+{ Id: 5259440; Type: Group; Name: АКІТ-15-2 }
+{ Id: 5259442; Type: Group; Name: КН-15-1 }
+{ Id: 5259444; Type: Group; Name: АТу-15-2 }
+{ Id: 5259446; Type: Group; Name: ОТ-15-1 }
+{ Id: 5259448; Type: Group; Name: РТ-15-1 }
+{ Id: 5259450; Type: Group; Name: СТЗІ-15-1 }
+{ Id: 5265786; Type: Group; Name: ЕЕКі-15-1 }
+{ Id: 5265834; Type: Group; Name: ТКі-15-1 }
+{ Id: 5265840; Type: Group; Name: МІВТу-15-1 }
+{ Id: 5304811; Type: Teacher; Name: Сокорчук І. П. }
+{ Id: 5306219; Type: Teacher; Name: Власенко Л. А. }
+{ Id: 5306613; Type: Teacher; Name: Гнатенко О. С. }
+{ Id: 5318527; Type: Teacher; Name: Субота І. О. }
+{ Id: 5318934; Type: Teacher; Name: Ковальова І. В. }
+{ Id: 5318941; Type: Teacher; Name: Панкратов О. В. }
+{ Id: 5318953; Type: Teacher; Name: Коваленко Г. А. }
+{ Id: 5335711; Type: Teacher; Name: Дейнеко А. О. }
+{ Id: 5339300; Type: Teacher; Name: Адамов О. С. }
+{ Id: 5339329; Type: Teacher; Name: Гнилицька І. С. }
+{ Id: 5343992; Type: Teacher; Name: Боцюра О. А. }
+{ Id: 5351917; Type: Group; Name: КІи-13-5 }
+{ Id: 5377069; Type: Group; Name: ТКи-15-4 }
+{ Id: 5377073; Type: Group; Name: МССи-15-1 }
+{ Id: 5420828; Type: Group; Name: ТКз-13-2 }
+{ Id: 5442307; Type: Group; Name: КІУКІі-15-1_1 }
+{ Id: 5442309; Type: Group; Name: БІБМІі-15-1_1 }
+{ Id: 5451498; Type: Group; Name: ВПС-15-2 }
+{ Id: 5451501; Type: Group; Name: КІу-15-6 }
+{ Id: 5451573; Type: Group; Name: ІНФу-15-1 }
+{ Id: 5452974; Type: Teacher; Name: Пятайкіна М. І. }
+{ Id: 5453119; Type: Teacher; Name: Толстих Є. Г. }
+{ Id: 5453883; Type: Group; Name: СТЗІу-15-3 }
+{ Id: 5453991; Type: Teacher; Name: Куля Ю. Е. }
+{ Id: 5454092; Type: Group; Name: ЕКи-15-1 }
+{ Id: 5454710; Type: Group; Name: КІи-15-1 }
+{ Id: 5457513; Type: Group; Name: БМІз-14-3 }
+{ Id: 5458826; Type: Group; Name: КІз-15-1 }
+{ Id: 5458831; Type: Group; Name: ТКз-15-1 }
+{ Id: 5458833; Type: Group; Name: ПІз-15-1 }
+{ Id: 5460232; Type: Teacher; Name: Мальцев О. С. }
+{ Id: 5460936; Type: Group; Name: ТКз-13-3 }
+{ Id: 5461250; Type: Group; Name: КІз-13-2 }
+{ Id: 5461875; Type: Group; Name: СІу-15-2 }
+{ Id: 5465798; Type: Teacher; Name: Смеляков К. С. }
+{ Id: 5470548; Type: Teacher; Name: Тітов С. В. }
+{ Id: 5470578; Type: Group; Name: ЕКз-12-9 }
+{ Id: 5470621; Type: Group; Name: РЕАз-12-2 }
+{ Id: 5470817; Type: Group; Name: ТСМпз-15-1 }
+{ Id: 5470989; Type: Teacher; Name: Бобнєв Р. О. }
+{ Id: 5474752; Type: Group; Name: ІПЗп-15-1 }
+{ Id: 5474754; Type: Group; Name: ІПЗп-15-2 }
+{ Id: 5476551; Type: Teacher; Name: Носова Я. В. }
+{ Id: 5477146; Type: Group; Name: АКІТи-15-1 }
+{ Id: 5477148; Type: Group; Name: БМІи-15-1 }
+{ Id: 5486916; Type: Group; Name: ЕКз-12-3 }
+{ Id: 5488452; Type: Teacher; Name: Костін Д. О. }
+{ Id: 5489298; Type: Teacher; Name: Сумцов Д. В. }
+{ Id: 5490347; Type: Teacher; Name: Савченко І. В. }
+{ Id: 5493807; Type: Group; Name: МІВТУ-15-1+МСС-15-1 }
+{ Id: 5493809; Type: Group; Name: КН-14-14 }
+{ Id: 5493813; Type: Group; Name: ТК-13-14 }
+{ Id: 5493815; Type: Group; Name: МСС-13-1+МССИ-13-1 }
+{ Id: 5493817; Type: Group; Name: МІВТУ-15-1+МІВТУ-14-1 }
+{ Id: 5493823; Type: Group; Name: КН-14-11 }
+{ Id: 5493825; Type: Group; Name: КН-14-13 }
+{ Id: 5493831; Type: Group; Name: КН-14-12 }
+{ Id: 5493837; Type: Group; Name: ТК-15-1+МСС-15-1 }
+{ Id: 5538579; Type: Group; Name: РЕАи-13-1 }
+{ Id: 5541928; Type: Teacher; Name: Мовсесян Я. С. }
+{ Id: 5542812; Type: Teacher; Name: Гальченко К. Р. }
+{ Id: 5567855; Type: Teacher; Name: Жернова П. Є. }
+{ Id: 5589503; Type: Group; Name: ІПЗмзд-15-1 }
+{ Id: 5603477; Type: Group; Name: КІЗ-15-1+ПІЗ-15-1+ТКЗ-15-1 }
+{ Id: 5603479; Type: Group; Name: КІЗ-15-1+ТКЗ-15-1 }
+{ Id: 5623769; Type: Teacher; Name: Мартовицький В. О. }
+{ Id: 5632082; Type: Group; Name: КІз-12_13-1 }
+{ Id: 5632690; Type: Group; Name: КІУКІі-15-1_2 }
+{ Id: 5632692; Type: Group; Name: БІБМІі-15-1_2 }
+{ Id: 5632701; Type: Group; Name: BME-14-1_2 }
+{ Id: 5644489; Type: Group; Name: ТКз-12_13-1 }
+{ Id: 5645104; Type: Teacher; Name: Томак В. В. }
+{ Id: 5646518; Type: Group; Name: РЕАз-12_13-1 }
+{ Id: 5649895; Type: Teacher; Name: Теслюк С. І. }
+{ Id: 5653689; Type: Group; Name: ФНІГп-15-19 }
+{ Id: 5654700; Type: Teacher; Name: Сидорова Т. Д. }
+{ Id: 5654749; Type: Teacher; Name: Аргунова Г. В. }
+{ Id: 5654750; Type: Teacher; Name: Носатова  В. М. }
+{ Id: 5654754; Type: Teacher; Name: Брусенцева Н. О. }
+{ Id: 5654755; Type: Teacher; Name: Рижченко О. С. }
+{ Id: 5654763; Type: Teacher; Name: Ткач О. Є. }
+{ Id: 5654765; Type: Teacher; Name: Троїцька В. В. }
+{ Id: 5654768; Type: Teacher; Name: Смірнова Т. О. }
+{ Id: 5654769; Type: Teacher; Name: Тиха Т. В. }
+{ Id: 5658183; Type: Group; Name: ПЗСпз-15-1 }
+{ Id: 5658187; Type: Group; Name: ІПЗпз-15-2 }
+{ Id: 5658189; Type: Group; Name: ІПЗпз-15-3 }
+{ Id: 5660094; Type: Group; Name: ФНІГп-15-2 }
+{ Id: 5660096; Type: Group; Name: ФНІГп-15-3 }
+{ Id: 5667502; Type: Teacher; Name: Поліщук О. В. }
+{ Id: 5668361; Type: Teacher; Name: Шматко О. В. }
+{ Id: 5668412; Type: Group; Name: ФНІГп-15-4 }
+{ Id: 5668414; Type: Group; Name: ФНІГп-15-5 }
+{ Id: 5668416; Type: Group; Name: ФНІГп-15-6 }
+{ Id: 5668418; Type: Group; Name: ФНІГп-15-7 }
+{ Id: 5668420; Type: Group; Name: ФНІГп-15-8 }
+{ Id: 5668422; Type: Group; Name: ФНІГп-15-9 }
+{ Id: 5668424; Type: Group; Name: ФНІГп-15-10 }
+{ Id: 5668444; Type: Group; Name: ФНІГп-15-11 }
+{ Id: 5668446; Type: Group; Name: ФНІГп-15-12 }
+{ Id: 5668449; Type: Group; Name: ФНІГп-15-13 }
+{ Id: 5668451; Type: Group; Name: ФНІГп-15-14 }
+{ Id: 5668453; Type: Group; Name: ФНІГп-15-15 }
+{ Id: 5668456; Type: Group; Name: ФНІГп-15-16 }
+{ Id: 5668458; Type: Group; Name: ФНІГп-15-17 }
+{ Id: 5668461; Type: Group; Name: ФНІГп-15-18 }
+{ Id: 5669619; Type: Group; Name: ФНІГп-15-1 }
+{ Id: 5686872; Type: Group; Name: ПЗСцз-16-1 }
+{ Id: 5692218; Type: Group; Name: ФНІГп-15-20 }
+{ Id: 5692220; Type: Teacher; Name: Носирєва О. В. }
+{ Id: 5695424; Type: Group; Name: ФНІГп-15-21 }
+{ Id: 5705255; Type: Group; Name: ЕКз-15-1 }
+{ Id: 5705733; Type: Group; Name: ФНІГмп-15-1 }
+{ Id: 5708610; Type: Teacher; Name: Шостак І. В. }
+{ Id: 5712051; Type: Teacher; Name: Бабій А. С. }
+{ Id: 5714451; Type: Group; Name: БІКСпз-15-1 }
+{ Id: 5716355; Type: Group; Name: ФНІГмп-15-2 }
+{ Id: 5719837; Type: Group; Name: ІПЗпз-16-1 }
+{ Id: 5719839; Type: Group; Name: ІПЗпз-16-2 }
+{ Id: 5721651; Type: Group; Name: КІУКІ-16-1 }
+{ Id: 5721653; Type: Group; Name: КСТЗІу-16-2 }
+{ Id: 5721655; Type: Group; Name: ТРРТу-16-2 }
+{ Id: 5721657; Type: Group; Name: АКТСІ-16-1 }
+{ Id: 5721659; Type: Group; Name: ПЗПІ-16-2 }
+{ Id: 5721661; Type: Group; Name: ІТІНФ-16-2 }
+{ Id: 5721663; Type: Group; Name: АКТСІу-16-2 }
+{ Id: 5721665; Type: Group; Name: ТРТК-16-1 }
+{ Id: 5721667; Type: Group; Name: ІТКН-16-9 }
+{ Id: 5721669; Type: Group; Name: КІУКІу-16-9 }
+{ Id: 5721671; Type: Group; Name: КІУКІ-16-6 }
+{ Id: 5721673; Type: Group; Name: ЕЕПСу-16-1 }
+{ Id: 5721675; Type: Group; Name: БІБМІ-16-1 }
+{ Id: 5721677; Type: Group; Name: РТ-14-3 }
+{ Id: 5721679; Type: Group; Name: КІУКІ-16-4 }
+{ Id: 5721681; Type: Group; Name: ПЗПІ-16-3 }
+{ Id: 5721683; Type: Group; Name: МНТМН-16-1 }
+{ Id: 5721685; Type: Group; Name: АТ-15-1+ЕАТУ-16-2 }
+{ Id: 5721687; Type: Group; Name: ІТІНФу-16-1 }
+{ Id: 5721689; Type: Group; Name: КБІКС-16-1 }
+{ Id: 5721691; Type: Group; Name: ЕАТу-16-2 }
+{ Id: 5721693; Type: Group; Name: ІТКН-16-4 }
+{ Id: 5721695; Type: Group; Name: БІБМІу-16-1 }
+{ Id: 5721697; Type: Group; Name: КІУКІ-16-2 }
+{ Id: 5721699; Type: Group; Name: ТРРТ-16-1+ЕАТ-16-1 }
+{ Id: 5721701; Type: Group; Name: КУІБ-16-1 }
+{ Id: 5721703; Type: Group; Name: МТМВТ-16-1+МТМСС-16-1 }
+{ Id: 5721705; Type: Group; Name: СТСА-16-1 }
+{ Id: 5721707; Type: Group; Name: АТ-14-1+АТУ-15-2 }
+{ Id: 5721709; Type: Group; Name: АКТАКІТ-16-1 }
+{ Id: 5721711; Type: Group; Name: КІ-14-7 }
+{ Id: 5721713; Type: Group; Name: АКТАКІТу-16-1 }
+{ Id: 5721715; Type: Group; Name: МСС-14-1+МІВТУ-15-1 }
+{ Id: 5721717; Type: Group; Name: ТРРЕАу-16-1 }
+{ Id: 5721719; Type: Group; Name: ТРРТу-16-3 }
+{ Id: 5721721; Type: Group; Name: ППМ-16-1 }
+{ Id: 5721723; Type: Group; Name: РТ-15-1+АТ-15-1 }
+{ Id: 5721725; Type: Group; Name: ЕАТ-16-1 }
+{ Id: 5721727; Type: Group; Name: ПЗПІ-16-1 }
+{ Id: 5721729; Type: Group; Name: ЕЕПС-16-1 }
+{ Id: 5721731; Type: Group; Name: МІВТ-13-1+МСС-13-1+МССИ-13-1 }
+{ Id: 5721733; Type: Group; Name: АКТАКІТ-16-2 }
+{ Id: 5721735; Type: Group; Name: ІТІНФ-16-1 }
+{ Id: 5721737; Type: Group; Name: ІТКН-16-7 }
+{ Id: 5721739; Type: Group; Name: ІТКН-16-3 }
+{ Id: 5721741; Type: Group; Name: МТОТу-16-1 }
+{ Id: 5721743; Type: Group; Name: МІВТ-13-1+МІВТУ-14-1 }
+{ Id: 5721745; Type: Group; Name: ТРТК-16-2 }
+{ Id: 5721747; Type: Group; Name: ОТ-14-1+ОТУ-15-1 }
+{ Id: 5721749; Type: Group; Name: АКТСІ-16-2 }
+{ Id: 5721751; Type: Group; Name: ПЗПІ-16-4 }
+{ Id: 5721753; Type: Group; Name: ПЗПІ-16-6 }
+{ Id: 5721755; Type: Group; Name: ТРРТ-16-1 }
+{ Id: 5721757; Type: Group; Name: МТОТ-16-1 }
+{ Id: 5721759; Type: Group; Name: АКТСІу-16-1 }
+{ Id: 5721761; Type: Group; Name: ТРТК-16-5 }
+{ Id: 5721763; Type: Group; Name: КІУКІ-16-3 }
+{ Id: 5721765; Type: Group; Name: ПЗПІ-16-5 }
+{ Id: 5721767; Type: Group; Name: РТ-14-2 }
+{ Id: 5721769; Type: Group; Name: КБІКС-16-2 }
+{ Id: 5721771; Type: Group; Name: ТРТКу-16-1 }
+{ Id: 5721773; Type: Group; Name: ІТКН-16-1 }
+{ Id: 5721775; Type: Group; Name: ІТКН-16-6 }
+{ Id: 5721777; Type: Group; Name: ІТКНу-16-1 }
+{ Id: 5721779; Type: Group; Name: ТРРЕАу-16-2 }
+{ Id: 5721781; Type: Group; Name: ТРТК-16-4 }
+{ Id: 5721783; Type: Group; Name: ТРРЕА-16-1 }
+{ Id: 5721785; Type: Group; Name: КСТЗІ-16-1 }
+{ Id: 5721787; Type: Group; Name: ЕЕК-16-1 }
+{ Id: 5721789; Type: Group; Name: ВПВПС-16-1 }
+{ Id: 5721791; Type: Group; Name: ЕАТ-16-1+ЕАТУ-16-2 }
+{ Id: 5777261; Type: Group; Name: МТМСС-16-1 }
+{ Id: 5777719; Type: Group; Name: МТМВТ-16-1 }
+{ Id: 5780390; Type: Group; Name: ЕЕКі-16-1 }
+{ Id: 5780392; Type: Group; Name: КІУКІі-16-1_1 }
+{ Id: 5780394; Type: Group; Name: БІБМІі-16-1_1 }
+{ Id: 5821098; Type: Teacher; Name: Зибіна К. В. }
+{ Id: 5829128; Type: Teacher; Name: Пустовойтов П. Є. }
+{ Id: 5831125; Type: Teacher; Name: Узлов Д. Ю. }
+{ Id: 5832323; Type: Teacher; Name: Магдаліна І. В. }
+{ Id: 5833009; Type: Teacher; Name: Бєляєв О. В. }
+{ Id: 5845127; Type: Teacher; Name: Чала О. О. }
+{ Id: 5845175; Type: Teacher; Name: Бортнікова В. О. }
+{ Id: 5853680; Type: Teacher; Name: Каргін А. О. }
+{ Id: 5855813; Type: Teacher; Name: Свиридов А. С. }
+{ Id: 5858276; Type: Group; Name: ТРТКі-16-1 }
+{ Id: 5858783; Type: Teacher; Name: Литвин О. М. }
+{ Id: 5863603; Type: Teacher; Name: Решетнік В. М. }
+{ Id: 5863607; Type: Teacher; Name: Шеховцов С. Б. }
+{ Id: 5863608; Type: Teacher; Name: Коваленко А. І. }
+{ Id: 5921463; Type: Teacher; Name: Дронова-Вартанян І. В. }
+{ Id: 5921467; Type: Teacher; Name: Панасовська Ю. В. }
+{ Id: 5921705; Type: Group; Name: АКІТз-15-1 }
+{ Id: 5921707; Type: Group; Name: РЕАз-13-1 }
+{ Id: 5921709; Type: Group; Name: РЕАЗ-12-1 }
+{ Id: 5921711; Type: Group; Name: БМІз-15-1 }
+{ Id: 5921713; Type: Group; Name: РЕАз-14-2 }
+{ Id: 5921715; Type: Group; Name: СТЗІз-12-1 }
+{ Id: 5921717; Type: Group; Name: ЕКз-13-2 }
+{ Id: 5921721; Type: Group; Name: ПІЗ-12-1,ПІЗ-12-3 }
+{ Id: 5924154; Type: Group; Name: КІУКІ-16-5 }
+{ Id: 5924156; Type: Group; Name: КІУКІ-16-7 }
+{ Id: 5924158; Type: Group; Name: КІУКІу-16-8 }
+{ Id: 5925456; Type: Group; Name: КСТЗІу-16-3 }
+{ Id: 5925459; Type: Group; Name: ТРРТу-16-4 }
+{ Id: 5926149; Type: Group; Name: МТМВТу-16-1 }
+{ Id: 5926293; Type: Group; Name: КІи-14-4 }
+{ Id: 5927428; Type: Group; Name: ВПВПС-16-2 }
+{ Id: 5927820; Type: Group; Name: ПЗПІ-16-7 }
+{ Id: 5927832; Type: Group; Name: ПЗПІ-16-8 }
+{ Id: 5927834; Type: Group; Name: ІТКН-16-2 }
+{ Id: 5927836; Type: Group; Name: ІТКН-16-5 }
+{ Id: 5927838; Type: Group; Name: ІТКН-16-8 }
+{ Id: 5928764; Type: Teacher; Name: Письменецький В. О. }
+{ Id: 5929392; Type: Group; Name: КІУКІз-16-1 }
+{ Id: 5929394; Type: Group; Name: ПЗПІз-16-1 }
+{ Id: 5931770; Type: Group; Name: КІз-14-2 }
+{ Id: 5931885; Type: Group; Name: ТКз-14-2 }
+{ Id: 5932209; Type: Teacher; Name: Петров К. Е. }
+{ Id: 5933606; Type: Group; Name: ІПЗп-16-1 }
+{ Id: 5935830; Type: Group; Name: ПІз-12-3 }
+{ Id: 5935892; Type: Group; Name: БМІз-15-2 }
+{ Id: 5936090; Type: Group; Name: ІТКНз-16-1 }
+{ Id: 5936092; Type: Group; Name: ТРТКз-16-1 }
+{ Id: 5936820; Type: Group; Name: КУІБі-16-1 }
+{ Id: 5937707; Type: Teacher; Name: Кобзєв В. Г. }
+{ Id: 5937995; Type: Teacher; Name: Левченко  А. В. }
+{ Id: 5938280; Type: Teacher; Name: Зелений О. П. }
+{ Id: 5941706; Type: Teacher; Name: Матвієнко О. І. }
+{ Id: 5941888; Type: Teacher; Name: Шандренко Р. В. }
+{ Id: 5941894; Type: Teacher; Name: Луцький С. В. }
+{ Id: 5941895; Type: Teacher; Name: Народницький Г. Ю. }
+{ Id: 5942715; Type: Teacher; Name: Твердохліб В. В. }
+{ Id: 5942911; Type: Teacher; Name: Козел Н. Б. }
+{ Id: 5945390; Type: Teacher; Name: Стадник О. М. }
+{ Id: 5945645; Type: Teacher; Name: Шеховцова В. І. }
+{ Id: 5946430; Type: Teacher; Name: Стеценко П. І. }
+{ Id: 5946431; Type: Teacher; Name: Федюшин О. І. }
+{ Id: 5946432; Type: Teacher; Name: Перекопський О. О. }
+{ Id: 5947183; Type: Group; Name: ФНІГп-16-1 }
+{ Id: 5947185; Type: Group; Name: ФНІГп-16-2 }
+{ Id: 5947187; Type: Group; Name: ФНІГп-16-3 }
+{ Id: 5947189; Type: Group; Name: ФНІГп-16-4 }
+{ Id: 5951929; Type: Group; Name: ПЗСцз-16-2 }
+{ Id: 5954223; Type: Group; Name: ФНІГп-16-5 }
+{ Id: 5954225; Type: Group; Name: ФНІГп-16-6 }
+{ Id: 5954227; Type: Group; Name: ФНІГп-16-7 }
+{ Id: 5954229; Type: Group; Name: ФНІГп-16-8 }
+{ Id: 5957533; Type: Teacher; Name: Кучук Г. А. }
+{ Id: 5960294; Type: Group; Name: ФНІГп-16-9 }
+{ Id: 5960296; Type: Group; Name: ФНІГп-16-10 }
+{ Id: 5960298; Type: Group; Name: ФНІГп-16-11 }
+{ Id: 5960300; Type: Group; Name: ФНІГп-16-12 }
+{ Id: 5960302; Type: Group; Name: ФНІГп-16-13 }
+{ Id: 5960304; Type: Group; Name: ФНІГп-16-14 }
+{ Id: 5966125; Type: Teacher; Name: Кириченко І. В. }
+{ Id: 5966217; Type: Group; Name: КІУКІи-16-1 }
+{ Id: 5966219; Type: Group; Name: КБІКСи-16-1 }
+{ Id: 5966221; Type: Group; Name: ТРТКи-16-1 }
+{ Id: 5966229; Type: Teacher; Name: Голубничий Д. Ю. }
+{ Id: 5966239; Type: Teacher; Name: Олізаренко С. А. }
+{ Id: 5966268; Type: Group; Name: SA-16-1 }
+{ Id: 5966347; Type: Group; Name: ACIRST-16-1 }
+{ Id: 5970243; Type: Group; Name: АКТСІи-16-2 }
+{ Id: 5970245; Type: Group; Name: АКТАКІТи-16-1 }
+{ Id: 5970247; Type: Group; Name: БІБМІи-16-1 }
+{ Id: 5970366; Type: Group; Name: ПЗПІи-16-4 }
+{ Id: 5970368; Type: Group; Name: ЕЕКи-16-1 }
+{ Id: 5974436; Type: Group; Name: ФНІГп-16-15 }
+{ Id: 5974438; Type: Group; Name: ФНІГп-16-16 }
+{ Id: 5974440; Type: Group; Name: ФНІГп-16-17 }
+{ Id: 5976701; Type: Teacher; Name: Золотухіна Н. А. }
+{ Id: 5976711; Type: Group; Name: ФНІГп-16-18 }
+{ Id: 5976713; Type: Group; Name: ФНІГп-16-19 }
+{ Id: 5976715; Type: Group; Name: ФНІГп-16-20 }
+{ Id: 5984841; Type: Teacher; Name: Архипова В. 0. }
+{ Id: 5985584; Type: Group; Name: ФНІГп-16-21 }
+{ Id: 5985586; Type: Group; Name: ФНІГп-16-22 }
+{ Id: 5985588; Type: Group; Name: ФНІГп-16-23 }
+{ Id: 5985590; Type: Group; Name: ФНІГп-16-24 }
+{ Id: 5985592; Type: Group; Name: ФНІГп-16-25 }
+{ Id: 5985594; Type: Group; Name: ФНІГп-16-26 }
+{ Id: 5985596; Type: Group; Name: ФНІГп-16-27 }
+{ Id: 5986589; Type: Teacher; Name: Єщенко Ю. Ф. }
+{ Id: 5986816; Type: Teacher; Name: Парфьонова О. В. }
+{ Id: 5988181; Type: Group; Name: КБдф-16-1 }
+{ Id: 5989512; Type: Group; Name: КІУКІі-16-2_1 }
+{ Id: 5989515; Type: Group; Name: БІБМІі-16-1_2 }
+{ Id: 5991864; Type: Group; Name: ЕЕКз-16-1 }
+{ Id: 5994778; Type: Group; Name: СТСАи-16-1 }
+{ Id: 5997672; Type: Group; Name: ФНІГмп-16-01 }
+{ Id: 5997674; Type: Group; Name: ФНІГмп-16-02 }
+{ Id: 5997676; Type: Group; Name: ФНІГмп-16-03 }
+{ Id: 5997678; Type: Group; Name: ФНІГп-16-28 }
+{ Id: 5997680; Type: Group; Name: ФНІГп-16-29 }
+{ Id: 5997682; Type: Group; Name: ФНІГп-16-30 }
+{ Id: 5997684; Type: Group; Name: ФНІГп-16-31 }
+{ Id: 5997686; Type: Group; Name: ФНІГп-16-32 }
+{ Id: 5997688; Type: Group; Name: ФНІГп-16-33 }
+{ Id: 5998046; Type: Group; Name: ЕКдф-16-1 }
+{ Id: 5998063; Type: Group; Name: ПФНМдф-16-1 }
+{ Id: 5998075; Type: Group; Name: ПМдф-16-1 }
+{ Id: 5998080; Type: Group; Name: ІПЗдф-16-1 }
+{ Id: 5998085; Type: Group; Name: КНІТдф-16-1 }
+{ Id: 5998091; Type: Group; Name: КІдф-16-1 }
+{ Id: 5998099; Type: Group; Name: САдф-16-1 }
+{ Id: 5998106; Type: Group; Name: АКІТдф-16-1 }
+{ Id: 5998112; Type: Group; Name: МІВТдф-16-1 }
+{ Id: 5998114; Type: Group; Name: БМІдф-16-1 }
+{ Id: 5998119; Type: Group; Name: ЕЛТдф-16-1 }
+{ Id: 5998127; Type: Group; Name: ТКРТдф-16-1 }
+{ Id: 6006278; Type: Teacher; Name: Сидоренко  С. І. }
+{ Id: 6009116; Type: Group; Name: МТМВТУ-16-1+МСС-15-1 }
+{ Id: 6009118; Type: Group; Name: МНТМН-16-1+МТОТ-16-1 }
+{ Id: 6009120; Type: Group; Name: КІ-14-1+КІИ-14-1 }
+{ Id: 6009122; Type: Group; Name: ОТ-15-1+МТОТУ-16-1 }
+{ Id: 6009124; Type: Group; Name: БМІ-15-1+ЕПС-15-1 }
+{ Id: 6009126; Type: Group; Name: МН-15-1+ОТ-15-1 }
+{ Id: 6009128; Type: Group; Name: МТМСС-16-1+ТРТК-16-2 }
+{ Id: 6016269; Type: Group; Name: МАГ-АКТ-1-16 }
+{ Id: 6016285; Type: Group; Name: МАГ-АКТ-2-16 }
+{ Id: 6018438; Type: Teacher; Name: Марикян С. В. }
+{ Id: 6018899; Type: Group; Name: ФНІГп-16-34 }
+{ Id: 6018916; Type: Group; Name: ФНІГп-16-35 }
+{ Id: 6018920; Type: Group; Name: ФНІГп-16-36 }
+{ Id: 6018922; Type: Group; Name: ФНІГп-16-37 }
+{ Id: 6018924; Type: Group; Name: ФНІГп-16-38 }
+{ Id: 6018926; Type: Group; Name: ФНІГп-16-39 }
+{ Id: 6018928; Type: Group; Name: ФНІГп-16-40 }
+{ Id: 6018931; Type: Group; Name: ФНІГп-16-41 }
+{ Id: 6018933; Type: Group; Name: ФНІГп-16-42 }
+{ Id: 6018935; Type: Group; Name: ФНІГп-16-43 }
+{ Id: 6018937; Type: Group; Name: ФНІГп-16-44 }
+{ Id: 6031979; Type: Teacher; Name: Чебан Г. Є. }
+{ Id: 6032234; Type: Group; Name: ІТКНи-16-7 }
+{ Id: 6054944; Type: Teacher; Name: Назаров О. С. }
+{ Id: 6061987; Type: Teacher; Name: Міщенко О. С. }
+{ Id: 6065304; Type: Teacher; Name: Яськов Г. М. }
+{ Id: 6069939; Type: Teacher; Name: Бітченко О. М. }
+{ Id: 6074533; Type: Teacher; Name: Ванін В. А. }
+{ Id: 6107973; Type: Group; Name: КІз-16-1 }
+{ Id: 6107979; Type: Group; Name: КІЗ-16-1+ТКЗ-16-1 }
+{ Id: 6107983; Type: Group; Name: ТКз-16-1 }
+{ Id: 6107989; Type: Group; Name: ПІз-16-1 }
+{ Id: 6111513; Type: Group; Name: ІПЗпз-16-3 }
+{ Id: 6111517; Type: Group; Name: ІПЗпз-16-4 }
+{ Id: 6111651; Type: Group; Name: ІПЗмзд-16-1 }
+{ Id: 6132389; Type: Group; Name: БІКСмзд-16-1 }
+{ Id: 6178183; Type: Group; Name: КІУКІі-16-1_2 }
+{ Id: 6178227; Type: Group; Name: КІУКІі-16-2_2 }
+{ Id: 6190770; Type: Teacher; Name: Кравченко Т. М. }
+{ Id: 6191617; Type: Group; Name: БІКСпз-16-1 }
+{ Id: 6223850; Type: Teacher; Name: Пілюгіна І. С. }
+{ Id: 6223853; Type: Teacher; Name: Мартинюк М. М. }
+{ Id: 6228110; Type: Group; Name: КІУКІі-16-3 }
+{ Id: 6228112; Type: Group; Name: БІБМІі-16-3 }
+{ Id: 6228114; Type: Group; Name: ЕЕКі-16-3 }
+{ Id: 6228116; Type: Group; Name: ACIRST-16-3 }
+{ Id: 6234999; Type: Teacher; Name: Машкаров Ю. Г. }
+{ Id: 6248394; Type: Group; Name: ПЗСцз-17-1 }
+{ Id: 6248473; Type: Teacher; Name: Єщенко Ю. Ф. }
+{ Id: 6255560; Type: Teacher; Name: Новакова В. С. }
+{ Id: 6255573; Type: Teacher; Name: Хрустальов К. Л. }
+{ Id: 6273255; Type: Group; Name: ФНІГп-16-45 }
+{ Id: 6274741; Type: Group; Name: ПЗСпз-16-1 }
+{ Id: 6283361; Type: Group; Name: МТОТ-17-1 }
+{ Id: 6283363; Type: Group; Name: КСТЗІу-17-2 }
+{ Id: 6283365; Type: Group; Name: ПЗПІ-17-1 }
+{ Id: 6283367; Type: Group; Name: РТ-15-3 }
+{ Id: 6283369; Type: Group; Name: ВПВПСу-17-1 }
+{ Id: 6283371; Type: Group; Name: БІБМІу-17-1 }
+{ Id: 6283373; Type: Group; Name: ТРРЕА-17-1 }
+{ Id: 6283375; Type: Group; Name: ПЗПІ-17-2 }
+{ Id: 6283377; Type: Group; Name: КІУКІ-17-3 }
+{ Id: 6283379; Type: Group; Name: ТРРТу-17-2 }
+{ Id: 6283381; Type: Group; Name: ІТКН-17-5 }
+{ Id: 6283383; Type: Group; Name: ІТКН-17-2 }
+{ Id: 6283387; Type: Group; Name: РТ-15-2 }
+{ Id: 6283389; Type: Group; Name: ВПВПС-17-1 }
+{ Id: 6283393; Type: Group; Name: ЕСТМу-17-2 }
+{ Id: 6283395; Type: Group; Name: ІТКНу-17-1 }
+{ Id: 6283397; Type: Group; Name: ЕЕПСу-17-1 }
+{ Id: 6283399; Type: Group; Name: КІ-15-6 }
+{ Id: 6283403; Type: Group; Name: КІУКІ-17-1 }
+{ Id: 6283405; Type: Group; Name: КІУКІ-17-4 }
+{ Id: 6283407; Type: Group; Name: АКТАКІТ-17-2 }
+{ Id: 6283409; Type: Group; Name: ПЗПІ-17-7 }
+{ Id: 6283413; Type: Group; Name: КБІКС-17-2 }
+{ Id: 6283415; Type: Group; Name: КУІБ-17-1 }
+{ Id: 6283417; Type: Group; Name: ІТКН-17-6 }
+{ Id: 6283421; Type: Group; Name: БІБМІ-17-1 }
+{ Id: 6283423; Type: Group; Name: МТМВТу-17-1 }
+{ Id: 6283425; Type: Group; Name: МНТМН-17-1 }
+{ Id: 6283427; Type: Group; Name: ІКТу-17-1 }
+{ Id: 6283429; Type: Group; Name: КІУКІ-17-2 }
+{ Id: 6283431; Type: Group; Name: ТРРТу-17-3 }
+{ Id: 6283433; Type: Group; Name: ІТКН-17-4 }
+{ Id: 6283437; Type: Group; Name: ЕЕПС-17-1 }
+{ Id: 6283441; Type: Group; Name: АКТАКІТу-17-1 }
+{ Id: 6283445; Type: Group; Name: ТРТКу-17-1 }
+{ Id: 6283447; Type: Group; Name: АКТСІ-17-1 }
+{ Id: 6283449; Type: Group; Name: АКТСІ-17-2 }
+{ Id: 6283451; Type: Group; Name: ТРІКІ-17-1 }
+{ Id: 6283455; Type: Group; Name: ЕСТМ-17-1 }
+{ Id: 6283457; Type: Group; Name: КСТЗІ-17-1 }
+{ Id: 6283459; Type: Group; Name: КРП-17-1 }
+{ Id: 6283461; Type: Group; Name: КІУКІ-17-5 }
+{ Id: 6283463; Type: Group; Name: ПЗПІ-17-5 }
+{ Id: 6283465; Type: Group; Name: ТРІМІ-17-1 }
+{ Id: 6283467; Type: Group; Name: ТРТК-17-1 }
+{ Id: 6283469; Type: Group; Name: КБІКС-17-1 }
+{ Id: 6283471; Type: Group; Name: ТРТК-17-2 }
+{ Id: 6283475; Type: Group; Name: АКТСІу-17-1 }
+{ Id: 6283477; Type: Group; Name: КІУКІу-17-9 }
+{ Id: 6283479; Type: Group; Name: ППМ-17-1 }
+{ Id: 6283481; Type: Group; Name: ТРРТ-17-1 }
+{ Id: 6283483; Type: Group; Name: ІТІНФ-17-1 }
+{ Id: 6283485; Type: Group; Name: ТРРЕАу-17-1 }
+{ Id: 6283487; Type: Group; Name: АКТАКІТ-17-1 }
+{ Id: 6283489; Type: Group; Name: ПЗПІ-17-6 }
+{ Id: 6283491; Type: Group; Name: ІТКН-17-1 }
+{ Id: 6283493; Type: Group; Name: ІТКН-17-3 }
+{ Id: 6283497; Type: Group; Name: МТТЕ-17-1 }
+{ Id: 6283499; Type: Group; Name: ІТІНФ-17-2 }
+{ Id: 6283501; Type: Group; Name: ЕЕК-17-1 }
+{ Id: 6283503; Type: Group; Name: КУІБу-17-1 }
+{ Id: 6288171; Type: Group; Name: СТСА-17-1 }
+{ Id: 6288652; Type: Group; Name: ЕЕКі-17-1 }
+{ Id: 6288654; Type: Group; Name: КІУКІі-17-1_1 }
+{ Id: 6288656; Type: Group; Name: БІБМІі-17-1_1 }
+{ Id: 6290346; Type: Group; Name: ІНФм-17-1 }
+{ Id: 6290348; Type: Group; Name: БМІм-17-1 }
+{ Id: 6290350; Type: Group; Name: ПМм-17-1 }
+{ Id: 6290352; Type: Group; Name: КСУАм-17-1 }
+{ Id: 6290354; Type: Group; Name: ТЕМВм-17-1 }
+{ Id: 6290356; Type: Group; Name: СПРм-17-1 }
+{ Id: 6290358; Type: Group; Name: СШІм-17-1 }
+{ Id: 6290360; Type: Group; Name: ІТБМм-17-1 }
+{ Id: 6290364; Type: Group; Name: РЕАЗм-17-1 }
+{ Id: 6290366; Type: Group; Name: ІМЗм-17-1 }
+{ Id: 6290368; Type: Group; Name: ІКІм-17-1 }
+{ Id: 6290370; Type: Group; Name: СТКСм-17-1 }
+{ Id: 6290372; Type: Group; Name: МВТм-17-1 }
+{ Id: 6290374; Type: Group; Name: ІТКСм-17-1 }
+{ Id: 6290378; Type: Group; Name: КІТПВм-17-1 }
+{ Id: 6290380; Type: Group; Name: МНПм-17-1 }
+{ Id: 6290384; Type: Group; Name: БДІРм-17-1 }
+{ Id: 6290388; Type: Group; Name: МЗВЯПм-17-1 }
+{ Id: 6290390; Type: Group; Name: РПСКм-17-1 }
+{ Id: 6290394; Type: Group; Name: ІТМРТм-17-1 }
+{ Id: 6290396; Type: Group; Name: ТДВм-17-1 }
+{ Id: 6290398; Type: Group; Name: ІУСТм-17-1 }
+{ Id: 6290400; Type: Group; Name: КТСВПВм-17-1 }
+{ Id: 6290402; Type: Group; Name: ТСМм-17-1 }
+{ Id: 6290404; Type: Group; Name: ЯССм-17-1 }
+{ Id: 6290406; Type: Group; Name: АРТм-17-1 }
+{ Id: 6290408; Type: Group; Name: РТм-17-1 }
+{ Id: 6290410; Type: Group; Name: АМЗІм-17-1 }
+{ Id: 6290412; Type: Group; Name: САУм-17-1 }
+{ Id: 6290416; Type: Group; Name: СПм-17-1 }
+{ Id: 6290418; Type: Group; Name: СПм-17-2 }
+{ Id: 6290420; Type: Group; Name: ІМІм-17-1 }
+{ Id: 6290422; Type: Group; Name: ІПЗм-17-2 }
+{ Id: 6290424; Type: Group; Name: СТМм-17-1 }
+{ Id: 6290426; Type: Group; Name: КСМм-17-1 }
+{ Id: 6290428; Type: Group; Name: ІКТм-17-1 }
+{ Id: 6290430; Type: Group; Name: СКСм-17-1 }
+{ Id: 6290432; Type: Group; Name: КТРСм-17-1 }
+{ Id: 6290434; Type: Group; Name: АУТПм-17-1 }
+{ Id: 6290436; Type: Group; Name: СІм-17-1 }
+{ Id: 6290438; Type: Group; Name: УПм-17-1 }
+{ Id: 6290440; Type: Group; Name: ЕКм-17-1 }
+{ Id: 6290442; Type: Group; Name: ІТПм-17-1 }
+{ Id: 6290444; Type: Group; Name: ІПЗм-17-1 }
+{ Id: 6290448; Type: Group; Name: ЕППм-17-1 }
+{ Id: 6291555; Type: Group; Name: ЛОЕТм-17-1 }
+{ Id: 6291557; Type: Group; Name: ФТОІм-17-1 }
+{ Id: 6317374; Type: Group; Name: СТЗІАм-17-1 }
+{ Id: 6317387; Type: Group; Name: ІВДЕм-17-1 }
+{ Id: 6329209; Type: Group; Name: БІКСм-17-1 }
+{ Id: 6329217; Type: Teacher; Name: Глухов О. В. }
+{ Id: 6336180; Type: Group; Name: 10 кл-1 }
+{ Id: 6336318; Type: Group; Name: 10 кл-2 }
+{ Id: 6336530; Type: Group; Name: 9 кл-1 }
+{ Id: 6336532; Type: Group; Name: 9 кл-2 }
+{ Id: 6336648; Type: Group; Name: Клубы-1 }
+{ Id: 6336650; Type: Group; Name: Клубы-2 }
+{ Id: 6336652; Type: Group; Name: Клубы-3 }
+{ Id: 6336654; Type: Group; Name: Клубы-4 }
+{ Id: 6336656; Type: Group; Name: Клубы-5 }
+{ Id: 6336662; Type: Group; Name: Навч.-консульт.курси 11кл }
+{ Id: 6336664; Type: Group; Name: Недільні-1 }
+{ Id: 6336666; Type: Group; Name: Недільні-2 }
+{ Id: 6336668; Type: Group; Name: Недільні-3 }
+{ Id: 6336670; Type: Group; Name: Недільні-4 }
+{ Id: 6336672; Type: Group; Name: Недільні-5 }
+{ Id: 6336676; Type: Group; Name: ЦДПв 11кл -1 }
+{ Id: 6336678; Type: Group; Name: ЦДПв 11кл -2 }
+{ Id: 6336680; Type: Group; Name: ЦДПв 11кл -3 }
+{ Id: 6336682; Type: Group; Name: ЦДПв 11кл -4 }
+{ Id: 6336684; Type: Group; Name: ЦДПв 11кл (6 міс)-1 }
+{ Id: 6336692; Type: Group; Name: Факультатив 11кл }
+{ Id: 6336694; Type: Group; Name: ЦДПв 11кл -5 }
+{ Id: 6344799; Type: Teacher; Name: Мінухін С. В. }
+{ Id: 6344800; Type: Teacher; Name: Аврамов К. В. }
+{ Id: 6344857; Type: Teacher; Name: Морозова А. І. }
+{ Id: 6345418; Type: Teacher; Name: Климова І. М. }
+{ Id: 6345773; Type: Teacher; Name: Панкратова  Ю. Є. }
+{ Id: 6345774; Type: Group; Name: 9 кл-3 }
+{ Id: 6345776; Type: Group; Name: 10 кл-3 }
+{ Id: 6346686; Type: Group; Name: 10 кл-4 }
+{ Id: 6353562; Type: Group; Name: БМІз-15-1+БМІз-15-2 }
+{ Id: 6385508; Type: Teacher; Name: Пономарьова С. В. }
+{ Id: 6390471; Type: Teacher; Name: Халімова С. В. }
+{ Id: 6393362; Type: Teacher; Name: Олійник  О. В. }
+{ Id: 6393364; Type: Teacher; Name: Шаповалова А. С. }
+{ Id: 6397278; Type: Teacher; Name: Романов Ю. М. }
+{ Id: 6397911; Type: Teacher; Name: Стьопіна С. В. }
+{ Id: 6398736; Type: Teacher; Name: Шаповалов С. В. }
+{ Id: 6400499; Type: Teacher; Name: Ляшенко О. С. }
+{ Id: 6437405; Type: Teacher; Name: Мар`Їн С. О. }
+{ Id: 6438825; Type: Group; Name: АКІТдф-17-1 }
+{ Id: 6438827; Type: Group; Name: БМІдф-17-1 }
+{ Id: 6438829; Type: Group; Name: ЕКдф-17-1 }
+{ Id: 6438946; Type: Group; Name: ЕЛТдф-17-1 }
+{ Id: 6438948; Type: Group; Name: ІПЗдф-17-1 }
+{ Id: 6438950; Type: Group; Name: КБдф-17-1 }
+{ Id: 6438952; Type: Group; Name: КІдф-17-1 }
+{ Id: 6438954; Type: Group; Name: КНІТдф-17-1 }
+{ Id: 6438956; Type: Group; Name: МІВТдф-17-1 }
+{ Id: 6438959; Type: Group; Name: ПМдф-17-1 }
+{ Id: 6438961; Type: Group; Name: ПФНМдф-17-1 }
+{ Id: 6438963; Type: Group; Name: САдф-17-1 }
+{ Id: 6438965; Type: Group; Name: ТКРТдф-17-1 }
+{ Id: 6455080; Type: Group; Name: ЕКім-17-1 }
+{ Id: 6455082; Type: Group; Name: КСМім-17-1 }
+{ Id: 6455084; Type: Group; Name: БМІім-17-1 }
+{ Id: 6455086; Type: Group; Name: БІКСім-17-1 }
+{ Id: 6496526; Type: Group; Name: ІТКН-17-9 }
+{ Id: 6496529; Type: Group; Name: ІТКН-17-7 }
+{ Id: 6496536; Type: Group; Name: ІТКН-17-8 }
+{ Id: 6496546; Type: Group; Name: ІТШІ-17-1 }
+{ Id: 6496569; Type: Group; Name: ВПВПС-17-2 }
+{ Id: 6496576; Type: Group; Name: ПЗПІ-17-3 }
+{ Id: 6496579; Type: Group; Name: ПЗПІ-17-4 }
+{ Id: 6496585; Type: Group; Name: ПЗПІ-17-8 }
+{ Id: 6496598; Type: Group; Name: ПЗПІ-17-9 }
+{ Id: 6497191; Type: Group; Name: ІСТ-17-1 }
+{ Id: 6497234; Type: Group; Name: КІУКІ-17-6 }
+{ Id: 6497245; Type: Group; Name: КІУКІ-17-7 }
+{ Id: 6497251; Type: Group; Name: КІУКІ-17-8 }
+{ Id: 6497273; Type: Group; Name: ІТІР-17-1 }
+{ Id: 6497286; Type: Group; Name: ТРРТу-17-4 }
+{ Id: 6497290; Type: Group; Name: СШІм-17-2 }
+{ Id: 6497317; Type: Group; Name: ВСА-17-1 }
+{ Id: 6497325; Type: Group; Name: АКТСІу-17-2 }
+{ Id: 6497368; Type: Group; Name: ПЗСм-17-1 }
+{ Id: 6497371; Type: Group; Name: ПЗСм-17-2 }
+{ Id: 6497374; Type: Group; Name: ПЗСм-17-3 }
+{ Id: 6497376; Type: Group; Name: КІУКІу-17-10 }
+{ Id: 6497384; Type: Group; Name: АРТм-17-2 }
+{ Id: 6497389; Type: Group; Name: СТЗІАм-17-2 }
+{ Id: 6497452; Type: Group; Name: КСМм-17-2 }
+{ Id: 6497466; Type: Group; Name: СКСм-17-2 }
+{ Id: 6497605; Type: Group; Name: ІНФм-17-2 }
+{ Id: 6498485; Type: Group; Name: КТРСм-17-2 }
+{ Id: 6500237; Type: Group; Name: ПЗПІз-17-1 }
+{ Id: 6500239; Type: Group; Name: АКТАКІТз-17-1 }
+{ Id: 6500241; Type: Group; Name: БІБМІз-17-1 }
+{ Id: 6500243; Type: Group; Name: ВПВПСз-17-1 }
+{ Id: 6500245; Type: Group; Name: ЕЕКз-17-2 }
+{ Id: 6500247; Type: Group; Name: ІТКНз-17-1 }
+{ Id: 6500249; Type: Group; Name: КІУКІз-17-1 }
+{ Id: 6500251; Type: Group; Name: ТРІМІз-17-1 }
+{ Id: 6500261; Type: Group; Name: БМІз-16-2 }
+{ Id: 6500294; Type: Group; Name: КБІКС-17-3 }
+{ Id: 6502140; Type: Group; Name: ТРРЕАу-17-2 }
+{ Id: 6502209; Type: Group; Name: БІІТБМ-17-1 }
+{ Id: 6502385; Type: Group; Name: ТРТКу-17-2 }
+{ Id: 6502987; Type: Group; Name: КУІБі-17-1 }
+{ Id: 6502989; Type: Group; Name: ТРТКі-17-1 }
+{ Id: 6503300; Type: Group; Name: ТРТКі-16-2 }
+{ Id: 6505592; Type: Group; Name: ТСМмі-17-1 }
+{ Id: 6505594; Type: Group; Name: АМЗІмі-17-1 }
+{ Id: 6506805; Type: Group; Name: КІз-15-2 }
+{ Id: 6506807; Type: Group; Name: ТКз-15-2 }
+{ Id: 6506809; Type: Group; Name: АРТзм-12-1 }
+{ Id: 6506813; Type: Group; Name: АУТПзм-12-1 }
+{ Id: 6506815; Type: Group; Name: БМІзм-12-1 }
+{ Id: 6506817; Type: Group; Name: ЕКзм-12-1 }
+{ Id: 6506819; Type: Group; Name: БІІТБМу-17-1 }
+{ Id: 6506821; Type: Group; Name: ЕППзм-12-1 }
+{ Id: 6506842; Type: Group; Name: ІМЗзм-12-1 }
+{ Id: 6506907; Type: Group; Name: РТзм-12-1 }
+{ Id: 6506940; Type: Group; Name: КСМзм-12-1 }
+{ Id: 6506952; Type: Group; Name: СПзм-12-1 }
+{ Id: 6506967; Type: Group; Name: ТСМзм-12-1 }
+{ Id: 6506969; Type: Group; Name: СШІзм-12-1 }
+{ Id: 6506973; Type: Group; Name: ПЗСзм-12-1 }
+{ Id: 6507011; Type: Group; Name: ІМЗзм-12-2 }
+{ Id: 6507013; Type: Group; Name: ВПСз-15-1 }
+{ Id: 6507015; Type: Group; Name: СТЗІАзм-12-1 }
+{ Id: 6507017; Type: Group; Name: КТСВПВзм-12-1 }
+{ Id: 6507021; Type: Group; Name: ІУСТзм-12-1 }
+{ Id: 6507039; Type: Group; Name: СШІм-17-3 }
+{ Id: 6508773; Type: Group; Name: ІМІзм-12-1 }
+{ Id: 6509088; Type: Group; Name: ІТКНу-17-2 }
+{ Id: 6511524; Type: Group; Name: АКТСІ-17-3 }
+{ Id: 6514502; Type: Group; Name: МТОТу-17-1 }
+{ Id: 6515785; Type: Group; Name: ФНІГп-17-1 }
+{ Id: 6515787; Type: Group; Name: ФНІГп-17-2 }
+{ Id: 6515789; Type: Group; Name: ФНІГп-17-3 }
+{ Id: 6515791; Type: Group; Name: ФНІГп-17-4 }
+{ Id: 6515793; Type: Group; Name: ФНІГп-17-5 }
+{ Id: 6515795; Type: Group; Name: ФНІГп-17-6 }
+{ Id: 6515797; Type: Group; Name: ФНІГп-17-7 }
+{ Id: 6515799; Type: Group; Name: ФНІГп-17-8 }
+{ Id: 6515801; Type: Group; Name: ФНІГп-17-9 }
+{ Id: 6515803; Type: Group; Name: ФНІГп-17-10 }
+{ Id: 6517083; Type: Group; Name: УФЕБм-17-1 }
+{ Id: 6517366; Type: Teacher; Name: Мерзлікін А. О. }
+{ Id: 6518449; Type: Group; Name: БІБМІз-16-3 }
+{ Id: 6520631; Type: Group; Name: ЕЕКи-17-1 }
+{ Id: 6520633; Type: Group; Name: ЕКми-17-1 }
+{ Id: 6520764; Type: Group; Name: ІУСТми-17-1 }
+{ Id: 6521143; Type: Group; Name: АКТСІи-17-1 }
+{ Id: 6521147; Type: Group; Name: КІУКІи-17-1 }
+{ Id: 6521153; Type: Group; Name: КСМми-17-1 }
+{ Id: 6521155; Type: Group; Name: ТСМми-17-1 }
+{ Id: 6521157; Type: Group; Name: ЯССми-17-1 }
+{ Id: 6521159; Type: Group; Name: АУТПми-17-1 }
+{ Id: 6522910; Type: Group; Name: ТРРЕАу-17-3 }
+{ Id: 6522928; Type: Group; Name: КСТЗІз-17-1 }
+{ Id: 6523162; Type: Teacher; Name: Побіженко І. О. }
+{ Id: 6523178; Type: Teacher; Name: Успенський Б. В. }
+{ Id: 6524013; Type: Teacher; Name: Калюжний М. М. }
+{ Id: 6525977; Type: Teacher; Name: Знайдюк В. Г. }
+{ Id: 6526174; Type: Group; Name: КСМзм-12-2 }
+{ Id: 6531663; Type: Teacher; Name: Бекіров А. Е. }
+{ Id: 6532138; Type: Group; Name: ПІп-17-1 }
+{ Id: 6537990; Type: Teacher; Name: Наконечний М. В. }
+{ Id: 6538005; Type: Teacher; Name: Білова Т. Г. }
+{ Id: 6541605; Type: Group; Name: КБІКСи-17-1 }
+{ Id: 6541634; Type: Group; Name: ВПСи-14-1 }
+{ Id: 6542376; Type: Group; Name: ЕКім-17-2 }
+{ Id: 6544832; Type: Group; Name: БІБМІи-17-1 }
+{ Id: 6544903; Type: Group; Name: АКТАКІТи-17-1 }
+{ Id: 6557368; Type: Teacher; Name: Россіхін В. В. }
+{ Id: 6557376; Type: Teacher; Name: Петрикова І. Ю. }
+{ Id: 6560385; Type: Teacher; Name: Попов В. І. }
+{ Id: 6560640; Type: Group; Name: ТРТКи-17-1 }
+{ Id: 6561731; Type: Group; Name: БТІ-17-1 }
+{ Id: 6567345; Type: Group; Name: КСМім-17-2 }
+{ Id: 6568984; Type: Group; Name: БІБМІі-17-2_1 }
+{ Id: 6568986; Type: Group; Name: БІБМІі-17-1_2 }
+{ Id: 6568999; Type: Group; Name: КІз-14-3 }
+{ Id: 6569333; Type: Group; Name: ПЗПІи-17-5 }
+{ Id: 6570225; Type: Group; Name: БІБМІі-16-2_1 }
+{ Id: 6570227; Type: Group; Name: БІБМІі-16-2_2 }
+{ Id: 6571030; Type: Group; Name: БМІім-17-2 }
+{ Id: 6571365; Type: Group; Name: КІУКІі-17-2_1 }
+{ Id: 6571367; Type: Group; Name: КІУКІі-17-1_2 }
+{ Id: 6572362; Type: Group; Name: СТСАи-17-1 }
+{ Id: 6572364; Type: Group; Name: ІТКНи-17-1 }
+{ Id: 6574532; Type: Group; Name: ПЗСцз-17-2 }
+{ Id: 6574973; Type: Group; Name: ФНІГп-17-11 }
+{ Id: 6574975; Type: Group; Name: ФНІГп-17-12 }
+{ Id: 6574977; Type: Group; Name: ФНІГп-17-13 }
+{ Id: 6574979; Type: Group; Name: ФНІГп-17-14 }
+{ Id: 6574981; Type: Group; Name: ФНІГп-17-15 }
+{ Id: 6577862; Type: Group; Name: БІБМІі-17-2_2 }
+{ Id: 6580352; Type: Teacher; Name: Кузнецова Г. С. }
+{ Id: 6581603; Type: Teacher; Name: Паламарчук О. В. }
+{ Id: 6584474; Type: Group; Name: КІУКІі-17-2_2 }
+{ Id: 6587852; Type: Group; Name: ФНІГп-17-16 }
+{ Id: 6587854; Type: Group; Name: ФНІГп-17-17 }
+{ Id: 6587857; Type: Group; Name: ФНІГп-17-18 }
+{ Id: 6587859; Type: Group; Name: ФНІГп-17-19 }
+{ Id: 6587861; Type: Group; Name: ФНІГп-17-20 }
+{ Id: 6587949; Type: Group; Name: БІБМІі-17-3_1 }
+{ Id: 6600829; Type: Teacher; Name: Горелов Ю. П. }
+{ Id: 6600837; Type: Teacher; Name: Кравченко Т. М. }
+{ Id: 6601590; Type: Teacher; Name: Козуб П. А. }
+{ Id: 6607649; Type: Group; Name: ФНІГп-17-21 }
+{ Id: 6607651; Type: Group; Name: ФНІГп-17-22 }
+{ Id: 6607653; Type: Group; Name: ФНІГп-17-23 }
+{ Id: 6607655; Type: Group; Name: ФНІГп-17-24 }
+{ Id: 6607657; Type: Group; Name: ФНІГп-17-25 }
+{ Id: 6615519; Type: Group; Name: МСС-15-1+МТМВТУ-16-1 }
+{ Id: 6619620; Type: Group; Name: ЯССМ-17-1+МЗВЯПМ-17-1+МВТМ-17-1 }
+{ Id: 6620798; Type: Group; Name: ЕЕКз-17-1 }
+{ Id: 6620800; Type: Group; Name: БІБМІз-16-1 }
+{ Id: 6620802; Type: Group; Name: СТЗІзм-12-1 }
+{ Id: 6642034; Type: Teacher; Name: Дух Я. В. }
+{ Id: 6652723; Type: Teacher; Name: Косенко Н. В. }
+{ Id: 6654025; Type: Group; Name: ПІпз-17-1 }
+{ Id: 6654027; Type: Group; Name: ІПЗмзд-17-1 }
+{ Id: 6654389; Type: Teacher; Name: Холодкова А. В. }
+{ Id: 6654400; Type: Teacher; Name: Лисенко І. О. }
+{ Id: 6654401; Type: Teacher; Name: Мехедькіна Т. Я. }
+{ Id: 6654403; Type: Group; Name: ФНІГп-17-26 }
+{ Id: 6654405; Type: Group; Name: ФНІГп-17-27 }
+{ Id: 6654407; Type: Group; Name: ФНІГп-17-28 }
+{ Id: 6654409; Type: Group; Name: ФНІГп-17-29 }
+{ Id: 6654411; Type: Group; Name: ФНІГп-17-30 }
+{ Id: 6654461; Type: Teacher; Name: Чумаков В. І. }
+{ Id: 6688436; Type: Teacher; Name: Світлична-Фоміна В. О. }
+{ Id: 6693611; Type: Teacher; Name: Олійник В. О. }
+{ Id: 6756173; Type: Group; Name: БІБМІи-16-2 }
+{ Id: 6760137; Type: Teacher; Name: Сальніков Д. С. }
+{ Id: 6760656; Type: Teacher; Name: Данілов В. М. }
+{ Id: 6798131; Type: Teacher; Name: Мерсні А. . }
+{ Id: 6803319; Type: Teacher; Name: Севостьянова О. М. }
+{ Id: 6803519; Type: Group; Name: БІБМІів-17-1 }
+{ Id: 6803521; Type: Group; Name: КІУКІів-17-1 }
+{ Id: 6803795; Type: Teacher; Name: Минко П. Є. }
+{ Id: 6813412; Type: Group; Name: ЕЕКів-17-1 }
+{ Id: 6813460; Type: Teacher; Name: Хміль Н. В. }
+{ Id: 6826067; Type: Group; Name: КСМімв-17-1 }
+{ Id: 6826069; Type: Group; Name: БІКСімв-17-1 }
+{ Id: 6839036; Type: Group; Name: ФНІГп-17-31 }
+{ Id: 6839038; Type: Group; Name: ФНІГп-17-32 }
+{ Id: 6839040; Type: Group; Name: ФНІГп-17-33 }
+{ Id: 6839042; Type: Group; Name: ФНІГп-17-34 }
+{ Id: 6839044; Type: Group; Name: ФНІГп-17-35 }
+{ Id: 6842702; Type: Teacher; Name: Кабалянц П. С. }
+{ Id: 6842703; Type: Teacher; Name: Полякова Л. Ю. }
+{ Id: 6842728; Type: Teacher; Name: Олійник О. О. }
+{ Id: 6855927; Type: Teacher; Name: Волкова Л. А. }
+{ Id: 6864198; Type: Teacher; Name: Сорокіна О. О. }
+{ Id: 6870069; Type: Teacher; Name: Стрілкова Т. О. }
+{ Id: 6875125; Type: Group; Name: ТРТКів-17-1 }
+{ Id: 6875129; Type: Group; Name: КУІБів-17-1 }
+{ Id: 6876594; Type: Group; Name: ОРТІзмв-17-1 }
+{ Id: 6881720; Type: Teacher; Name: Дмитруха А. В. }
+{ Id: 6881724; Type: Group; Name: ФНІГп-17-36 }
+{ Id: 6881726; Type: Group; Name: ФНІГп-17-37 }
+{ Id: 6881728; Type: Group; Name: ФНІГп-17-38 }
+{ Id: 6881730; Type: Group; Name: ФНІГп-17-39 }
+{ Id: 6881732; Type: Group; Name: ФНІГп-17-40 }
+{ Id: 6897287; Type: Teacher; Name: Горохова І. М. }
+{ Id: 6900743; Type: Group; Name: БІБМІив-17-1 }
+{ Id: 6900786; Type: Group; Name: БМІмив-17-1 }
+{ Id: 6901637; Type: Group; Name: БМІімв-17-1 }
+{ Id: 6916616; Type: Teacher; Name: Логвінов Є. Я. }
+{ Id: 6917886; Type: Teacher; Name: Носик А. М. }
+{ Id: 6919755; Type: Teacher; Name: Попсуйшапка О. К. }
+{ Id: 6919757; Type: Teacher; Name: Чернишова І. М. }
+{ Id: 6919790; Type: Teacher; Name: Салєєва А. Д. }
+{ Id: 6922769; Type: Group; Name: КСМмив-17-1 }
+{ Id: 6922990; Type: Group; Name: ФНІГп-17-41 }
+{ Id: 6922992; Type: Group; Name: ФНІГп-17-42 }
+{ Id: 6922997; Type: Group; Name: ФНІГп-17-43 }
+{ Id: 6923002; Type: Group; Name: ФНІГп-17-44 }
+{ Id: 6923004; Type: Group; Name: ФНІГп-17-45 }
+{ Id: 6931739; Type: Teacher; Name: Юрченко Л. І. }
+{ Id: 6933998; Type: Group; Name: ПЗПІив-17-1 }
+{ Id: 6946169; Type: Group; Name: ФМ-17-1 }
+{ Id: 6946171; Type: Group; Name: ФМ-17-2 }
+{ Id: 6946173; Type: Group; Name: ФМ-17-3 }
+{ Id: 6946175; Type: Group; Name: ФМ-17-4 }
+{ Id: 6946177; Type: Group; Name: ФМ-17-5 }
+{ Id: 6949642; Type: Group; Name: КІУКІ-18-3 }
+{ Id: 6949644; Type: Group; Name: ІТКНу-18-1 }
+{ Id: 6949650; Type: Group; Name: ТРРЗВСу-18-1 }
+{ Id: 6949652; Type: Group; Name: АКТСІ-18-1 }
+{ Id: 6949654; Type: Group; Name: ПЗПІ-18-9 }
+{ Id: 6949658; Type: Group; Name: АКТСІу-18-1 }
+{ Id: 6949660; Type: Group; Name: АКТСІу-18-2 }
+{ Id: 6949662; Type: Group; Name: ІТКН-18-9 }
+{ Id: 6949664; Type: Group; Name: ІТШІ-18-1 }
+{ Id: 6949666; Type: Group; Name: ІТКН-18-1 }
+{ Id: 6949668; Type: Group; Name: ІТКН-18-3 }
+{ Id: 6949670; Type: Group; Name: ІВДЕу-18-1 }
+{ Id: 6949672; Type: Group; Name: ЕСТМу-18-1 }
+{ Id: 6949674; Type: Group; Name: ІТІНФ-18-2 }
+{ Id: 6949676; Type: Group; Name: КІУКІ-18-1 }
+{ Id: 6949678; Type: Group; Name: ІВДЕ-18-1 }
+{ Id: 6949680; Type: Group; Name: КІУКІ-18-7 }
+{ Id: 6949682; Type: Group; Name: КБІКС-18-1 }
+{ Id: 6949684; Type: Group; Name: АКТАКІТ-18-1 }
+{ Id: 6949688; Type: Group; Name: ПЗПІ-18-6 }
+{ Id: 6949690; Type: Group; Name: БІБМІ-18-1 }
+{ Id: 6949692; Type: Group; Name: КІУКІ-18-5 }
+{ Id: 6949694; Type: Group; Name: ТРРТу-18-1 }
+{ Id: 6949698; Type: Group; Name: ІТКН-18-7 }
+{ Id: 6949700; Type: Group; Name: МНТМНу-18-1 }
+{ Id: 6949702; Type: Group; Name: ВСА-18-1 }
+{ Id: 6949704; Type: Group; Name: ТРТКу-18-1 }
+{ Id: 6949706; Type: Group; Name: ПЗПІ-18-3 }
+{ Id: 6949708; Type: Group; Name: МТТЕу-18-1 }
+{ Id: 6949710; Type: Group; Name: КІУКІ-18-6 }
+{ Id: 6949714; Type: Group; Name: ТРТК-18-2 }
+{ Id: 6949720; Type: Group; Name: АКТСІ-18-2 }
+{ Id: 6949724; Type: Group; Name: ПЗПІ-18-7 }
+{ Id: 6949726; Type: Group; Name: ПЗПІ-18-8 }
+{ Id: 6949728; Type: Group; Name: МНТМН-18-1 }
+{ Id: 6949730; Type: Group; Name: ЕСТМ-18-1 }
+{ Id: 6949734; Type: Group; Name: МТОТ-18-1 }
+{ Id: 6949736; Type: Group; Name: ВПВПСу-18-1 }
+{ Id: 6949738; Type: Group; Name: МТОТу-18-1 }
+{ Id: 6949742; Type: Group; Name: КІУКІ-18-4 }
+{ Id: 6949744; Type: Group; Name: ТРРТ-18-1 }
+{ Id: 6949746; Type: Group; Name: ТРТК-18-1 }
+{ Id: 6949750; Type: Group; Name: БІБМІу-18-1 }
+{ Id: 6949754; Type: Group; Name: ВПВПС-18-1 }
+{ Id: 6949756; Type: Group; Name: ІТКН-18-2 }
+{ Id: 6949758; Type: Group; Name: ІКТу-18-1 }
+{ Id: 6949760; Type: Group; Name: КІУКІу-18-1 }
+{ Id: 6949764; Type: Group; Name: ІТІНФ-18-1 }
+{ Id: 6949766; Type: Group; Name: КІУКІ-18-2 }
+{ Id: 6949770; Type: Group; Name: КІУКІ-18-8 }
+{ Id: 6949772; Type: Group; Name: ПЗПІ-18-1 }
+{ Id: 6949774; Type: Group; Name: ПЗПІ-18-4 }
+{ Id: 6949776; Type: Group; Name: ТРІТЗРу-18-1 }
+{ Id: 6949778; Type: Group; Name: ТРІМІ-18-1 }
+{ Id: 6949784; Type: Group; Name: ППМ-18-1 }
+{ Id: 6949786; Type: Group; Name: ТРІТЗР-18-1 }
+{ Id: 6949788; Type: Group; Name: КУІБ-18-1 }
+{ Id: 6949790; Type: Group; Name: МТТЕ-18-1 }
+{ Id: 6949796; Type: Group; Name: ЕЕК-18-1 }
+{ Id: 6949798; Type: Group; Name: СТСА-18-1 }
+{ Id: 6949800; Type: Group; Name: КУІБу-18-1 }
+{ Id: 6949802; Type: Group; Name: КСТЗІу-18-1 }
+{ Id: 6949804; Type: Group; Name: ТРІКІ-18-1 }
+{ Id: 6949806; Type: Group; Name: ІТКН-18-8 }
+{ Id: 6949808; Type: Group; Name: ВПВПС-18-2 }
+{ Id: 6949812; Type: Group; Name: ЕЕПСу-18-1 }
+{ Id: 6949814; Type: Group; Name: КСТЗІ-18-1 }
+{ Id: 6949818; Type: Group; Name: АКТАЕу-18-1 }
+{ Id: 6949820; Type: Group; Name: КІУКІу-18-2 }
+{ Id: 6949830; Type: Group; Name: ПЗПІ-18-2 }
+{ Id: 6949832; Type: Group; Name: АКТАКІТ-18-2 }
+{ Id: 6949834; Type: Group; Name: ЕЕПС-18-1 }
+{ Id: 6949836; Type: Group; Name: ТРІМІу-18-1 }
+{ Id: 6954752; Type: Group; Name: ВСАу-18-1 }
+{ Id: 6954799; Type: Group; Name: ІТІР-18-1 }
+{ Id: 6954806; Type: Group; Name: ІСТ-18-1 }
+{ Id: 6954808; Type: Group; Name: ІСМ-18-1 }
+{ Id: 6954825; Type: Group; Name: ЦДПв 11кл -1 }
+{ Id: 6954827; Type: Group; Name: ЦДПв 11кл -2 }
+{ Id: 6954829; Type: Group; Name: ЦДПв 11кл -3 }
+{ Id: 6954831; Type: Group; Name: ЦДПв 11кл -4 }
+{ Id: 6954833; Type: Group; Name: ЦДПв 11кл -5 }
+{ Id: 6954841; Type: Group; Name: Недільні-1 }
+{ Id: 6954843; Type: Group; Name: Недільні-2 }
+{ Id: 6954845; Type: Group; Name: Недільні-3 }
+{ Id: 6954847; Type: Group; Name: Недільні-4 }
+{ Id: 6954849; Type: Group; Name: Недільні-5 }
+{ Id: 6954851; Type: Group; Name: 9 кл-1 }
+{ Id: 6954853; Type: Group; Name: 9 кл-2 }
+{ Id: 6954855; Type: Group; Name: Навч.-консульт.курси 11кл }
+{ Id: 6954858; Type: Group; Name: Факультатив 11кл }
+{ Id: 6954860; Type: Group; Name: Факультатив 10кл }
+{ Id: 6954862; Type: Group; Name: Клубы-1 }
+{ Id: 6954864; Type: Group; Name: Клубы-2 }
+{ Id: 6954866; Type: Group; Name: Клубы-3 }
+{ Id: 6954868; Type: Group; Name: Клубы-4 }
+{ Id: 6954870; Type: Group; Name: Клубы-5 }
+{ Id: 6954872; Type: Group; Name: Клубы-6 }
+{ Id: 6954875; Type: Group; Name: Заочні-1 }
+{ Id: 6954877; Type: Group; Name: 10 кл-1 }
+{ Id: 6954879; Type: Group; Name: 10 кл-2 }
+{ Id: 6954881; Type: Group; Name: 10 кл-3 }
+{ Id: 6954883; Type: Group; Name: ЕРАМ-18-1 }
+{ Id: 6954885; Type: Group; Name: ЕРАМ-18-2 }
+{ Id: 6954890; Type: Group; Name: ФМ-18-1 }
+{ Id: 6954892; Type: Group; Name: ФМ-18-2 }
+{ Id: 6954894; Type: Group; Name: ФМ-18-3 }
+{ Id: 6954896; Type: Group; Name: ФМ-18-4 }
+{ Id: 6954898; Type: Group; Name: ФМ-18-5 }
+{ Id: 6954900; Type: Group; Name: ФМ-18-6 }
+{ Id: 6963377; Type: Group; Name: ТРРТ-16-2 }
+{ Id: 6963379; Type: Group; Name: ТРРТ-16-3 }
+{ Id: 6963480; Type: Group; Name: МНПм-18-1 }
+{ Id: 6963482; Type: Group; Name: АРТм-18-1 }
+{ Id: 6963486; Type: Group; Name: ІПЗм-18-1 }
+{ Id: 6963492; Type: Group; Name: МЗВЯПм-18-1 }
+{ Id: 6963498; Type: Group; Name: ІУСТм-18-1 }
+{ Id: 6963500; Type: Group; Name: БМІм-18-1 }
+{ Id: 6963502; Type: Group; Name: РТм-18-1 }
+{ Id: 6963504; Type: Group; Name: ТЕМВм-18-1 }
+{ Id: 6963506; Type: Group; Name: ПЗСм-18-1 }
+{ Id: 6963508; Type: Group; Name: АУТПм-18-1 }
+{ Id: 6963512; Type: Group; Name: РЕАЗм-18-1 }
+{ Id: 6963514; Type: Group; Name: ЯССм-18-1 }
+{ Id: 6963518; Type: Group; Name: ІТКСм-18-1 }
+{ Id: 6963520; Type: Group; Name: ЕППм-18-1 }
+{ Id: 6963522; Type: Group; Name: ІМІм-18-1 }
+{ Id: 6963524; Type: Group; Name: МВТм-18-1 }
+{ Id: 6963528; Type: Group; Name: КСМм-18-1 }
+{ Id: 6963532; Type: Group; Name: КТСВПВм-18-1 }
+{ Id: 6963534; Type: Group; Name: СІм-18-1 }
+{ Id: 6963536; Type: Group; Name: СТКСм-18-1 }
+{ Id: 6963538; Type: Group; Name: КСУАм-18-1 }
+{ Id: 6963540; Type: Group; Name: ІТМРТм-18-1 }
+{ Id: 6963542; Type: Group; Name: ТДВм-18-1 }
+{ Id: 6963544; Type: Group; Name: ПМм-18-1 }
+{ Id: 6963548; Type: Group; Name: КІТПВм-18-1 }
+{ Id: 6963554; Type: Group; Name: СПм-18-2 }
+{ Id: 6963556; Type: Group; Name: РПСКм-18-1 }
+{ Id: 6963558; Type: Group; Name: ІТПм-18-1 }
+{ Id: 6963560; Type: Group; Name: ІНФм-18-1 }
+{ Id: 6963562; Type: Group; Name: САУм-18-1 }
+{ Id: 6963564; Type: Group; Name: СТМм-18-1 }
+{ Id: 6963566; Type: Group; Name: УПГІТм-18-1 }
+{ Id: 6963568; Type: Group; Name: ІКТм-18-1 }
+{ Id: 6963570; Type: Group; Name: СПм-18-1 }
+{ Id: 6963572; Type: Group; Name: УФЕБм-18-1 }
+{ Id: 6963574; Type: Group; Name: ІТБМм-18-1 }
+{ Id: 6963576; Type: Group; Name: ІВДЕм-18-1 }
+{ Id: 6963580; Type: Group; Name: АМЗІм-18-1 }
+{ Id: 6963582; Type: Group; Name: СШІм-18-4 }
+{ Id: 6963584; Type: Group; Name: ТСМм-18-1 }
+{ Id: 6963586; Type: Group; Name: ІМЗм-17-2 }
+{ Id: 6963588; Type: Group; Name: ЕКм-18-1 }
+{ Id: 6963592; Type: Group; Name: КТРСм-18-1 }
+{ Id: 6963594; Type: Group; Name: БІКСм-18-1 }
+{ Id: 6963596; Type: Group; Name: СШІм-18-3 }
+{ Id: 6963598; Type: Group; Name: ІМЗм-18-1 }
+{ Id: 6963600; Type: Group; Name: ІКІм-18-1 }
+{ Id: 6963602; Type: Group; Name: СПРм-18-1 }
+{ Id: 6963604; Type: Group; Name: СПРм-18-2 }
+{ Id: 6963606; Type: Group; Name: БДІРм-18-1 }
+{ Id: 6963608; Type: Group; Name: СКСм-18-1 }
+{ Id: 6977487; Type: Group; Name: ФТОІм-18-1 }
+{ Id: 6977489; Type: Group; Name: ЛОЕТм-18-1 }
+{ Id: 6982740; Type: Group; Name: КІи-15-1 }
+{ Id: 6984160; Type: Group; Name: СШІм-18-1 }
+{ Id: 6984162; Type: Group; Name: СШІм-18-5 }
+{ Id: 7049337; Type: Group; Name: КРП-18-1 }
+{ Id: 7053817; Type: Group; Name: КСМзм-17-1 }
+{ Id: 7053823; Type: Group; Name: БМІз-14-1 }
+{ Id: 7053825; Type: Group; Name: ІМЗзм-17-2 }
+{ Id: 7055611; Type: Group; Name: КСМзм-17-2 }
+{ Id: 7061989; Type: Teacher; Name: Колчигін Б. В. }
+{ Id: 7062543; Type: Teacher; Name: Матвєєв Д. І. }
+{ Id: 7062547; Type: Group; Name: СТЗІАм-18-1 }
+{ Id: 7063375; Type: Teacher; Name: Кравець Н. С. }
+{ Id: 7063673; Type: Teacher; Name: Горбенко Є. О. }
+{ Id: 7063688; Type: Group; Name: СТЗІАм-18-2 }
+{ Id: 7063729; Type: Teacher; Name: Слабий К. Г. }
+{ Id: 7063731; Type: Teacher; Name: Кобцева В. М. }
+{ Id: 7067189; Type: Teacher; Name: Богатов Є. О. }
+{ Id: 7068574; Type: Teacher; Name: Шушляпіна Н. О. }
+{ Id: 7072315; Type: Teacher; Name: Гурін Д. В. }
+{ Id: 7074930; Type: Group; Name: КІУКІі-18-1_1 }
+{ Id: 7074932; Type: Group; Name: ЕЕКі-18-1 }
+{ Id: 7074934; Type: Group; Name: БІБМІі-18-1_1 }
+{ Id: 7074936; Type: Group; Name: КСМмі-18-1 }
+{ Id: 7074938; Type: Group; Name: КСМмі-18-2 }
+{ Id: 7074940; Type: Group; Name: БМІім-18-1 }
+{ Id: 7074942; Type: Group; Name: БМІім-18-2 }
+{ Id: 7074960; Type: Group; Name: ЕЕКім-18-1 }
+{ Id: 7077506; Type: Teacher; Name: Федорченко В. М. }
+{ Id: 7079382; Type: Teacher; Name: Назарова Н. В. }
+{ Id: 7079545; Type: Teacher; Name: Норік Л. О. }
+{ Id: 7082185; Type: Group; Name: БІКСмі-18-1 }
+{ Id: 7082211; Type: Teacher; Name: Карабицька О. Д. }
+{ Id: 7082213; Type: Teacher; Name: Доля О. Є. }
+{ Id: 7082214; Type: Teacher; Name: Серіков М. А. }
+{ Id: 7082261; Type: Teacher; Name: Малєєва Г. А. }
+{ Id: 7082262; Type: Teacher; Name: Власов А. В. }
+{ Id: 7089721; Type: Teacher; Name: Бібічков І. Є. }
+{ Id: 7089722; Type: Teacher; Name: Малеєва І. А. }
+{ Id: 7092830; Type: Teacher; Name: Прийма А. К. }
+{ Id: 7101273; Type: Teacher; Name: Бабій А. С. }
+{ Id: 7104584; Type: Teacher; Name: Невзорова О. С. }
+{ Id: 7104838; Type: Teacher; Name: Драз О. М. }
+{ Id: 7188427; Type: Group; Name: ІПЗм-18-2 }
+{ Id: 7188429; Type: Group; Name: ІПЗм-18-3 }
+{ Id: 7191238; Type: Group; Name: КБІКСу-18-1 }
+{ Id: 7193372; Type: Group; Name: КБІКС-18-2 }
+{ Id: 7193630; Type: Group; Name: ІТКН-18-6 }
+{ Id: 7193632; Type: Group; Name: ІТКН-18-4 }
+{ Id: 7193634; Type: Group; Name: ІТКНу-18-2 }
+{ Id: 7193689; Type: Group; Name: ІТКН-18-5 }
+{ Id: 7193698; Type: Group; Name: ІТШІ-18-2 }
+{ Id: 7193729; Type: Group; Name: БІБМІі-17-3_2 }
+{ Id: 7193731; Type: Group; Name: ІСМу-18-1 }
+{ Id: 7194003; Type: Group; Name: КБІКС-18-3 }
+{ Id: 7194031; Type: Group; Name: ІКТ-18-1 }
+{ Id: 7195529; Type: Group; Name: ПЗПІ-18-10 }
+{ Id: 7195531; Type: Group; Name: ПЗПІ-18-5 }
+{ Id: 7195533; Type: Group; Name: ПЗПІ-18-11 }
+{ Id: 7195614; Type: Teacher; Name: Петренко О. Є. }
+{ Id: 7195791; Type: Group; Name: ІТІНФ-18-3 }
+{ Id: 7195918; Type: Group; Name: ІНФм-18-2 }
+{ Id: 7196049; Type: Group; Name: ВПВПС-18-3 }
+{ Id: 7196707; Type: Group; Name: АМЗІм-18-2 }
+{ Id: 7197169; Type: Group; Name: АКТСІ-18-3 }
+{ Id: 7197629; Type: Group; Name: ПЗПІ-17-10 }
+{ Id: 7198369; Type: Group; Name: СШІм-18-2 }
+{ Id: 7198725; Type: Group; Name: КУІБі-18-1 }
+{ Id: 7198727; Type: Group; Name: ТРТКі-18-1 }
+{ Id: 7198729; Type: Group; Name: АМЗІмі-18-1 }
+{ Id: 7198731; Type: Group; Name: ТСМмі-18-1 }
+{ Id: 7202077; Type: Group; Name: СПм-18-3 }
+{ Id: 7202079; Type: Group; Name: СКСм-18-2 }
+{ Id: 7202860; Type: Group; Name: ІМЗм-18-2 }
+{ Id: 7208463; Type: Group; Name: ПЗПІп-18-1 }
+{ Id: 7208905; Type: Teacher; Name: Заворотна М. Г. }
+{ Id: 7208908; Type: Group; Name: ІПЗм-18-4 }
+{ Id: 7210916; Type: Group; Name: ФНІГп-18-2 }
+{ Id: 7210918; Type: Group; Name: ФНІГп-18-10 }
+{ Id: 7210920; Type: Group; Name: ФНІГп-18-12 }
+{ Id: 7210922; Type: Group; Name: ФНІГп-18-4 }
+{ Id: 7210929; Type: Group; Name: ФНІГп-18-5 }
+{ Id: 7210931; Type: Group; Name: ФНІГп-18-6 }
+{ Id: 7210936; Type: Group; Name: ФНІГп-18-7 }
+{ Id: 7210941; Type: Group; Name: ФНІГп-18-8 }
+{ Id: 7210943; Type: Group; Name: ФНІГп-18-9 }
+{ Id: 7212976; Type: Group; Name: ФНІГп-18-1 }
+{ Id: 7213844; Type: Teacher; Name: Єрьоміна Н. С. }
+{ Id: 7219261; Type: Teacher; Name: Чепела С. П. }
+{ Id: 7221178; Type: Group; Name: ІТКНз-18-1 }
+{ Id: 7221180; Type: Group; Name: ПЗПІз-18-1 }
+{ Id: 7221182; Type: Group; Name: ІТШІз-18-1 }
+{ Id: 7221184; Type: Group; Name: ВПВПСз-18-1 }
+{ Id: 7221186; Type: Group; Name: ЕЕКз-18-1 }
+{ Id: 7221190; Type: Group; Name: АКТАКІТз-18-1 }
+{ Id: 7221192; Type: Group; Name: БІБМІз-18-1 }
+{ Id: 7221202; Type: Group; Name: ЕЕПСз-18-1 }
+{ Id: 7221204; Type: Group; Name: КІУКІз-18-1 }
+{ Id: 7221230; Type: Group; Name: ТРІМІз-18-1 }
+{ Id: 7221232; Type: Group; Name: МТОТзу-18-1 }
+{ Id: 7221593; Type: Group; Name: ІТКН-18-10 }
+{ Id: 7221595; Type: Group; Name: ІТКН-18-11 }
+{ Id: 7221597; Type: Group; Name: ІТКН-18-12 }
+{ Id: 7222666; Type: Group; Name: ТРТКз-16-2 }
+{ Id: 7222668; Type: Group; Name: ТРТКз-17-1 }
+{ Id: 7222740; Type: Group; Name: АМЗІзм-18-1 }
+{ Id: 7222894; Type: Group; Name: АУТПзм-18-1 }
+{ Id: 7222896; Type: Group; Name: БМІзм-18-1 }
+{ Id: 7222898; Type: Group; Name: УФЕБзм-18-1 }
+{ Id: 7222900; Type: Group; Name: ПЗСзм-18-1 }
+{ Id: 7222902; Type: Group; Name: ЕППзм-18-1 }
+{ Id: 7222904; Type: Group; Name: КТСВПВзм-18-1 }
+{ Id: 7222906; Type: Group; Name: КСМзм-18-1 }
+{ Id: 7222908; Type: Group; Name: СПзм-18-2 }
+{ Id: 7222910; Type: Group; Name: СПзм-18-1 }
+{ Id: 7222912; Type: Group; Name: ТСМзм-18-1 }
+{ Id: 7222914; Type: Group; Name: СШІзм-18-1 }
+{ Id: 7222916; Type: Group; Name: ІУСТзм-18-1 }
+{ Id: 7222918; Type: Group; Name: ЛОЕТзм-18-1 }
+{ Id: 7224388; Type: Group; Name: СТЗІАзм-18-1 }
+{ Id: 7224390; Type: Group; Name: РТзм-18-1 }
+{ Id: 7224394; Type: Group; Name: ІМЗзм-18-1 }
+{ Id: 7224396; Type: Group; Name: ІМЗзм-18-2 }
+{ Id: 7226651; Type: Teacher; Name: Хавин Г. Л. }
+{ Id: 7227909; Type: Teacher; Name: Бродецький Ф. А. }
+{ Id: 7227926; Type: Group; Name: ІМІм-18-2 }
+{ Id: 7228873; Type: Teacher; Name: Творошенко І. С. }
+{ Id: 7231374; Type: Teacher; Name: Ситнікова П. Е. }
+{ Id: 7236401; Type: Teacher; Name: Чиркова К. С. }
+{ Id: 7236742; Type: Teacher; Name: Житло В. Я. }
+{ Id: 7237049; Type: Group; Name: ТКРТдф-18-1 }
+{ Id: 7237051; Type: Group; Name: САдф-18-1 }
+{ Id: 7237053; Type: Group; Name: ПФНМдф-18-1 }
+{ Id: 7237055; Type: Group; Name: ПМдф-18-1 }
+{ Id: 7237057; Type: Group; Name: МІВТдф-18-1 }
+{ Id: 7237059; Type: Group; Name: КНдф-18-1 }
+{ Id: 7237061; Type: Group; Name: КБдф-18-1 }
+{ Id: 7237063; Type: Group; Name: КІдф-18-1 }
+{ Id: 7237065; Type: Group; Name: ЕЛТдф-18-1 }
+{ Id: 7237067; Type: Group; Name: ЕКдф-18-1 }
+{ Id: 7237069; Type: Group; Name: БМІдф-18-1 }
+{ Id: 7237071; Type: Group; Name: АКІТдф-18-1 }
+{ Id: 7237073; Type: Group; Name: ІПЗдф-18-1 }
+{ Id: 7237194; Type: Group; Name: БІБМІз-17-2 }
+{ Id: 7237196; Type: Group; Name: КІУКІз-16-2 }
+{ Id: 7237719; Type: Teacher; Name: Стьопін О. С. }
+{ Id: 7240325; Type: Teacher; Name: 1 В. А. }
+{ Id: 7240401; Type: Group; Name: ПЗПІи-18-1 }
+{ Id: 7240419; Type: Group; Name: БІБМІи-18-1 }
+{ Id: 7240421; Type: Group; Name: ІТКНи-18-1 }
+{ Id: 7240423; Type: Group; Name: КІУКІи-18-1 }
+{ Id: 7240427; Type: Teacher; Name: Тихонов  В. А. }
+{ Id: 7241650; Type: Group; Name: БІКСмі-18-2 }
+{ Id: 7241769; Type: Group; Name: ТРТКз-18-1 }
+{ Id: 7242038; Type: Group; Name: ІСТдф-18-1 }
+{ Id: 7242589; Type: Group; Name: КБІКСі-18-1 }
+{ Id: 7249677; Type: Teacher; Name: Авілова О. В. }
+{ Id: 7252108; Type: Teacher; Name: Шевченко О. Ю. }
+{ Id: 7256637; Type: Group; Name: КІУКІі-18-1_2 }
+{ Id: 7256639; Type: Group; Name: БІБМІі-18-1_2 }
+{ Id: 7257469; Type: Group; Name: ФМ-18-7 }
+{ Id: 7258417; Type: Group; Name: ПЗСцз-18-1 }
+{ Id: 7258654; Type: Teacher; Name: Сидоренко Г. Ю. }
+{ Id: 7264097; Type: Group; Name: ФНІГп-18-3 }
+{ Id: 7264103; Type: Teacher; Name: Чуприна О. О. }
+{ Id: 7264116; Type: Group; Name: ТСМми-18-1 }
+{ Id: 7264134; Type: Group; Name: БМІми-18-1 }
+{ Id: 7270067; Type: Teacher; Name: Сезонова І. К. }
+{ Id: 7278035; Type: Group; Name: БІБМІі-18-2_1 }
+{ Id: 7278037; Type: Group; Name: БІБМІі-18-2_2 }
+{ Id: 7278039; Type: Group; Name: КІУКІі-18-2_1 }
+{ Id: 7278041; Type: Group; Name: КІУКІі-18-2_2 }
+{ Id: 7278548; Type: Teacher; Name: Роздолянська О. Г. }
+{ Id: 7278549; Type: Teacher; Name: Новіков О. В. }
+{ Id: 7278550; Type: Teacher; Name: Глубока С. В. }
+{ Id: 7278563; Type: Teacher; Name: Беркутова Т. І. }
+{ Id: 7278569; Type: Teacher; Name: Губарєва О. С. }
+{ Id: 7278607; Type: Teacher; Name: Кринська Н. В. }
+{ Id: 7278608; Type: Teacher; Name: Макаров В. Б. }
+{ Id: 7278611; Type: Teacher; Name: Малько Н. О. }
+{ Id: 7278612; Type: Teacher; Name: Мельник С. С. }
+{ Id: 7281038; Type: Group; Name: ФНІГп-18-11 }
+{ Id: 7281041; Type: Group; Name: ФНІГп-18-15 }
+{ Id: 7281043; Type: Group; Name: ФНІГп-18-14 }
+{ Id: 7281045; Type: Group; Name: ФНІГп-18-16 }
+{ Id: 7289973; Type: Teacher; Name: Пахомов Ю. В. }
+{ Id: 7298418; Type: Group; Name: ТРТКи-18-1 }
+{ Id: 7299704; Type: Group; Name: БМІми-18-2 }
+{ Id: 7299750; Type: Group; Name: МТМССи-16-1 }
+{ Id: 7299752; Type: Group; Name: КУІБи-18-1 }
+{ Id: 7310687; Type: Group; Name: ЕЕКи-18-1 }
+{ Id: 7310790; Type: Group; Name: ІТКСим-18-1 }
+{ Id: 7312738; Type: Group; Name: ФНІГп-18-20 }
+{ Id: 7314754; Type: Group; Name: ФНІГп-18-13 }
+{ Id: 7321898; Type: Group; Name: ВМп-18-1 }
+{ Id: 7321900; Type: Group; Name: ВМп-18-2 }
+{ Id: 7321902; Type: Group; Name: ВМп-18-3 }
+{ Id: 7334689; Type: Group; Name: ТРРТ-16-1+ТРРТУ-17-2 }
+{ Id: 7334691; Type: Group; Name: ТРРТ-16-2+ТРРТУ-17-3 }
+{ Id: 7334697; Type: Group; Name: ТРІКІ-17-1+ТРТКУ-18-1 }
+{ Id: 7334699; Type: Group; Name: РТ-15-3+ТРРТУ-16-4 }
+{ Id: 7334703; Type: Group; Name: ТРІКІ-17-1+МТТЕ-17-1+МТТЕУ-18-1 }
+{ Id: 7334705; Type: Group; Name: ЕСТМ-17-1+ЕСТМУ-18-2 }
+{ Id: 7334707; Type: Group; Name: ВСА-17-1+ВСАУ-18-1+ТРІТЗРУ-18-1 }
+{ Id: 7334711; Type: Group; Name: КУІБ-16-1+КУІБУ-17-1 }
+{ Id: 7334713; Type: Group; Name: РТ-15-2+ТРРТУ-16-3 }
+{ Id: 7334717; Type: Group; Name: ТРРТ-16-3+ТРРТУ-17-4 }
+{ Id: 7334725; Type: Group; Name: ЕЕПС-16-1+ЕЕПСУ-17-1+МТМСС-16-1+МТМВТУ-17-1 }
+{ Id: 7334727; Type: Group; Name: ТРРТ-16-1+ТРРТУ-17-2+ТРРТ-16-2+ТРРТУ-17-3 }
+{ Id: 7334731; Type: Group; Name: ЕСТМ-17-1+МТОТ-17-1+МТОТУ-18-1 }
+{ Id: 7334733; Type: Group; Name: ТРІКІ-18-1+ТРТК-18-2 }
+{ Id: 7334735; Type: Group; Name: ВСА-17-1+ВСАУ-18-1 }
+{ Id: 7334739; Type: Group; Name: РТ-15-1+ТРРТУ-16-2 }
+{ Id: 7334745; Type: Group; Name: МТМСС-16-1+МТТЕУ-18-1 }
+{ Id: 7334747; Type: Group; Name: МТТЕ-18-1+МТТЕУ-18-1 }
+{ Id: 7334753; Type: Group; Name: АКТСІУ-18-1+АКТСІУ-18-2 }
+{ Id: 7334757; Type: Group; Name: ТРТК-16-2+ТРТКУ-17-2 }
+{ Id: 7334767; Type: Group; Name: ТРРЕА-16-1+ТРРЕАУ-17-3 }
+{ Id: 7334769; Type: Group; Name: ТРРЗВСУ-18-1+ТРІТЗРУ-18-1 }
+{ Id: 7334775; Type: Group; Name: ЕАТ-16-1+ЕСТМУ-17-2 }
+{ Id: 7334777; Type: Group; Name: ТРІМІ-18-1+ТРТК-18-1 }
+{ Id: 7334781; Type: Group; Name: ЕСТМу-18-2 }
+{ Id: 7334783; Type: Group; Name: МТТЕ-17-1+МТТЕУ-18-1 }
+{ Id: 7334785; Type: Group; Name: МТМСС-16-1+МТМВТУ-17-1 }
+{ Id: 7341739; Type: Group; Name: ЯССМ-18-1+МЗВЯПМ-18-1+МВТМ-18-1 }
+{ Id: 7341747; Type: Group; Name: СІМ-18-1+ІТКСМ-18-1 }
+{ Id: 7341749; Type: Group; Name: ІМІМ-18-1+ІМІМ-18-2 }
+{ Id: 7341753; Type: Group; Name: БІКСМ-18-1+БДІРМ-18-1 }
+{ Id: 7341757; Type: Group; Name: ІМЗМ-18-1+ІМЗМ-18-2 }
+{ Id: 7341761; Type: Group; Name: ІКІМ-18-1+ТСММ-18-1 }
+{ Id: 7341763; Type: Group; Name: МВТМ-18-1+МЗВЯПМ-18-1 }
+{ Id: 7341765; Type: Group; Name: РПСКМ-18-1+ІВДЕМ-18-1 }
+{ Id: 7341771; Type: Group; Name: АМЗІМ-18-1+АМЗІМ-18-2 }
+{ Id: 7347913; Type: Teacher; Name: Колісник М. М. }
+{ Id: 7421530; Type: Group; Name: ПЗПІпз-18-1 }
+{ Id: 7421535; Type: Group; Name: ІПЗмзд-18-1 }
