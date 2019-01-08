@@ -22,9 +22,5 @@ type SubjectModel = {
     Id : long
     Brief : string
     Title : string
-    Teachers : Dictionary<EventType, TeacherModel list>
-}
-and TeacherModel = {
-    Name : string
-    Groups : string list
+    TeachersByGroup : Dictionary<string, Dictionary<EventType, string list>>
 }

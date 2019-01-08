@@ -30,7 +30,7 @@ type AdminController (context : ScheduleContext) =
     member this.UpdateSubjects() = 
         let watch = Stopwatch()
         watch.Start()
-        let subjects = getAllSubjects [7310687L]
+        let subjects = getAllSubjects [5721681L]
 //        let subjects = getAllSubjects (context.Identites
 //                                       |> PSeq.filter (fun i -> i.Type = IdentityType.Group)
 //                                       |> PSeq.map (fun i -> i.Id)
