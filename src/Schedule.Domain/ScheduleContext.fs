@@ -35,5 +35,9 @@ type ScheduleContext =
     new(options : DbContextOptions<ScheduleContext>) = { inherit DbContext(options) }
     
     override __.OnModelCreating modelBuilder =
-        let typeConvert = ValueConverter<EventType, int>((fun v -> LanguagePrimitives.EnumToValue v), (fun v -> LanguagePrimitives.EnumOfValue v))
-        modelBuilder.Entity<Event>().Property(fun e -> e.Type).HasConversion(typeConvert) |> ignore
+        let eventTypeConvert = ValueConverter<EventType, int>((fun v -> LanguagePrimitives.EnumToValue v),
+                                                              (fun v -> LanguagePrimitives.EnumOfValue v))
+        modelBuilder.Entity<Event>().Property(fun e -> e.Type).HasConversion(eventTypeConvert) |> ignore
+        let identityTypeConvert = ValueConverter<IdentityType, int>((fun v -> LanguagePrimitives.EnumToValue v),
+                                                                    (fun v -> LanguagePrimitives.EnumOfValue v))
+        modelBuilder.Entity<Identity>().Property(fun e -> e.Type).HasConversion(identityTypeConvert) |> ignore
