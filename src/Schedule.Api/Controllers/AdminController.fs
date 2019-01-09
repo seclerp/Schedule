@@ -3,6 +3,7 @@ namespace src.Controllers
 open Microsoft.AspNetCore.Mvc
 open System.Diagnostics
 
+open System
 open Domain.Models
 open Domain.ScheduleContext
 open FSharp.Collections.ParallelSeq
@@ -32,11 +33,40 @@ type AdminController (context : ScheduleContext) =
         watch.Start()
         let subjects = getAllSubjects [5721681L]
 //        let subjects = getAllSubjects (context.Identites
-//                                       |> PSeq.filter (fun i -> i.Type = IdentityType.Group)
-//                                       |> PSeq.map (fun i -> i.Id)
-//                                       |> Seq.toList)
-        //context.Subjects.RemoveRange(context.Subjects)
-        //context.Subjects.AddRange(subjects)
-        //context.SaveChanges() |> ignore
+//                                       |> PSeq.filter (fun identity -> identity.Type = IdentityType.Group)
+//                                       |> PSeq.map (fun identity -> identity.Id)
+//                                       |> PSeq.toList)
+        let subjectEntities = subjects
+                              |> PSeq.map (fun subject ->
+                                  { Id = subject.Id; Brief = subject.Brief; Title = subject.Title })
+                              |> PSeq.toArray
+        use tx = context.Database.BeginTransaction()
+        
+        context.Subjects.RemoveRange(context.Subjects)
+        context.Subjects.AddRange(subjectEntities)
+        context.SaveChanges() |> ignore
+        
+        let teachersEntities =
+            subjects
+            |> Seq.map (fun subject ->
+                query {
+                    for teacherByGroup in subject.TeachersByGroup do
+                    join teacherIdentity in context.Identites on (teacherByGroup.Teacher = teacherIdentity.ShortName)
+                    join groupIdentity in context.Identites on (teacherByGroup.Group = groupIdentity.ShortName)
+                    select { EntryId = Guid.NewGuid()
+                             TeacherId = teacherIdentity.Id;
+                             GroupId = groupIdentity.Id;
+                             SubjectId = subject.Id;
+                             EventType = LanguagePrimitives.EnumToValue teacherByGroup.EventType }
+                } |> Seq.toList)
+            |> PSeq.concat
+            |> PSeq.toList
+        
+        context.Teachers.RemoveRange(context.Teachers)
+        context.Teachers.AddRange(teachersEntities)
+        context.SaveChanges() |> ignore
+        
+        tx.Commit()
+        
         watch.Stop()
         printfn "Done in %A" watch.Elapsed

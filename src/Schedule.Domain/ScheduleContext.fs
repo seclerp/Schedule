@@ -31,6 +31,12 @@ type ScheduleContext =
         with get () = x.subjects 
         and set v = x.subjects <- v
     
+    [<DefaultValue>]
+    val mutable teachers   : DbSet<Teacher>
+    member x.Teachers 
+        with get () = x.teachers 
+        and set v = x.teachers <- v
+    
     new() = { inherit DbContext() }
     new(options : DbContextOptions<ScheduleContext>) = { inherit DbContext(options) }
     

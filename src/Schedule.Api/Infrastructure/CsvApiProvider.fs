@@ -22,7 +22,7 @@ module private Patterns =
     let deptOnClick     = @"javascript:IAS_Change_Kaf\(([0-9]+),([0-9]+)\)"
     let groupOnClick    = @"javascript:IAS_ADD_Group_in_List\('(.+)',([0-9]+)\)"
     let teacherOnClick  = @"javascript:IAS_ADD_Teach_in_List\('(.+)',([0-9]+)\)"
-    let eventType       = @"(?:.*: )?([а-яА-Я]+) \(\d+\)"
+    let eventType       = @"(?:.*: )?([а-яА-ЯҐЄІЇґєії]+) \(\d+\)"
 
 let private validHtmlTemplate =
     sprintf "<html lang=\"ru\" xmlns:htmldb=\"http://htmldb.oracle.com\"><body>%s</body></html>"
@@ -61,6 +61,13 @@ let private getFaculties () =
     |> PSeq.filter (fun x -> Regex.IsMatch(x, Patterns.facultyOnClick))
     |> PSeq.map (fun x -> Regex.Match(x, Patterns.facultyOnClick).Groups.[1].Value)
 
+let private createIdentity id name iType =
+    { Id = id
+      ShortName = name
+      FullName = name
+      Type = iType
+      IsAlternative = Subjects.isAlternative name }
+
 let private getGroupIdentities () =
     getFaculties ()
     |> PSeq.map (fun id ->
@@ -73,12 +80,7 @@ let private getGroupIdentities () =
         |> PSeq.filter (fun x -> Regex.IsMatch(x, Patterns.groupOnClick))
         |> PSeq.map (fun matchedString ->
             let groups = Regex.Match(matchedString, Patterns.groupOnClick).Groups
-            {
-                Id = groups.[2].Value |> int64
-                ShortName = groups.[1].Value
-                FullName = groups.[1].Value
-                Type = IdentityType.Group
-            }
+            createIdentity (groups.[2].Value |> int64) groups.[1].Value IdentityType.Group
         )
     )
     |> PSeq.concat          
@@ -109,10 +111,7 @@ let private getTeacherIdentities () =
         |> PSeq.filter (fun x -> Regex.IsMatch(x, Patterns.teacherOnClick))
         |> PSeq.map (fun matched ->
             let groups = Regex.Match(matched, Patterns.teacherOnClick).Groups
-            { Id = groups.[2].Value |> int64
-              ShortName = groups.[1].Value
-              FullName = groups.[1].Value
-              Type = IdentityType.Teacher }
+            createIdentity (groups.[2].Value |> int64) groups.[1].Value IdentityType.Teacher
         )
     )
     |> PSeq.concat
@@ -135,61 +134,98 @@ let private getSemesterBounds (currentTime : DateTime) =
     else
         (DateTime(currentTime.Year, 2, 19), DateTime(currentTime.Year, 8, 18))
 
-let private parseComplexGroup = id
+let private parseComplexGroup (complexGroup : string) =
+    let processOne =
+        function
+        | x when Subjects.isAlternative x ->
+            [ x.Replace("-)", ")") ]
+        | x when x.Contains(",") ->
+            let commaSeparated = x.Split(",")
+            let mainGroupParts =  commaSeparated.[0].Split("-")
+            let baseHead = String.Join("-", mainGroupParts.[..mainGroupParts.Length - 2])
+            [ commaSeparated.[0] ] @ (commaSeparated.[1..] |> PSeq.map (fun part -> baseHead + "-" + part) |> PSeq.toList)
+        | x -> [ x ]
 
-type TeachersParseResult = Dictionary<string, Dictionary<EventType, string list>>
+    let group = if complexGroup.EndsWith(", ") then complexGroup.Substring(0, complexGroup.Length - 2) else complexGroup
+    let result = group.Replace(" ", "").Split(";")
+                 |> PSeq.map processOne
+                 |> PSeq.concat
+                 |> PSeq.toList
+    result
 
-type private TeachersParseState = {
+type private TeachersParserState = {
     CurrentType     : EventType
     CurrentGroups   : string list
     CurrentTeachers : string list
-    Result          : TeachersParseResult
+    Result          : TeachersPerGroup list
 }
+let private getDefaultParserState () =
+    { CurrentType = EventType.Lecture
+      CurrentGroups = []
+      CurrentTeachers = []
+      Result = [] }
 
-let addTeacher (dict : TeachersParseResult) group eventType teacher  =
-    if not (dict.ContainsKey(group)) then
-        dict.Add(group, new Dictionary<EventType, string list>())
-    if not (dict.[group].ContainsKey(eventType)) then
-        dict.[group].Add(eventType, [])
-    dict.[group].[eventType] <- dict.[group].[eventType] @ [teacher]
-                    
-let rec private parseTeachersRec state (rows : HtmlNode list) =
+let makeTeacherForGroup result eventType teacher group =
+    { Teacher = teacher; EventType = eventType; Group = group }
+
+type private ParserToken =
+    | GroupName of string
+    | TeacherName of string
+    | Text of string
+
+let rec private getTokensFromRowsRec (tokens : ParserToken list) (rows : HtmlNode list) =
     match rows with
-    // Parse new event type
-    | x::xs when Regex.IsMatch(x.InnerText(), Patterns.eventType) ->
-        // Complete previous parse
-        for group in state.CurrentGroups do
-            for teacher in state.CurrentTeachers do
-                addTeacher state.Result group state.CurrentType teacher
-        
-        let regMatch = Regex.Match(x.InnerText(), Patterns.eventType)
-        parseTeachersRec {
-            state with
-                CurrentType = EventType.map regMatch.Groups.[1].Value
-                CurrentGroups = []
-                CurrentTeachers = []
-        } xs
     // Parse group names
     | x::xs when x.AttributeValue("href").Contains("_GROUP") ->
-        let groups = x.InnerText().Split(";") |> PSeq.map parseComplexGroup |> PSeq.toList
-        parseTeachersRec { state with CurrentGroups = groups } xs
-    // Parse teacher names
+        let groups = x.InnerText().Split(";")
+                     |> PSeq.map parseComplexGroup
+                     |> PSeq.concat
+                     |> PSeq.map GroupName
+                     |> PSeq.toList
+        getTokensFromRowsRec (tokens @ groups) xs
+    // Parse teacher name
     | x::xs when x.AttributeValue("href").Contains("_KAF") ->
-        parseTeachersRec { state with CurrentTeachers = state.CurrentTeachers @ [ x.InnerText() ] } xs
+        getTokensFromRowsRec (tokens @ [ x.InnerText() |> TeacherName ]) xs
+    | [] -> tokens
+    // Parse usual text
+    | x::xs ->
+        // Try to split by ' - ' to process non-linkable groups (alternatives)
+        let splitted = x.InnerText().Split(" - ", StringSplitOptions.RemoveEmptyEntries)
+        if splitted |> PSeq.length = 2 then
+            let text = splitted |> PSeq.head |> Text
+            let groupNames = splitted |> Seq.last |> parseComplexGroup |> PSeq.map GroupName |> PSeq.toList
+            getTokensFromRowsRec (tokens @ [ text ] @ groupNames) xs
+        else
+            getTokensFromRowsRec (tokens @ [ x.InnerText() |> Text ]) xs
+            
+let private getTokensFromRows =
+    getTokensFromRowsRec []
+
+let rec private parseTeachersRec state =
+    function
+    | (GroupName group)::tail ->
+        parseTeachersRec { state with CurrentGroups = state.CurrentGroups @ [ group ] } tail
+    | (TeacherName teacher)::tail ->
+        let newResult = state.Result @ (state.CurrentGroups
+                                        |> PSeq.map (makeTeacherForGroup state.Result state.CurrentType teacher)
+                                        |> PSeq.toList)
+        parseTeachersRec { state with Result = newResult; CurrentTeachers = state.CurrentTeachers @ [ teacher ] } tail
+    | (Text text)::tail when Regex.IsMatch(text, Patterns.eventType) ->
+        let regMatch = Regex.Match(text, Patterns.eventType)
+        let newType = mapEventType regMatch.Groups.[1].Value
+        parseTeachersRec { state with CurrentType = newType; CurrentGroups = []; CurrentTeachers = [] } tail
     | [] -> state.Result
-    | _::xs -> parseTeachersRec state xs
+    | x::xs -> parseTeachersRec state xs
 
 let private parseTeachers (infoTableRow : HtmlNode) =
-    parseTeachersRec
-        { CurrentType = Lecture
-          CurrentGroups = []
-          CurrentTeachers = []
-          Result = new Dictionary<string, Dictionary<EventType, string list>>() }
-        (infoTableRow.Elements())
+    let tokens = 
+        infoTableRow.Elements()
+        |> getTokensFromRows
+    tokens |> parseTeachersRec (getDefaultParserState ())
 
 let getAllSubjects : long list -> SubjectModel list =
     Seq.chunkBySize 50
-    // Do not make Seq.map parallel - CIST can't process 2 or more requests once
+    // Do not make Seq.map parallel - CIST can't process 2 or more requests per time
     >> Seq.map (fun (idsChunk : long array) ->
         printfn "Start proecessing for IDs: %s" (String.Join(", ", idsChunk))
         let semesterBounds = getSemesterBounds DateTime.Now
@@ -206,13 +242,13 @@ let getAllSubjects : long list -> SubjectModel list =
         |> loadHtmlStream
         |> cssSelect "table.footer tr"
         |> PSeq.map (fun tr ->
-            let nameTableRow = tr |> cssSelect "td[class=name]" |> Seq.head
-            let infoTableRow = tr |> cssSelect "td" |> PSeq.filter (fun td -> td <> nameTableRow) |> Seq.head
-            let subjectInfoLink = nameTableRow.Elements() |> Seq.head
+            let nameTableRow = tr |> cssSelect "td[class=name]" |> PSeq.head
+            let infoTableRow = tr |> cssSelect "td" |> PSeq.filter (fun td -> td <> nameTableRow) |> PSeq.head
+            let subjectInfoLink = nameTableRow.Elements() |> PSeq.head
         
             let subjectId = subjectInfoLink.AttributeValue "name" |> int64
             let subjectBrief = subjectInfoLink.InnerText()
-            let subjectTitle = infoTableRow.InnerText().Split(':') |> Seq.head
+            let subjectTitle = infoTableRow.InnerText().Split(':') |> PSeq.head
         
             { Id = subjectId;
               Brief = subjectBrief;
@@ -221,7 +257,7 @@ let getAllSubjects : long list -> SubjectModel list =
         )
     )
     >> PSeq.concat
-    //>> PSeq.distinctBy (fun subject -> subject.Id)
+    >> PSeq.distinct
     >> PSeq.sortBy (fun subject -> subject.Id)
     >> PSeq.toList
 

@@ -38,6 +38,21 @@ namespace Schedule.Migrations.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Teachers",
+                columns: table => new
+                {
+                    EntryId = table.Column<Guid>(nullable: false),
+                    SubjectId = table.Column<long>(nullable: false),
+                    TeacherId = table.Column<long>(nullable: false),
+                    EventType = table.Column<int>(nullable: false),
+                    GroupId = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Teachers", x => x.EntryId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Events",
                 columns: table => new
                 {
@@ -74,6 +89,7 @@ namespace Schedule.Migrations.Migrations
                     ShortName = table.Column<string>(nullable: true),
                     FullName = table.Column<string>(nullable: true),
                     Type = table.Column<int>(nullable: false),
+                    IsAlternative = table.Column<bool>(nullable: false),
                     EventId = table.Column<long>(nullable: true),
                     EventId1 = table.Column<long>(nullable: true)
                 },
@@ -119,6 +135,9 @@ namespace Schedule.Migrations.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Identites");
+
+            migrationBuilder.DropTable(
+                name: "Teachers");
 
             migrationBuilder.DropTable(
                 name: "Events");
