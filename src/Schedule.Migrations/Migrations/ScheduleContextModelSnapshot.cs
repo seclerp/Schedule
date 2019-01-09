@@ -97,18 +97,15 @@ namespace Schedule.Migrations.Migrations
 
             modelBuilder.Entity("Domain.Models+Teacher", b =>
                 {
-                    b.Property<Guid>("EntryId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("EventType");
-
-                    b.Property<long>("GroupId");
+                    b.Property<long>("TeacherId");
 
                     b.Property<long>("SubjectId");
 
-                    b.Property<long>("TeacherId");
+                    b.Property<long>("GroupId");
 
-                    b.HasKey("EntryId");
+                    b.Property<int>("EventType");
+
+                    b.HasKey("TeacherId", "SubjectId", "GroupId", "EventType");
 
                     b.ToTable("Teachers");
                 });

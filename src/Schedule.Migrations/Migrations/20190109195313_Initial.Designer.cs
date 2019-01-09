@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Schedule.Migrations.Migrations
 {
     [DbContext(typeof(ScheduleContext.ScheduleContext))]
-    [Migration("20190109194657_Initial")]
+    [Migration("20190109195313_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -99,18 +99,15 @@ namespace Schedule.Migrations.Migrations
 
             modelBuilder.Entity("Domain.Models+Teacher", b =>
                 {
-                    b.Property<Guid>("EntryId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("EventType");
-
-                    b.Property<long>("GroupId");
+                    b.Property<long>("TeacherId");
 
                     b.Property<long>("SubjectId");
 
-                    b.Property<long>("TeacherId");
+                    b.Property<long>("GroupId");
 
-                    b.HasKey("EntryId");
+                    b.Property<int>("EventType");
+
+                    b.HasKey("TeacherId", "SubjectId", "GroupId", "EventType");
 
                     b.ToTable("Teachers");
                 });

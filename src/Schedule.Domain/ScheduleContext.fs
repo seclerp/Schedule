@@ -47,3 +47,5 @@ type ScheduleContext =
         let identityTypeConvert = ValueConverter<IdentityType, int>((fun v -> LanguagePrimitives.EnumToValue v),
                                                                     (fun v -> LanguagePrimitives.EnumOfValue v))
         modelBuilder.Entity<Identity>().Property(fun e -> e.Type).HasConversion(identityTypeConvert) |> ignore
+        
+        modelBuilder.Entity<Teacher>().HasKey([|"TeacherId"; "SubjectId"; "GroupId"; "EventType"|]) |> ignore

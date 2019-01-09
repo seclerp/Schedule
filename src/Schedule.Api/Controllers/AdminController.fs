@@ -53,12 +53,11 @@ type AdminController (context : ScheduleContext) =
                     for teacherByGroup in subject.TeachersByGroup do
                     join teacherIdentity in context.Identites on (teacherByGroup.Teacher = teacherIdentity.ShortName)
                     join groupIdentity in context.Identites on (teacherByGroup.Group = groupIdentity.ShortName)
-                    select { EntryId = Guid.NewGuid()
-                             TeacherId = teacherIdentity.Id;
+                    select { TeacherId = teacherIdentity.Id;
                              GroupId = groupIdentity.Id;
                              SubjectId = subject.Id;
                              EventType = LanguagePrimitives.EnumToValue teacherByGroup.EventType }
-                } |> Seq.toList)
+                } |> Seq.toList |> PSeq.distinct)
             |> PSeq.concat
             |> PSeq.toList
         

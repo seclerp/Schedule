@@ -41,7 +41,6 @@ namespace Schedule.Migrations.Migrations
                 name: "Teachers",
                 columns: table => new
                 {
-                    EntryId = table.Column<Guid>(nullable: false),
                     SubjectId = table.Column<long>(nullable: false),
                     TeacherId = table.Column<long>(nullable: false),
                     EventType = table.Column<int>(nullable: false),
@@ -49,7 +48,7 @@ namespace Schedule.Migrations.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Teachers", x => x.EntryId);
+                    table.PrimaryKey("PK_Teachers", x => new { x.TeacherId, x.SubjectId, x.GroupId, x.EventType });
                 });
 
             migrationBuilder.CreateTable(

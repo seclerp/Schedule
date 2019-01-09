@@ -76,8 +76,6 @@ and [<CLIMutable>] Subject = {
     Title         : string
 }
 and [<CLIMutable>] Teacher = {
-    [<Key>]
-    EntryId       : Guid
     SubjectId     : long
     TeacherId     : long
     EventType     : int
