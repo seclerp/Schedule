@@ -1,2 +1,2 @@
-# NURE-Schedule-BE
-ASP.NET Core Web API backend for NURE Schedule
+# Schedule
+Back-end for NURE Schedule project
