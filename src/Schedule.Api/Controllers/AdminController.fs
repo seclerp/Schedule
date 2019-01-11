@@ -46,24 +46,49 @@ type AdminController (context : ScheduleContext) =
         context.Subjects.AddRange(subjectEntities)
         context.SaveChanges() |> ignore
         
-        let teachersEntities =
+        let teacherGroupEventTypeSubject =
             subjects
-            |> Seq.map (fun subject ->
-                query {
-                    for teacherByGroup in subject.TeachersByGroup do
-                    join teacherIdentity in context.Identites on (teacherByGroup.Teacher = teacherIdentity.ShortName)
-                    join groupIdentity in context.Identites on (teacherByGroup.Group = groupIdentity.ShortName)
-                    select { TeacherId = teacherIdentity.Id;
-                             GroupId = groupIdentity.Id;
-                             SubjectId = subject.Id;
-                             EventType = LanguagePrimitives.EnumToValue teacherByGroup.EventType }
-                } |> Seq.toList |> PSeq.distinct)
+            |> PSeq.map (fun subject -> subject.TeachersByGroup |> PSeq.map (fun teacherGroup ->
+                (teacherGroup.Teacher, teacherGroup.Group, teacherGroup.EventType, subject.Id)))
             |> PSeq.concat
+            |> PSeq.distinct
             |> PSeq.toList
         
-        context.Teachers.RemoveRange(context.Teachers)
-        context.Teachers.AddRange(teachersEntities)
-        context.SaveChanges() |> ignore
+        let missing = teacherGroupEventTypeSubject
+                      |> Seq.map (fun (teacherName, _, _, _) ->
+                          let count = context.Identites |> Seq.filter (fun identity -> identity.ShortName = teacherName) |> Seq.length
+                          (teacherName, count))
+                      |> PSeq.filter (fun (_, count) -> count = 0)
+                      |> PSeq.toList
+        
+        let teacherEntities =
+            teacherGroupEventTypeSubject
+            |> PSeq.map (fun (teacherName, groupName, eventType, subjectId) ->
+                let a = context.Identites |> Seq.filter (fun identity -> identity.ShortName = teacherName) |> Seq.length
+                let teacherId = (context.Identites |> Seq.find (fun identity -> identity.ShortName = teacherName)).Id
+                let groupId = (context.Identites |> Seq.find (fun identity -> identity.ShortName = groupName)).Id
+                { TeacherId = teacherId;
+                  GroupId = groupId;
+                  SubjectId = subjectId;
+                  EventType = LanguagePrimitives.EnumToValue eventType })
+            |> PSeq.toList
+        
+//        let teachersEntities =
+//            query {
+//                for teachePerGroup in teachersPerGroup do
+//                join teacherIdentity in (context.Identites |> Seq.filter (fun i -> i.Type = IdentityType.Teacher))
+//                    on (teachePerGroup.Teacher = teacherIdentity.ShortName)
+//                join groupIdentity in (context.Identites |> Seq.filter (fun i -> i.Type = IdentityType.Group))
+//                    on (teachePerGroup.Group = groupIdentity.ShortName)
+//                select ( teacherIdentity.ShortName, groupIdentity.ShortName )
+//            }
+//            |> PSeq.toList
+//            |> PSeq.distinct
+//            |> PSeq.toList
+        
+//        context.Teachers.RemoveRange(context.Teachers)
+//        context.Teachers.AddRange(teachersEntities)
+//        context.SaveChanges() |> ignore
         
         tx.Commit()
         
