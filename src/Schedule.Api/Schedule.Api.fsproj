@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Compile Include="Infrastructure\Models.fs" />
-    <Compile Include="Infrastructure\CsvApiProvider.fs" />
+    <Compile Include="Infrastructure\CistApiProvider.fs" />
   </ItemGroup>
   
   <ItemGroup>

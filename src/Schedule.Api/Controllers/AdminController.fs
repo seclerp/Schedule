@@ -2,14 +2,11 @@ namespace src.Controllers
 
 open Microsoft.AspNetCore.Mvc
 open System.Diagnostics
+open FSharp.Collections.ParallelSeq
 
-open System
 open Domain.Models
 open Domain.ScheduleContext
-open FSharp.Collections.ParallelSeq
-open Infrastructure.CsvApiProvider
-open Microsoft.EntityFrameworkCore
-
+open Infrastructure.CistApiProvider
 
 [<Route("api/admin")>]
 [<ApiController>]
@@ -56,7 +53,7 @@ type AdminController (context : ScheduleContext) =
         
         let missing = teacherGroupEventTypeSubject
                       |> Seq.map (fun (teacherName, _, _, _) ->
-                          let count = context.Identites |> Seq.filter (fun identity -> identity.ShortName = teacherName) |> Seq.length
+                          let count = context.Identites |> Seq.filter (fun identity -> identity.Name = teacherName) |> Seq.length
                           (teacherName, count))
                       |> PSeq.filter (fun (_, count) -> count = 0)
                       |> PSeq.toList
@@ -64,9 +61,9 @@ type AdminController (context : ScheduleContext) =
         let teacherEntities =
             teacherGroupEventTypeSubject
             |> PSeq.map (fun (teacherName, groupName, eventType, subjectId) ->
-                let a = context.Identites |> Seq.filter (fun identity -> identity.ShortName = teacherName) |> Seq.length
-                let teacherId = (context.Identites |> Seq.find (fun identity -> identity.ShortName = teacherName)).Id
-                let groupId = (context.Identites |> Seq.find (fun identity -> identity.ShortName = groupName)).Id
+                let a = context.Identites |> Seq.filter (fun identity -> identity.Name = teacherName) |> Seq.length
+                let teacherId = (context.Identites |> Seq.find (fun identity -> identity.Name = teacherName)).Id
+                let groupId = (context.Identites |> Seq.find (fun identity -> identity.Name = groupName)).Id
                 { TeacherId = teacherId;
                   GroupId = groupId;
                   SubjectId = subjectId;

@@ -51,16 +51,15 @@ type IdentityType =
 type [<CLIMutable>] Event = {
     Id            : long
     Date          : DateTime
-    Teachers      : List<Identity>
-    Groups        : List<Identity>
+    Teachers      : string   // csv list of long
+    Groups        : string   // csv list of long
     Auditory      : Auditory
     Subject       : Subject
     Type          : EventType
 }
 and [<CLIMutable>] Identity = {
     Id            : long
-    ShortName     : string
-    FullName      : string
+    Name          : string
     Type          : IdentityType
     IsAlternative : bool
 }

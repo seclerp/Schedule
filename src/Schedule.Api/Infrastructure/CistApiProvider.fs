@@ -1,4 +1,4 @@
-module Infrastructure.CsvApiProvider
+module Infrastructure.CistApiProvider
 
 open System
 open System.Collections.Generic
@@ -37,7 +37,7 @@ let private loadHtml : string -> HtmlNode = toStream >> loadHtmlStream
 
 let inline private cssSelect selector (node : HtmlNode) = node.CssSelect(selector)
 
-let private request (url : string) (queryParams : (string * string) list) =
+let private request url queryParams =
     let uri = if List.isEmpty queryParams then url
               else url + "?" + String.Join("&", (queryParams |> Seq.map (fun (k, v) -> k + "=" + v)))
               |> Uri
@@ -63,8 +63,7 @@ let private getFaculties () =
 
 let private createIdentity id name iType =
     { Id = id
-      ShortName = name
-      FullName = name
+      Name = name
       Type = iType
       IsAlternative = Subjects.isAlternative name }
 
@@ -97,6 +96,12 @@ let private getDeptsOnFaculties facultyId =
     |> PSeq.filter (fun x -> Regex.IsMatch(x, Patterns.deptOnClick))
     |> PSeq.map (fun x -> (facultyId, Regex.Match(x, Patterns.deptOnClick).Groups.[2].Value))
 
+// Sometimes teacher first name is separated from last and sur names with two spaces, e.g.:
+// "Ivanov  I. I." instead of
+// "Ivanov I. I."
+// To fix this - we replace "  " with " "
+let private fixTeacherName (teacherName : string) = teacherName.Replace("  ", " ")
+
 let private getTeacherIdentities () =
     getFaculties ()
     |> PSeq.map getDeptsOnFaculties
@@ -111,12 +116,13 @@ let private getTeacherIdentities () =
         |> PSeq.filter (fun x -> Regex.IsMatch(x, Patterns.teacherOnClick))
         |> PSeq.map (fun matched ->
             let groups = Regex.Match(matched, Patterns.teacherOnClick).Groups
-            createIdentity (groups.[2].Value |> int64) groups.[1].Value IdentityType.Teacher
+            let fixedName = fixTeacherName groups.[1].Value
+            createIdentity (groups.[2].Value |> int64) fixedName IdentityType.Teacher
         )
     )
     |> PSeq.concat
 
-let getAllIdentities () : Identity list =
+let getAllIdentities () =
     [ getGroupIdentities(); getTeacherIdentities(); ]
     |> PSeq.concat
     |> PSeq.distinctBy (fun identity -> identity.Id)
