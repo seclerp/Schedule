@@ -49,3 +49,4 @@ type ScheduleContext =
         modelBuilder.Entity<Identity>().Property(fun e -> e.Type).HasConversion(identityTypeConvert) |> ignore
         
         modelBuilder.Entity<Teacher>().HasKey([|"TeacherId"; "SubjectId"; "GroupId"; "EventType"|]) |> ignore
+        modelBuilder.Entity<Identity>().HasKey([|"Id"; "Type"|]) |> ignore

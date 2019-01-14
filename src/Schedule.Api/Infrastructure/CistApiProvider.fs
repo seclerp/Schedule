@@ -64,8 +64,7 @@ let private getFaculties () =
 let private createIdentity id name iType =
     { Id = id
       Name = name
-      Type = iType
-      IsAlternative = Subjects.isAlternative name }
+      Type = iType }
 
 let private getGroupIdentities () =
     getFaculties ()

@@ -42,7 +42,11 @@ namespace Schedule.Migrations.Migrations
 
                     b.Property<DateTime>("Date");
 
+                    b.Property<string>("Groups");
+
                     b.Property<long?>("SubjectId");
+
+                    b.Property<string>("Teachers");
 
                     b.Property<int>("Type");
 
@@ -60,23 +64,11 @@ namespace Schedule.Migrations.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<long?>("EventId");
-
-                    b.Property<long?>("EventId1");
-
-                    b.Property<string>("FullName");
-
-                    b.Property<bool>("IsAlternative");
-
-                    b.Property<string>("ShortName");
+                    b.Property<string>("Name");
 
                     b.Property<int>("Type");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EventId");
-
-                    b.HasIndex("EventId1");
 
                     b.ToTable("Identites");
                 });
@@ -119,17 +111,6 @@ namespace Schedule.Migrations.Migrations
                     b.HasOne("Domain.Models+Subject", "Subject")
                         .WithMany()
                         .HasForeignKey("SubjectId");
-                });
-
-            modelBuilder.Entity("Domain.Models+Identity", b =>
-                {
-                    b.HasOne("Domain.Models+Event")
-                        .WithMany("Groups")
-                        .HasForeignKey("EventId");
-
-                    b.HasOne("Domain.Models+Event")
-                        .WithMany("Teachers")
-                        .HasForeignKey("EventId1");
                 });
 #pragma warning restore 612, 618
         }

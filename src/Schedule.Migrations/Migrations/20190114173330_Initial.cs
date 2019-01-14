@@ -24,6 +24,20 @@ namespace Schedule.Migrations.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Identites",
+                columns: table => new
+                {
+                    Id = table.Column<long>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    Type = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Identites", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Subjects",
                 columns: table => new
                 {
@@ -58,6 +72,8 @@ namespace Schedule.Migrations.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Date = table.Column<DateTime>(nullable: false),
+                    Teachers = table.Column<string>(nullable: true),
+                    Groups = table.Column<string>(nullable: true),
                     AuditoryId = table.Column<long>(nullable: true),
                     SubjectId = table.Column<long>(nullable: true),
                     Type = table.Column<int>(nullable: false)
@@ -79,36 +95,6 @@ namespace Schedule.Migrations.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Identites",
-                columns: table => new
-                {
-                    Id = table.Column<long>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    ShortName = table.Column<string>(nullable: true),
-                    FullName = table.Column<string>(nullable: true),
-                    Type = table.Column<int>(nullable: false),
-                    IsAlternative = table.Column<bool>(nullable: false),
-                    EventId = table.Column<long>(nullable: true),
-                    EventId1 = table.Column<long>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Identites", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Identites_Events_EventId",
-                        column: x => x.EventId,
-                        principalTable: "Events",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Identites_Events_EventId1",
-                        column: x => x.EventId1,
-                        principalTable: "Events",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_Events_AuditoryId",
                 table: "Events",
@@ -118,28 +104,18 @@ namespace Schedule.Migrations.Migrations
                 name: "IX_Events_SubjectId",
                 table: "Events",
                 column: "SubjectId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Identites_EventId",
-                table: "Identites",
-                column: "EventId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Identites_EventId1",
-                table: "Identites",
-                column: "EventId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Events");
+
+            migrationBuilder.DropTable(
                 name: "Identites");
 
             migrationBuilder.DropTable(
                 name: "Teachers");
-
-            migrationBuilder.DropTable(
-                name: "Events");
 
             migrationBuilder.DropTable(
                 name: "Auditories");

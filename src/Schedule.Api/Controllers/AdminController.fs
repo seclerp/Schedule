@@ -4,6 +4,7 @@ open Microsoft.AspNetCore.Mvc
 open System.Diagnostics
 open FSharp.Collections.ParallelSeq
 
+open System
 open Domain.Models
 open Domain.ScheduleContext
 open Infrastructure.CistApiProvider
@@ -15,14 +16,7 @@ type AdminController (context : ScheduleContext) =
 
     [<HttpPost("identities/update")>]
     member this.UpdateIdentities() = 
-        let watch = Stopwatch()
-        watch.Start()
-        let identities = getAllIdentities()
-        context.Identites.RemoveRange(context.Identites)
-        context.Identites.AddRange(identities)
-        context.SaveChanges() |> ignore
-        watch.Stop()
-        printfn "Done in %A" watch.Elapsed
+        
         
     [<HttpGet("subjects/update")>]
     member this.UpdateSubjects() = 
@@ -58,12 +52,25 @@ type AdminController (context : ScheduleContext) =
                       |> PSeq.filter (fun (_, count) -> count = 0)
                       |> PSeq.toList
         
-        let teacherEntities =
+        let teachersEntities =
             teacherGroupEventTypeSubject
-            |> PSeq.map (fun (teacherName, groupName, eventType, subjectId) ->
-                let a = context.Identites |> Seq.filter (fun identity -> identity.Name = teacherName) |> Seq.length
-                let teacherId = (context.Identites |> Seq.find (fun identity -> identity.Name = teacherName)).Id
-                let groupId = (context.Identites |> Seq.find (fun identity -> identity.Name = groupName)).Id
+            |> Seq.map (fun (teacherName, groupName, eventType, subjectId) ->
+                let groupExistInDb = context.Identites |> PSeq.exists (fun identity -> identity.Name = groupName)
+                let groupId =
+                    // If not exists in db, then it is alternative group, let's add it
+                    if not groupExistInDb then
+                        let altGroupId = groupName.GetHashCode() + Int32.MaxValue |> int64
+                        context.Identites.Add(
+                            { Id = altGroupId;
+                              Name = groupName;
+                              Type = IdentityType.AlternativeGroup }
+                        ) |> ignore
+                        context.SaveChanges() |> ignore
+                        altGroupId
+                    else
+                        (context.Identites |> PSeq.find (fun identity -> identity.Name = groupName)).Id
+
+                let teacherId = (context.Identites |> PSeq.find (fun identity -> identity.Name = teacherName)).Id
                 { TeacherId = teacherId;
                   GroupId = groupId;
                   SubjectId = subjectId;
@@ -83,9 +90,9 @@ type AdminController (context : ScheduleContext) =
 //            |> PSeq.distinct
 //            |> PSeq.toList
         
-//        context.Teachers.RemoveRange(context.Teachers)
-//        context.Teachers.AddRange(teachersEntities)
-//        context.SaveChanges() |> ignore
+        context.Teachers.RemoveRange(context.Teachers)
+        context.Teachers.AddRange(teachersEntities)
+        context.SaveChanges() |> ignore
         
         tx.Commit()
         

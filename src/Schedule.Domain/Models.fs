@@ -44,9 +44,10 @@ type EventType =
 //    | CourseWork    = 60 // КП/КР (базовый тип) – course_work.
 
 type IdentityType =
-    | Teacher = 0
-    | Group = 1
-    | Auditory = 2
+    | Teacher          = 0
+    | Group            = 1
+    | Auditory         = 2
+    | AlternativeGroup = 3
 
 type [<CLIMutable>] Event = {
     Id            : long
@@ -61,7 +62,6 @@ and [<CLIMutable>] Identity = {
     Id            : long
     Name          : string
     Type          : IdentityType
-    IsAlternative : bool
 }
 and [<CLIMutable>] Auditory = {
     Id            : long

@@ -1,0 +1,1 @@
+del ..\Schedule.Migrations\Migrations
