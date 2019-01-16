@@ -6,8 +6,9 @@ open System.Net.Http
 open System.Text
 open System.Text.RegularExpressions
 open FSharp.Data
-open Domain.Models
 open FSharp.Collections.ParallelSeq
+
+open Domain.Models
 open Infrastructure.Models
 
 module private Urls =
@@ -28,13 +29,14 @@ let private validHtmlTemplate =
 
 let private windows1251 = Encoding.GetEncoding("windows-1251")
 
-let private toStream (inputString : string) = inputString |> Encoding.UTF8.GetBytes |> MemoryStream
+let private bytesToStream (bytes : byte array) = new MemoryStream(bytes)
+let private stringToStream : string -> MemoryStream = Encoding.UTF8.GetBytes >> bytesToStream
 let private docToNode (doc : HtmlDocument) = doc.Html()
 
-let private loadHtmlStream (stream : Stream) = stream |> HtmlDocument.Load |> docToNode
-let private loadHtml : string -> HtmlNode = toStream >> loadHtmlStream
+let private loadHtmlStream : Stream -> HtmlNode = HtmlDocument.Load >> docToNode
+let private loadHtmlString : string -> HtmlNode = stringToStream >> loadHtmlStream
 
-let inline private cssSelect selector (node : HtmlNode) = node.CssSelect(selector)
+let private cssSelect selector (node : HtmlNode) = node.CssSelect(selector)
 
 let private request url queryParams =
     let uri = if List.isEmpty queryParams then url
@@ -49,21 +51,19 @@ let private request url queryParams =
     reader.ReadToEnd()
 
 let private makeValidHtmlStream nonValidHtmlString =
-    let valid = nonValidHtmlString |> validHtmlTemplate
-    new MemoryStream(Encoding.UTF8.GetBytes(valid))
+    nonValidHtmlString
+    |> validHtmlTemplate
+    |> stringToStream
 
 let private getFaculties () =
     request Urls.groupsSchedule []
-    |> loadHtml
+    |> loadHtmlString
     |> cssSelect ".htmldbTabbedNavigationList a"
     |> PSeq.map (fun el -> el.AttributeValue "onclick")
     |> PSeq.filter (fun x -> Regex.IsMatch(x, Patterns.facultyOnClick))
     |> PSeq.map (fun x -> Regex.Match(x, Patterns.facultyOnClick).Groups.[1].Value)
 
-let private createIdentity id name iType =
-    { Id = id
-      Name = name
-      Type = iType }
+let private createIdentity id name iType = { Id = id; Name = name; Type = iType }
 
 let private getGroupIdentities () =
     getFaculties ()
@@ -151,11 +151,10 @@ let private parseComplexGroup (complexGroup : string) =
         | x -> [ x ]
 
     let group = if complexGroup.EndsWith(", ") then complexGroup.Substring(0, complexGroup.Length - 2) else complexGroup
-    let result = group.Replace(" ", "").Split(";")
-                 |> PSeq.map processOne
-                 |> PSeq.concat
-                 |> PSeq.toList
-    result
+    group.Replace(" ", "").Split(";")
+    |> PSeq.map processOne
+    |> PSeq.concat
+    |> PSeq.toList
 
 type private TeachersParserState = {
     CurrentType     : EventType
@@ -164,10 +163,7 @@ type private TeachersParserState = {
     Result          : TeachersPerGroup list
 }
 let private getDefaultParserState () =
-    { CurrentType = EventType.Lecture
-      CurrentGroups = []
-      CurrentTeachers = []
-      Result = [] }
+    { CurrentType = EventType.Lecture; CurrentGroups = []; CurrentTeachers = []; Result = [] }
 
 let makeTeacherForGroup result eventType teacher group =
     { Teacher = teacher; EventType = eventType; Group = group }
@@ -177,7 +173,7 @@ type private ParserToken =
     | TeacherName of string
     | Text of string
 
-let rec private getTokensFromRowsRec (tokens : ParserToken list) (rows : HtmlNode list) =
+let rec private getTokensFromRows' (tokens : ParserToken list) (rows : HtmlNode list) =
     match rows with
     // Parse group names
     | x::xs when x.AttributeValue("href").Contains("_GROUP") ->
@@ -186,10 +182,10 @@ let rec private getTokensFromRowsRec (tokens : ParserToken list) (rows : HtmlNod
                      |> PSeq.concat
                      |> PSeq.map GroupName
                      |> PSeq.toList
-        getTokensFromRowsRec (tokens @ groups) xs
+        getTokensFromRows' (tokens @ groups) xs
     // Parse teacher name
     | x::xs when x.AttributeValue("href").Contains("_KAF") ->
-        getTokensFromRowsRec (tokens @ [ x.InnerText() |> TeacherName ]) xs
+        getTokensFromRows' (tokens @ [ x.InnerText() |> TeacherName ]) xs
     | [] -> tokens
     // Parse usual text
     | x::xs ->
@@ -198,12 +194,12 @@ let rec private getTokensFromRowsRec (tokens : ParserToken list) (rows : HtmlNod
         if splitted |> PSeq.length = 2 then
             let text = splitted |> PSeq.head |> Text
             let groupNames = splitted |> Seq.last |> parseComplexGroup |> PSeq.map GroupName |> PSeq.toList
-            getTokensFromRowsRec (tokens @ [ text ] @ groupNames) xs
+            getTokensFromRows' (tokens @ [ text ] @ groupNames) xs
         else
-            getTokensFromRowsRec (tokens @ [ x.InnerText() |> Text ]) xs
+            getTokensFromRows' (tokens @ [ x.InnerText() |> Text ]) xs
             
 let private getTokensFromRows =
-    getTokensFromRowsRec []
+    getTokensFromRows' []
 
 let rec private parseTeachersRec state =
     function
@@ -222,10 +218,9 @@ let rec private parseTeachersRec state =
     | x::xs -> parseTeachersRec state xs
 
 let private parseTeachers (infoTableRow : HtmlNode) =
-    let tokens = 
-        infoTableRow.Elements()
-        |> getTokensFromRows
-    tokens |> parseTeachersRec (getDefaultParserState ())
+    infoTableRow.Elements()
+    |> getTokensFromRows
+    |> parseTeachersRec (getDefaultParserState ())
 
 let getAllSubjects : long list -> SubjectModel list =
     Seq.chunkBySize 50

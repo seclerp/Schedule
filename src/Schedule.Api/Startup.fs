@@ -19,15 +19,13 @@ type Startup private () =
     member this.ConfigureServices(services: IServiceCollection) =
         // Add framework services.
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1) |> ignore
-        services.AddSwaggerGen(fun c ->
-                    c.SwaggerDoc("v1", new Info())
-                ) |> ignore
+        services.AddSwaggerGen(fun c -> c.SwaggerDoc("v1", new Info())) |> ignore
         services.AddEntityFrameworkMySql() |> ignore
         services.AddSingleton<IConfiguration>(this.Configuration) |> ignore
-        services.AddDbContext<ScheduleContext>(
-            fun o -> o.UseMySql(this.Configuration.GetValue<string>("ConnectionStrings:Schedule"),
+        services.AddDbContext<ScheduleContext>(fun o ->
+                    o.UseMySql(this.Configuration.GetValue<string>("ConnectionStrings:Schedule"),
                                 fun o -> o.MigrationsAssembly("Schedule.Migrations") |> ignore
-                     ) |> ignore
+                    ) |> ignore
         ) |> ignore
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
