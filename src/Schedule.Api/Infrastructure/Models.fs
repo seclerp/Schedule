@@ -1,6 +1,6 @@
 module Infrastructure.Models
 
-open System.Collections.Generic
+open System
 
 type EventType =
     | Lecture = 1
@@ -20,7 +20,6 @@ let mapEventType = function
     | "ІспКомб" -> EventType.Exam
     | _         -> EventType.CourseWork
 
-
 type TeachersPerGroup = {
     Teacher   : long
     EventType : EventType
@@ -32,4 +31,12 @@ type SubjectModel = {
     Brief           : string
     Title           : string
     TeachersByGroup : TeachersPerGroup list
+}
+
+type EventModel = {
+    TimeStart : DateTime
+    TimeEnd : DateTime
+    GroupsNames : string list
+    SubjectName : string
+    EventType : EventType
 }

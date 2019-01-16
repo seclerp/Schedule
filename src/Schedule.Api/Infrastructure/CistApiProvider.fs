@@ -15,7 +15,7 @@ module private Urls =
     let groupsSchedule  = "http://cist.nure.ua/ias/app/tt/f?p=778:2"
     let facultyGroups   = "http://cist.nure.ua/ias/app/tt/WEB_IAS_TT_AJX_GROUPS"
     let facultyTeachers = "http://cist.nure.ua/ias/app/tt/WEB_IAS_TT_AJX_TEACHS"
-    let subjects        = "http://cist.nure.ua/ias/app/tt/WEB_IAS_TT_GNR_RASP.GEN_GROUP_POTOK_RASP"
+    let scheduleMain    = "http://cist.nure.ua/ias/app/tt/WEB_IAS_TT_GNR_RASP.GEN_GROUP_POTOK_RASP"
 
 module private Patterns =
     let facultyOnClick  = @"javascript:IAS_Change_Groups\(([0-9]+)\)"
@@ -238,7 +238,7 @@ let getAllSubjects : long list -> SubjectModel list =
           ("Aid_potok", "0")
           ("ADateStart", dateStart)
           ("ADateEnd", dateEnd) ]
-        |> request Urls.subjects
+        |> request Urls.scheduleMain
         |> makeValidHtmlStream
         |> loadHtmlStream
         |> cssSelect "table.footer tr"
@@ -262,5 +262,21 @@ let getAllSubjects : long list -> SubjectModel list =
     >> PSeq.sortBy (fun subject -> subject.Id)
     >> PSeq.toList
 
-// long -> long -> Event list
-let getSchedule identityId identityType = ()
+//let getGroupsSchedule : long list -> EventModel =
+//    Seq.chunkBySize 50
+//    // Do not make Seq.map parallel - CIST can't process 2 or more requests per time
+//    >> Seq.map (fun (idsChunk : long array) ->
+//        let semesterBounds = getSemesterBounds DateTime.Now
+//        let groupsConcated = String.Join("_", idsChunk)
+//        let dateStart = (fst semesterBounds).ToString("dd.MM.yyyy")
+//        let dateEnd = (snd semesterBounds).ToString("dd.MM.yyyy")
+//        [ ("ATypeDoc", "1")
+//          ("Aid_group", groupsConcated)
+//          ("Aid_potok", "0")
+//          ("ADateStart", dateStart)
+//          ("ADateEnd", dateEnd) ]
+//        |> request Urls.scheduleMain
+//    )
+//
+//// long list -> IdentityType -> Event list
+//let getSchedule identityId identityType = [getGroupsSchedule] |> PSeq.concat
