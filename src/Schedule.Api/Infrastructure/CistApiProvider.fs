@@ -23,6 +23,7 @@ module private Patterns =
     let groupOnClick    = @"javascript:IAS_ADD_Group_in_List\('(.+)',([0-9]+)\)"
     let teacherOnClick  = @"javascript:IAS_ADD_Teach_in_List\('(.+)',([0-9]+)\)"
     let eventType       = @"(?:.*: )?([а-яА-ЯҐЄІЇґєії]+) \(\d+\)"
+    let identityHref    = @"javascript:ias_PopUp.*, '(\d+)', .*"
 
 let private validHtmlTemplate =
     sprintf "<html lang=\"ru\" xmlns:htmldb=\"http://htmldb.oracle.com\"><body>%s</body></html>"
@@ -159,7 +160,7 @@ let private parseComplexGroup (complexGroup : string) =
 type private TeachersParserState = {
     CurrentType     : EventType
     CurrentGroups   : string list
-    CurrentTeachers : string list
+    CurrentTeachers : long list
     Result          : TeachersPerGroup list
 }
 let private getDefaultParserState () =
@@ -170,7 +171,7 @@ let makeTeacherForGroup result eventType teacher group =
 
 type private ParserToken =
     | GroupName of string
-    | TeacherName of string
+    | TeacherId of long
     | Text of string
 
 let rec private getTokensFromRows' (tokens : ParserToken list) (rows : HtmlNode list) =
@@ -183,9 +184,10 @@ let rec private getTokensFromRows' (tokens : ParserToken list) (rows : HtmlNode 
                      |> PSeq.map GroupName
                      |> PSeq.toList
         getTokensFromRows' (tokens @ groups) xs
-    // Parse teacher name
+    // Parse teacher
     | x::xs when x.AttributeValue("href").Contains("_KAF") ->
-        getTokensFromRows' (tokens @ [ x.InnerText() |> TeacherName ]) xs
+        let regexMatch = Regex.Match(x.AttributeValue("href"), Patterns.identityHref)
+        getTokensFromRows' (tokens @ [ regexMatch.Groups.[1].Value |> int64 |> TeacherId ]) xs
     | [] -> tokens
     // Parse usual text
     | x::xs ->
@@ -205,7 +207,7 @@ let rec private parseTeachersRec state =
     function
     | (GroupName group)::tail ->
         parseTeachersRec { state with CurrentGroups = state.CurrentGroups @ [ group ] } tail
-    | (TeacherName teacher)::tail ->
+    | (TeacherId teacher)::tail ->
         let newResult = state.Result @ (state.CurrentGroups
                                         |> PSeq.map (makeTeacherForGroup state.Result state.CurrentType teacher)
                                         |> PSeq.toList)

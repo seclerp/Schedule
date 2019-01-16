@@ -20,8 +20,9 @@ let mapEventType = function
     | "ІспКомб" -> EventType.Exam
     | _         -> EventType.CourseWork
 
+
 type TeachersPerGroup = {
-    Teacher   : string
+    Teacher   : long
     EventType : EventType
     Group     : string
 }

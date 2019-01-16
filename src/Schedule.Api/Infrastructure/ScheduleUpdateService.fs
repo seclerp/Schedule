@@ -3,6 +3,7 @@ module Infrastructure.ScheduleUpdateService
 open System.Diagnostics
 open FSharp.Collections.ParallelSeq
 
+open System.Collections.Generic
 open Domain.Models
 open Domain.ScheduleContext
 open Infrastructure
@@ -25,16 +26,19 @@ let refreshIdentities (ctx : ScheduleContext) () =
 let refreshSubjectsForGroups (ctx : ScheduleContext) groupIdentityIds =
     let watch = Stopwatch()
     watch.Start()
-    
+
     use tx = ctx.Database.BeginTransaction()
-    
+
     let subjects = CistApiProvider.getAllSubjects groupIdentityIds |> PSeq.distinct
+
+    let identitiesFromDb = new List<Identity>(ctx.Identites)
+    let newGroups = new List<Identity>()
     
     subjects
     |> PSeq.map (fun subject -> { Id = subject.Id; Brief = subject.Brief; Title = subject.Title })
     |> PSeq.distinct
     |> refreshDbSet ctx ctx.Subjects
-    
+
     subjects
     |> PSeq.map (fun subject -> subject.TeachersByGroup
                              |> PSeq.map (fun tpg -> (tpg.Teacher, tpg.Group, tpg.EventType, subject.Id))
@@ -42,30 +46,34 @@ let refreshSubjectsForGroups (ctx : ScheduleContext) groupIdentityIds =
     |> PSeq.toList
     |> List.concat
     |> List.distinct
-    |> List.map (fun (teacherName, groupName, eventType, subjectId) ->
-        printfn "Processing data %A" (teacherName, groupName, eventType, subjectId)
-        let groupExistInDb = ctx.Identites |> PSeq.exists (fun identity -> identity.Name = groupName)
+    |> PSeq.map (fun (teacherId, groupName, eventType, subjectId) ->
+        printfn "Processing data %A" (teacherId, groupName, eventType, subjectId)
+        let groupExistInDb = identitiesFromDb |> PSeq.exists (fun identity -> identity.Name = groupName)
         let groupId =
             // If not exists in db, then it is alternative group, let's add it
             if not groupExistInDb then
                 let altGroupId = groupName.GetHashCode() |> int64
-                ctx.Identites.Add({ Id = altGroupId; Name = groupName; Type = IdentityType.AlternativeGroup }) |> ignore
-                ctx.SaveChanges() |> ignore
+                let altGroup = { Id = altGroupId; Name = groupName; Type = IdentityType.AlternativeGroup }
+                newGroups.Add(altGroup)
+                identitiesFromDb.Add(altGroup)
                 altGroupId
             else
-                (ctx.Identites |> PSeq.find (fun identity -> identity.Name = groupName)).Id
+                (identitiesFromDb |> PSeq.find (fun identity -> identity.Name = groupName)).Id
 
-        { TeacherId = (ctx.Identites |> PSeq.find (fun identity -> identity.Name = teacherName)).Id;
+        { TeacherId = teacherId;
           GroupId = groupId;
           SubjectId = subjectId;
           EventType = LanguagePrimitives.EnumToValue eventType })
     |> refreshDbSet ctx ctx.Teachers
     
-    tx.Commit()
+    ctx.Identites.AddRange(newGroups)
+    ctx.SaveChanges() |> ignore
     
+    tx.Commit()
+
     watch.Stop()
     printfn "Done subject updating in %A" watch.Elapsed
-    
+
 let refreshSubjectsForAllGroups (ctx : ScheduleContext) () =
     ctx.Identites
     |> PSeq.filter (fun identity -> identity.Type = IdentityType.Group)
