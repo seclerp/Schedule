@@ -50,24 +50,19 @@ type IdentityType =
     | AlternativeGroup = 3
 
 type [<CLIMutable>] Event = {
-    Id            : long
-    Date          : DateTime
+    Id            : Guid
+    StartTime     : DateTime
+    EndTime       : DateTime
     Teachers      : string   // csv list of long
-    Groups        : string   // csv list of long
-    Auditory      : Auditory
-    Subject       : Subject
-    Type          : EventType
+    GroupId       : long
+    Auditory      : string
+    SubjectId     : long
+    Type          : int
 }
 and [<CLIMutable>] Identity = {
     Id            : long
     Name          : string
     Type          : IdentityType
-}
-and [<CLIMutable>] Auditory = {
-    Id            : long
-    Name          : string
-    Floor         : int
-    HasPower      : bool
 }
 and [<CLIMutable>] Subject = {
     Id            : long

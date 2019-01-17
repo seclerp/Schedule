@@ -17,34 +17,20 @@ namespace Schedule.Migrations.Migrations
                 .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Domain.Models+Auditory", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Floor");
-
-                    b.Property<bool>("HasPower");
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Auditories");
-                });
-
             modelBuilder.Entity("Domain.Models+Event", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<long?>("AuditoryId");
+                    b.Property<string>("Auditory");
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("EndTime");
 
-                    b.Property<string>("Groups");
+                    b.Property<long>("GroupId");
 
-                    b.Property<long?>("SubjectId");
+                    b.Property<DateTime>("StartTime");
+
+                    b.Property<long>("SubjectId");
 
                     b.Property<string>("Teachers");
 
@@ -52,23 +38,18 @@ namespace Schedule.Migrations.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AuditoryId");
-
-                    b.HasIndex("SubjectId");
-
                     b.ToTable("Events");
                 });
 
             modelBuilder.Entity("Domain.Models+Identity", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Name");
+                    b.Property<long>("Id");
 
                     b.Property<int>("Type");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id", "Type");
 
                     b.ToTable("Identites");
                 });
@@ -100,17 +81,6 @@ namespace Schedule.Migrations.Migrations
                     b.HasKey("TeacherId", "SubjectId", "GroupId", "EventType");
 
                     b.ToTable("Teachers");
-                });
-
-            modelBuilder.Entity("Domain.Models+Event", b =>
-                {
-                    b.HasOne("Domain.Models+Auditory", "Auditory")
-                        .WithMany()
-                        .HasForeignKey("AuditoryId");
-
-                    b.HasOne("Domain.Models+Subject", "Subject")
-                        .WithMany()
-                        .HasForeignKey("SubjectId");
                 });
 #pragma warning restore 612, 618
         }

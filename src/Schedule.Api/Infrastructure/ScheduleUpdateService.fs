@@ -3,6 +3,8 @@ module Infrastructure.ScheduleUpdateService
 open System.Diagnostics
 open FSharp.Collections.ParallelSeq
 
+open System
+open System
 open System.Collections.Generic
 open Domain.Models
 open Domain.ScheduleContext
@@ -40,7 +42,7 @@ let refreshSubjectsForGroups (ctx : ScheduleContext) groupIdentityIds =
     |> refreshDbSet ctx ctx.Subjects
 
     subjects
-    |> PSeq.map (fun subject -> subject.TeachersByGroup
+    |> PSeq.map (fun subject -> subject.TeacherTypeGroups
                              |> PSeq.map (fun tpg -> (tpg.Teacher, tpg.Group, tpg.EventType, subject.Id))
                              |> PSeq.toList)
     |> PSeq.toList
@@ -80,3 +82,65 @@ let refreshSubjectsForAllGroups (ctx : ScheduleContext) () =
     |> PSeq.map (fun identity -> identity.Id)
     |> PSeq.toList
     |> refreshSubjectsForGroups ctx
+
+//type EventModel = {
+//    TimeStart    : DateTime
+//    TimeEnd      : DateTime
+//    Auditory     : string
+//    GroupsName   : string
+//    SubjectBrief : string
+//    EventType    : EventType
+//}
+
+//type [<CLIMutable>] Event = {
+//    Id            : Guid
+//    StartTime     : DateTime
+//    EndTime       : DateTime
+//    Teachers      : string   // csv list of long
+//    Group         : long
+//    Auditory      : string
+//    Subject       : Subject
+//    Type          : EventType
+//}
+
+let refreshEventsForGroups (ctx : ScheduleContext) groupsIds =
+    let fallbackGroupName = (ctx.Identites |> Seq.find (fun identity -> identity.Id = (groupsIds |> Seq.head))).Name
+    let events = CistApiProvider.getSchedule fallbackGroupName groupsIds
+    let identities = ctx.Identites |> Seq.toList
+    let teachers = ctx.Teachers |> Seq.toList
+    let subjects = ctx.Subjects |> Seq.toList
+    let eventsEntities =
+        events
+        |> PSeq.map(fun eventModel ->
+            let groupId = (ctx.Identites |> Seq.find (fun identity -> identity.Name = eventModel.GroupsName)).Id
+            let subjectId = (ctx.Subjects |> Seq.find (fun subject -> subject.Brief = eventModel.SubjectBrief)).Id
+            let eventTypeInt = LanguagePrimitives.EnumToValue(eventModel.EventType)
+            let teachersIds = teachers
+                              |> PSeq.filter (fun teacher -> teacher.GroupId = groupId && teacher.SubjectId = subjectId && teacher.EventType = eventTypeInt)
+                              |> PSeq.map (fun teacher -> teacher.TeacherId)
+                              |> PSeq.toList
+            let teachersCsv = String.Join(",", teachersIds)
+            {
+                Id = Guid.NewGuid()
+                StartTime = eventModel.TimeStart
+                EndTime = eventModel.TimeEnd
+                Teachers = teachersCsv
+                GroupId = groupId
+                Auditory = eventModel.Auditory
+                SubjectId = subjectId
+                Type = eventTypeInt
+            })
+        |> PSeq.toList
+    use tx = ctx.Database.BeginTransaction()
+    
+    ctx.Events.RemoveRange(ctx.Events |> Seq.filter (fun event -> groupsIds |> Seq.contains event.GroupId))
+    ctx.Events.AddRange(eventsEntities)
+    ctx.SaveChanges() |> ignore
+    tx.Commit()
+    
+let refreshEventsForAllGroups (ctx : ScheduleContext) () =
+    ctx.Identites
+    |> PSeq.filter (fun identity -> identity.Type = IdentityType.Group)
+    |> PSeq.map (fun identity -> identity.Id)
+    |> PSeq.toList
+    |> refreshEventsForGroups ctx

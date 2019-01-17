@@ -13,6 +13,8 @@ type AdminController (context : ScheduleContext) =
     let refreshIdentities = refreshIdentities context
     let refreshSubjectsForGroups = refreshSubjectsForGroups context
     let refreshSubjectsForAllGroups = refreshSubjectsForAllGroups context
+    let refreshEventsForGroups = refreshEventsForGroups context
+    let refreshEventsForAllGroups = refreshEventsForAllGroups context
     
     [<HttpPost("identities/update")>]
     member this.UpdateIdentities() = refreshIdentities ()
@@ -25,3 +27,9 @@ type AdminController (context : ScheduleContext) =
     
     [<HttpPost("subjects/update/all")>]
     member this.UpdateSubjects() = refreshSubjectsForAllGroups ()
+    
+    [<HttpPost("events/update/{id}")>]
+    member this.UpdateEvents(id : long) = refreshEventsForGroups [id]
+    
+    [<HttpPost("events/update/all")>]
+    member this.UpdateEvents() = refreshEventsForAllGroups ()

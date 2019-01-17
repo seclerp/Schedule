@@ -20,23 +20,24 @@ let mapEventType = function
     | "ІспКомб" -> EventType.Exam
     | _         -> EventType.CourseWork
 
-type TeachersPerGroup = {
+type TeacherTypeGroup = {
     Teacher   : long
     EventType : EventType
     Group     : string
 }
 
 type SubjectModel = {
-    Id              : long
-    Brief           : string
-    Title           : string
-    TeachersByGroup : TeachersPerGroup list
+    Id                : long
+    Brief             : string
+    Title             : string
+    TeacherTypeGroups : TeacherTypeGroup list
 }
 
 type EventModel = {
-    TimeStart : DateTime
-    TimeEnd : DateTime
-    GroupsNames : string list
-    SubjectName : string
-    EventType : EventType
+    TimeStart    : DateTime
+    TimeEnd      : DateTime
+    Auditory     : string
+    GroupsName   : string
+    SubjectBrief : string
+    EventType    : EventType
 }

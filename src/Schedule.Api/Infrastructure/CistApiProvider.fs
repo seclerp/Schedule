@@ -8,7 +8,9 @@ open System.Text.RegularExpressions
 open FSharp.Data
 open FSharp.Collections.ParallelSeq
 
+open System.Globalization
 open Domain.Models
+open FSharp.Data
 open Infrastructure.Models
 
 module private Urls =
@@ -18,23 +20,29 @@ module private Urls =
     let scheduleMain    = "http://cist.nure.ua/ias/app/tt/WEB_IAS_TT_GNR_RASP.GEN_GROUP_POTOK_RASP"
 
 module private Patterns =
-    let facultyOnClick  = @"javascript:IAS_Change_Groups\(([0-9]+)\)"
-    let deptOnClick     = @"javascript:IAS_Change_Kaf\(([0-9]+),([0-9]+)\)"
-    let groupOnClick    = @"javascript:IAS_ADD_Group_in_List\('(.+)',([0-9]+)\)"
-    let teacherOnClick  = @"javascript:IAS_ADD_Teach_in_List\('(.+)',([0-9]+)\)"
-    let eventType       = @"(?:.*: )?([а-яА-ЯҐЄІЇґєії]+) \(\d+\)"
-    let identityHref    = @"javascript:ias_PopUp.*, '(\d+)', .*"
+    let facultyOnClick      = @"javascript:IAS_Change_Groups\(([0-9]+)\)"
+    let deptOnClick         = @"javascript:IAS_Change_Kaf\(([0-9]+),([0-9]+)\)"
+    let groupOnClick        = @"javascript:IAS_ADD_Group_in_List\('(.+)',([0-9]+)\)"
+    let teacherOnClick      = @"javascript:IAS_ADD_Teach_in_List\('(.+)',([0-9]+)\)"
+    let eventType           = @"(?:.*: )?([а-яА-ЯҐЄІЇґєії]+) \(\d+\)"
+    let identityHref        = @"javascript:ias_PopUp.*, '(\d+)', .*"
+    let subjectTypeAuditory = @"([а-яА-ЯҐЄІЇґєіїA-Za-z.*]+ [а-яА-ЯҐЄІЇґєії]+ [\dа-яА-ЯҐЄІЇґєії]+)"
 
 let private validHtmlTemplate =
     sprintf "<html lang=\"ru\" xmlns:htmldb=\"http://htmldb.oracle.com\"><body>%s</body></html>"
 
 let private windows1251 = Encoding.GetEncoding("windows-1251")
+let private ukraineTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("FLE Standard Time")
 
 let private bytesToStream (bytes : byte array) = new MemoryStream(bytes)
 let private stringToStream : string -> MemoryStream = Encoding.UTF8.GetBytes >> bytesToStream
 let private docToNode (doc : HtmlDocument) = doc.Html()
+let private getCsvRows (file : Runtime.CsvFile<CsvRow>) =
+    let a = file.Rows |> Seq.toList
+    a
 
 let private loadHtmlStream : Stream -> HtmlNode = HtmlDocument.Load >> docToNode
+let private loadCsvStream (strean : Stream) = CsvFile.Load(strean).Cache()
 let private loadHtmlString : string -> HtmlNode = stringToStream >> loadHtmlStream
 
 let private cssSelect selector (node : HtmlNode) = node.CssSelect(selector)
@@ -50,6 +58,10 @@ let private request url queryParams =
 
     let reader = new StreamReader(reponseStream, windows1251)
     reader.ReadToEnd()
+
+let private requestCsvFile url queryParams =
+    let responseStream = request url queryParams |> stringToStream
+    CsvFile.Load(responseStream).Cache()
 
 let private makeValidHtmlStream nonValidHtmlString =
     nonValidHtmlString
@@ -161,7 +173,7 @@ type private TeachersParserState = {
     CurrentType     : EventType
     CurrentGroups   : string list
     CurrentTeachers : long list
-    Result          : TeachersPerGroup list
+    Result          : TeacherTypeGroup list
 }
 let private getDefaultParserState () =
     { CurrentType = EventType.Lecture; CurrentGroups = []; CurrentTeachers = []; Result = [] }
@@ -228,7 +240,7 @@ let getAllSubjects : long list -> SubjectModel list =
     Seq.chunkBySize 50
     // Do not make Seq.map parallel - CIST can't process 2 or more requests per time
     >> Seq.map (fun (idsChunk : long array) ->
-        printfn "Start proecessing for IDs: %s" (String.Join(", ", idsChunk))
+        printfn "Start processing for IDs: %s" (String.Join(", ", idsChunk))
         let semesterBounds = getSemesterBounds DateTime.Now
         let groupsConcated = String.Join("_", idsChunk)
         let dateStart = (fst semesterBounds).ToString("dd.MM.yyyy")
@@ -254,7 +266,7 @@ let getAllSubjects : long list -> SubjectModel list =
             { Id = subjectId;
               Brief = subjectBrief;
               Title = subjectTitle;
-              TeachersByGroup = parseTeachers infoTableRow }
+              TeacherTypeGroups = parseTeachers infoTableRow }
         )
     )
     >> PSeq.concat
@@ -262,21 +274,68 @@ let getAllSubjects : long list -> SubjectModel list =
     >> PSeq.sortBy (fun subject -> subject.Id)
     >> PSeq.toList
 
-//let getGroupsSchedule : long list -> EventModel =
-//    Seq.chunkBySize 50
-//    // Do not make Seq.map parallel - CIST can't process 2 or more requests per time
-//    >> Seq.map (fun (idsChunk : long array) ->
-//        let semesterBounds = getSemesterBounds DateTime.Now
-//        let groupsConcated = String.Join("_", idsChunk)
-//        let dateStart = (fst semesterBounds).ToString("dd.MM.yyyy")
-//        let dateEnd = (snd semesterBounds).ToString("dd.MM.yyyy")
-//        [ ("ATypeDoc", "1")
-//          ("Aid_group", groupsConcated)
-//          ("Aid_potok", "0")
-//          ("ADateStart", dateStart)
-//          ("ADateEnd", dateEnd) ]
-//        |> request Urls.scheduleMain
-//    )
-//
-//// long list -> IdentityType -> Event list
-//let getSchedule identityId identityType = [getGroupsSchedule] |> PSeq.concat
+let private parseEventDescription fallbackGroupName (desc : string) =
+    if not (desc.Contains(" - ")) then
+        Regex.Matches(desc, Patterns.subjectTypeAuditory)
+        |> Seq.map (fun m ->
+            let fullMatch = m.Value
+            let [| subjectBrief; eventTypeString; auditory |] = fullMatch.Split(" ")
+            printfn "%A" desc
+            let eventType = mapEventType eventTypeString
+            (subjectBrief, eventType, auditory, fallbackGroupName))
+        |> Seq.toList
+    else
+        let parts = desc.Split(" - ")
+        let groupName = desc.[0]
+        Regex.Matches(parts.[1], Patterns.subjectTypeAuditory)
+        |> Seq.map (fun m ->
+            let fullMatch = m.Value
+            let [| subjectBrief; eventTypeString; auditory |] = fullMatch.Split(" ")
+            printfn "%A" desc
+            let eventType = mapEventType eventTypeString
+            (subjectBrief, eventType, auditory, parts.[0]))
+        |> Seq.toList
+
+let private toUtcDateTime zone dateString timeString =
+    let localDateTime =
+        DateTime.ParseExact(sprintf "%s %s" dateString timeString, "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture)
+    TimeZoneInfo.ConvertTimeToUtc(localDateTime, ukraineTimeZoneInfo)
+
+let private processCsvRow fallbackGroupName (row : CsvRow) : EventModel list =
+    let timeStart = toUtcDateTime ukraineTimeZoneInfo (row.GetColumn("Дата начала")) (row.GetColumn("Время начала"))
+    let timeEnd = toUtcDateTime ukraineTimeZoneInfo (row.GetColumn("Дата завершения")) (row.GetColumn("Время завершения"))
+    parseEventDescription fallbackGroupName (row.GetColumn("Тема"))
+    |> List.map(fun (subjectBrief, eventType, auditory, group) ->
+        { TimeStart = timeStart
+          TimeEnd = timeEnd
+          SubjectBrief = subjectBrief
+          Auditory = auditory
+          GroupsName = group
+          EventType = eventType })
+
+let getGroupsSchedule fallbackGroupName : long list -> EventModel list =
+    Seq.chunkBySize 50
+    // Do not make Seq.map parallel - CIST can't process 2 or more requests per time
+    >> Seq.map (fun (idsChunk : long array) ->
+        printfn "Start events fetching for IDs: %s" (String.Join(", ", idsChunk))
+        let semesterBounds = getSemesterBounds DateTime.Now
+        let groupsConcated = String.Join("_", idsChunk)
+        let dateStart = (fst semesterBounds).ToString("dd.MM.yyyy")
+        let dateEnd = (snd semesterBounds).ToString("dd.MM.yyyy")
+        [ ("ATypeDoc", "3")
+          ("Aid_group", groupsConcated)
+          ("Aid_potok", "0")
+          ("ADateStart", dateStart)
+          ("ADateEnd", dateEnd) ]
+        |> requestCsvFile Urls.scheduleMain
+        |> getCsvRows
+        |> PSeq.map (processCsvRow fallbackGroupName))
+    >> Seq.concat
+    >> Seq.concat
+    >> Seq.toList
+
+// long list -> IdentityType -> Event list
+let getSchedule fallbackGroupName identityIds =
+    [getGroupsSchedule fallbackGroupName identityIds]
+    |> PSeq.concat
+    |> PSeq.toList
