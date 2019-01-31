@@ -7,11 +7,11 @@ open System.Text
 open System.Text.RegularExpressions
 open FSharp.Data
 open FSharp.Collections.ParallelSeq
-
 open System.Globalization
+
 open Domain.Models
-open FSharp.Data
 open Infrastructure.Models
+open Infrastructure.CsvParser
 
 module private Urls =
     let groupsSchedule  = "http://cist.nure.ua/ias/app/tt/f?p=778:2"
@@ -26,7 +26,7 @@ module private Patterns =
     let teacherOnClick      = @"javascript:IAS_ADD_Teach_in_List\('(.+)',([0-9]+)\)"
     let eventType           = @"(?:.*: )?([а-яА-ЯҐЄІЇґєії]+) \(\d+\)"
     let identityHref        = @"javascript:ias_PopUp.*, '(\d+)', .*"
-    let subjectTypeAuditory = @"([а-яА-ЯҐЄІЇґєіїA-Za-z.*]+ [а-яА-ЯҐЄІЇґєії]+ [\dа-яА-ЯҐЄІЇґєії]+)"
+    let subjectTypeAuditory = @"([а-яА-ЯҐЄІЇґєіїA-Za-z.*& \(\)]+ [а-яА-ЯҐЄІЇґєії]+ [\dа-яА-ЯҐЄІЇґєії\/]+) (?:[^ ]+)"
 
 let private validHtmlTemplate =
     sprintf "<html lang=\"ru\" xmlns:htmldb=\"http://htmldb.oracle.com\"><body>%s</body></html>"
@@ -37,12 +37,8 @@ let private ukraineTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("FLE Stand
 let private bytesToStream (bytes : byte array) = new MemoryStream(bytes)
 let private stringToStream : string -> MemoryStream = Encoding.UTF8.GetBytes >> bytesToStream
 let private docToNode (doc : HtmlDocument) = doc.Html()
-let private getCsvRows (file : Runtime.CsvFile<CsvRow>) =
-    let a = file.Rows |> Seq.toList
-    a
 
 let private loadHtmlStream : Stream -> HtmlNode = HtmlDocument.Load >> docToNode
-let private loadCsvStream (strean : Stream) = CsvFile.Load(strean).Cache()
 let private loadHtmlString : string -> HtmlNode = stringToStream >> loadHtmlStream
 
 let private cssSelect selector (node : HtmlNode) = node.CssSelect(selector)
@@ -59,9 +55,9 @@ let private request url queryParams =
     let reader = new StreamReader(reponseStream, windows1251)
     reader.ReadToEnd()
 
-let private requestCsvFile url queryParams =
-    let responseStream = request url queryParams |> stringToStream
-    CsvFile.Load(responseStream).Cache()
+let private requestCsv url queryParams =
+    request url queryParams
+    |> CsvParser.parse
 
 let private makeValidHtmlStream nonValidHtmlString =
     nonValidHtmlString
@@ -275,36 +271,43 @@ let getAllSubjects : long list -> SubjectModel list =
     >> PSeq.toList
 
 let private parseEventDescription fallbackGroupName (desc : string) =
-    if not (desc.Contains(" - ")) then
-        Regex.Matches(desc, Patterns.subjectTypeAuditory)
-        |> Seq.map (fun m ->
-            let fullMatch = m.Value
-            let [| subjectBrief; eventTypeString; auditory |] = fullMatch.Split(" ")
+    let groupName, toMatch = if desc.Contains(" - ") then desc.Split(" - ") |> fun splitted -> splitted.[0], splitted.[1]
+                             else fallbackGroupName, desc
+
+    Regex.Matches(toMatch, Patterns.subjectTypeAuditory)
+    |> Seq.map (fun m ->
+        let fullMatch = m.Groups.[1].Value
+        let parts = fullMatch.Split([|' '|], StringSplitOptions.RemoveEmptyEntries)
+        if parts.Length = 3 then
+            let subjectBrief = parts.[0]
+            let eventTypeString = parts.[1]
+            let auditory = parts.[2]
             printfn "%A" desc
             let eventType = mapEventType eventTypeString
-            (subjectBrief, eventType, auditory, fallbackGroupName))
-        |> Seq.toList
-    else
-        let parts = desc.Split(" - ")
-        let groupName = desc.[0]
-        Regex.Matches(parts.[1], Patterns.subjectTypeAuditory)
-        |> Seq.map (fun m ->
-            let fullMatch = m.Value
-            let [| subjectBrief; eventTypeString; auditory |] = fullMatch.Split(" ")
+            (subjectBrief, eventType, auditory, groupName)
+        else if parts.Length = 4 then
+            let subjectBrief1 = parts.[0]
+            let subjectBrief2 = parts.[1]
+            let eventTypeString = parts.[2]
+            let auditory = parts.[3]
             printfn "%A" desc
             let eventType = mapEventType eventTypeString
-            (subjectBrief, eventType, auditory, parts.[0]))
-        |> Seq.toList
+            (subjectBrief1 + " " + subjectBrief2, eventType, auditory, groupName)
+        else
+            failwithf "Fail to parse event description: '%A'" fullMatch)
+    |> Seq.toList
 
 let private toUtcDateTime zone dateString timeString =
     let localDateTime =
         DateTime.ParseExact(sprintf "%s %s" dateString timeString, "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture)
     TimeZoneInfo.ConvertTimeToUtc(localDateTime, ukraineTimeZoneInfo)
 
-let private processCsvRow fallbackGroupName (row : CsvRow) : EventModel list =
-    let timeStart = toUtcDateTime ukraineTimeZoneInfo (row.GetColumn("Дата начала")) (row.GetColumn("Время начала"))
-    let timeEnd = toUtcDateTime ukraineTimeZoneInfo (row.GetColumn("Дата завершения")) (row.GetColumn("Время завершения"))
-    parseEventDescription fallbackGroupName (row.GetColumn("Тема"))
+let private processCsvRow fallbackGroupName (row : Map<string, string>) : EventModel list =
+    let getColumnValue = getValue row
+    let timeStart = toUtcDateTime ukraineTimeZoneInfo (getColumnValue "Дата начала") (getColumnValue "Время начала")
+    let timeEnd = toUtcDateTime ukraineTimeZoneInfo (getColumnValue "Дата завершения") (getColumnValue "Время завершения")
+    let parseResult = parseEventDescription fallbackGroupName (getColumnValue "Тема")
+    parseResult
     |> List.map(fun (subjectBrief, eventType, auditory, group) ->
         { TimeStart = timeStart
           TimeEnd = timeEnd
@@ -327,8 +330,7 @@ let getGroupsSchedule fallbackGroupName : long list -> EventModel list =
           ("Aid_potok", "0")
           ("ADateStart", dateStart)
           ("ADateEnd", dateEnd) ]
-        |> requestCsvFile Urls.scheduleMain
-        |> getCsvRows
+        |> requestCsv Urls.scheduleMain
         |> PSeq.map (processCsvRow fallbackGroupName))
     >> Seq.concat
     >> Seq.concat

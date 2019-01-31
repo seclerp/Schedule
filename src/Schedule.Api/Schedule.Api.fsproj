@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Compile Include="Infrastructure\Models.fs" />
+    <Compile Include="Infrastructure\CsvParser.fs" />
     <Compile Include="Infrastructure\CistApiProvider.fs" />
     <Compile Include="Infrastructure\ScheduleUpdateService.fs" />
   </ItemGroup>
