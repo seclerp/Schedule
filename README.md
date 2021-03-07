@@ -1,2 +1,2 @@
 # :date: Schedule
-Back-end for NURE Schedule project
+Unfinished attempt to make alternative stable back-end for NURE Schedule
